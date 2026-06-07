@@ -29,8 +29,12 @@
       </ul>
       <div class="col text-end">
         {% if is_logged_in %}
-        <form action="/logout" method="POST">
-          <button type="submit" class="btn btn-primary mb-3">Logout</button>
+        <form
+          class="container-fluid justify-content-start"
+          action="/logout"
+          method="POST"
+        >
+          <button class="btn btn-outline-primary" type="submit">Logout</button>
           <input type="hidden" name="csrf_token" value="{{ csrf_token() }}" />
         </form>
         {% endif %}
