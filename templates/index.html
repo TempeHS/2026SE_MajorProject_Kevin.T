@@ -11,7 +11,36 @@
     <text x="50%" y="50%" fill="#dee2e6" dy=".3em">Map</text>
   </svg>
 
-  <!-- Right side buttons -->
+  <!-- Top left button -->
+  <div class="position-absolute top-0 start-0 p-3 d-flex flex-column gap-2">
+    <div class="btn-group dropend">
+      <button
+        type="button"
+        class="btn btn-primary dropdown-toggle"
+        data-bs-toggle="dropdown"
+        aria-expanded="false"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          fill="currentColor"
+          class="bi bi-person"
+          viewBox="0 0 16 16"
+        >
+          <path
+            d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z"
+          />
+        </svg>
+      </button>
+      <ul class="dropdown-menu" style="min-width: 18rem">
+        <li><h6 class="dropdown-header">Account</h6></li>
+        <li><a class="dropdown-item" href="#">Custom list</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Bottom Right side buttons -->
   <div class="position-absolute bottom-0 end-0 p-3 d-flex flex-column gap-2">
     <div class="btn-group dropstart">
       <button
@@ -88,18 +117,16 @@
           />
         </svg>
       </button>
-      <div class="dropdown-menu p-2">
-        <li class="d-flex align-items-center gap-2 px-2">
-          <h6 class="dropdown-header mb-0 p-0">Star rating</h6>
-          <input
-            type="range"
-            class="form-range m-0 flex-grow-1"
-            min="0"
-            max="5"
-            step="0.5"
-            id="range3"
-          />
-        </li>
+      <div class="dropdown-menu p-3" style="--bs-dropdown-min-width: 22rem">
+        <h6 class="dropdown-header mb-2 p-0">Star rating</h6>
+        <input
+          type="range"
+          class="form-range w-100 m-0"
+          min="0"
+          max="5"
+          step="0.5"
+          id="range-star"
+        />
       </div>
     </div>
 
@@ -123,38 +150,30 @@
           />
         </svg>
       </button>
-      <div class="dropdown-menu p-2" style="--bs-dropdown-min-width: 26rem">
-        <li class="d-flex align-items-center gap-2 px-2 flex-nowrap">
-          <h6 class="dropdown-header mb-0 p-0 text-nowrap">Price range:</h6>
+      <div class="dropdown-menu p-3" style="--bs-dropdown-min-width: 22rem">
+        <h6 class="dropdown-header mb-2 p-0">Price range:</h6>
 
-          <div
-            class="input-group input-group-sm flex-nowrap"
-            style="width: 8rem"
-          >
-            <span class="input-group-text">$</span>
-            <input
-              type="text"
-              class="form-control"
-              placeholder="min"
-              aria-label="Minimum price"
-            />
-          </div>
+        <div class="input-group input-group-sm flex-nowrap" style="width: 8rem">
+          <span class="input-group-text">$</span>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="min"
+            aria-label="Minimum price"
+          />
+        </div>
 
-          <span class="small text-nowrap">to</span>
+        <span class="small text-nowrap">to</span>
 
-          <div
-            class="input-group input-group-sm flex-nowrap"
-            style="width: 8rem"
-          >
-            <span class="input-group-text">$</span>
-            <input
-              type="text"
-              class="form-control"
-              placeholder="max"
-              aria-label="Maximum price"
-            />
-          </div>
-        </li>
+        <div class="input-group input-group-sm flex-nowrap" style="width: 8rem">
+          <span class="input-group-text">$</span>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="max"
+            aria-label="Maximum price"
+          />
+        </div>
       </div>
     </div>
 
@@ -178,18 +197,16 @@
           />
         </svg>
       </button>
-      <div class="dropdown-menu p-2">
-        <li class="d-flex align-items-center gap-2 px-2">
-          <h6 class="dropdown-header mb-0 p-0">Distance</h6>
-          <input
-            type="range"
-            class="form-range m-0 flex-grow-1"
-            min="0"
-            max="5"
-            step="0.5"
-            id="range3"
-          />
-        </li>
+      <div class="dropdown-menu p-3" style="--bs-dropdown-min-width: 22rem">
+        <h6 class="dropdown-header mb-2 p-0">Distance</h6>
+        <input
+          type="range"
+          class="form-range w-100 m-0"
+          min="0"
+          max="5"
+          step="0.5"
+          id="range-distance"
+        />
       </div>
     </div>
   </div>
