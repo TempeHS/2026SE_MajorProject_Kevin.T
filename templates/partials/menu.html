@@ -23,31 +23,18 @@
         <li class="nav-item">
           <a class="nav-link" href="/signup.html">Sign Up</a>
         </li>
-        <li class="nav-item dropdown">
-          <a
-            class="nav-link dropdown-toggle"
-            href="#"
-            role="button"
-            data-bs-toggle="dropdown"
-            aria-expanded="false"
-          >
-            Dropdown
-          </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><hr class="dropdown-divider" /></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
-        </li>
         <li class="nav-item">
-          <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+          <a class="nav-link" href="privacy.html">Privacy Policy</a>
         </li>
       </ul>
       <div class="col text-end">
         {% if is_logged_in %}
-        <form action="/logout" method="POST">
-          <button type="submit" class="btn btn-primary mb-3">Logout</button>
+        <form
+          class="container-fluid justify-content-start"
+          action="/logout"
+          method="POST"
+        >
+          <button class="btn btn-outline-primary" type="submit">Logout</button>
           <input type="hidden" name="csrf_token" value="{{ csrf_token() }}" />
         </form>
         {% endif %}
