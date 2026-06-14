@@ -51,18 +51,20 @@ def root():
 @app.route("/", methods=["GET"])
 @csp_header(
     {
-        # Server Side CSP is consistent with meta CSP in layout.html
         "base-uri": "'self'",
         "default-src": "'self'",
-        "style-src": "'self'",
-        "script-src": "'self'",
-        "img-src": "'self' data:",
+        "style-src": "'self' 'unsafe-inline'",
+        "style-src-attr": "'unsafe-inline'",
+        "style-src-elem": "'self' 'unsafe-inline'",
+        "script-src": "'self' 'unsafe-inline' https://maps.googleapis.com https://maps.gstatic.com",
+        "script-src-elem": "'self' 'unsafe-inline' https://maps.googleapis.com https://maps.gstatic.com",
+        "img-src": "'self' data: https://maps.gstatic.com https://maps.googleapis.com",
         "media-src": "'self'",
-        "font-src": "'self'",
-        "object-src": "'self'",
+        "font-src": "'self' https://fonts.gstatic.com",
+        "object-src": "'none'",
         "child-src": "'self'",
-        "connect-src": "'self'",
-        "worker-src": "'self'",
+        "connect-src": "'self' https://maps.googleapis.com https://maps.gstatic.com https://www.gstatic.com",
+        "worker-src": "'self' blob:",
         "report-uri": "/csp_report",
         "frame-ancestors": "'none'",
         "form-action": "'self'",

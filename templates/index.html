@@ -1,15 +1,15 @@
 {% extends 'layout.html' %} {% block content %}
+<!-- map stuff -->
+<script src="static/js/map.js"></script>
+
 <div class="container-fluid position-relative p-0 overflow-hidden">
-  <svg
-    aria-label="Placeholder: Responsive image"
-    class="bd-placeholder-img map-fill"
-    role="img"
-    xmlns="http://www.w3.org/2000/svg"
+  <gmp-map
+    center="38.7946,-106.5348"
+    zoom="4"
+    map-id="DEMO_MAP_ID"
+    style="height: calc(100vh - 56px)"
   >
-    <title>Placeholder</title>
-    <rect width="100%" height="100%" fill="#868e96"></rect>
-    <text x="50%" y="50%" fill="#dee2e6" dy=".3em">Map</text>
-  </svg>
+  </gmp-map>
 
   <!-- Top left button -->
   <div class="position-absolute top-0 start-0 p-3 d-flex flex-column gap-2">

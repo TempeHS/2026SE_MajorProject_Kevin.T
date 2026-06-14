@@ -14963,3 +14963,81 @@
 2026-06-14 10:20:45,357 127.0.0.1 - - [14/Jun/2026 10:20:45] "GET /static/js/app.js HTTP/1.1" 200 -
 2026-06-14 10:20:45,652 127.0.0.1 - - [14/Jun/2026 10:20:45] "GET /static/images/favicon.png HTTP/1.1" 200 -
 2026-06-14 10:20:45,877 127.0.0.1 - - [14/Jun/2026 10:20:45] "GET /static/js/serviceWorker.js HTTP/1.1" 200 -
+2026-06-14 11:03:38,732 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.1.129:5000
+2026-06-14 11:03:38,732 [33mPress CTRL+C to quit[0m
+2026-06-14 11:03:38,732  * Restarting with stat
+2026-06-14 11:03:39,198  * Debugger is active!
+2026-06-14 11:03:39,199  * Debugger PIN: 338-040-036
+2026-06-14 11:03:42,658 127.0.0.1 - - [14/Jun/2026 11:03:42] "GET / HTTP/1.1" 200 -
+2026-06-14 11:03:42,749 127.0.0.1 - - [14/Jun/2026 11:03:42] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-14 11:03:42,825 127.0.0.1 - - [14/Jun/2026 11:03:42] "[36mGET /static/js/map.js HTTP/1.1[0m" 304 -
+2026-06-14 11:03:42,946 127.0.0.1 - - [14/Jun/2026 11:03:42] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-14 11:03:42,954 127.0.0.1 - - [14/Jun/2026 11:03:42] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-14 11:03:42,988 127.0.0.1 - - [14/Jun/2026 11:03:42] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-14 11:03:43,064 127.0.0.1 - - [14/Jun/2026 11:03:43] "GET /static/js/serviceWorker.js HTTP/1.1" 200 -
+2026-06-14 11:04:35,568 127.0.0.1 - - [14/Jun/2026 11:04:35] "GET / HTTP/1.1" 200 -
+2026-06-14 11:04:35,676 127.0.0.1 - - [14/Jun/2026 11:04:35] "[36mGET /static/js/map.js HTTP/1.1[0m" 304 -
+2026-06-14 11:04:35,678 127.0.0.1 - - [14/Jun/2026 11:04:35] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-14 11:04:35,689 127.0.0.1 - - [14/Jun/2026 11:04:35] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-14 11:04:35,704 127.0.0.1 - - [14/Jun/2026 11:04:35] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-14 11:04:35,738 127.0.0.1 - - [14/Jun/2026 11:04:35] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-14 11:04:35,834 127.0.0.1 - - [14/Jun/2026 11:04:35] "GET /static/js/serviceWorker.js HTTP/1.1" 200 -
+2026-06-14 11:04:40,204 127.0.0.1 - - [14/Jun/2026 11:04:40] "GET / HTTP/1.1" 200 -
+2026-06-14 11:04:40,308 127.0.0.1 - - [14/Jun/2026 11:04:40] "[36mGET /static/js/map.js HTTP/1.1[0m" 304 -
+2026-06-14 11:04:40,316 127.0.0.1 - - [14/Jun/2026 11:04:40] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-14 11:04:40,318 127.0.0.1 - - [14/Jun/2026 11:04:40] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-14 11:04:40,322 127.0.0.1 - - [14/Jun/2026 11:04:40] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-14 11:04:40,324 127.0.0.1 - - [14/Jun/2026 11:04:40] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-14 11:04:40,407 127.0.0.1 - - [14/Jun/2026 11:04:40] "GET /static/js/serviceWorker.js HTTP/1.1" 200 -
+2026-06-14 11:04:55,001 127.0.0.1 - - [14/Jun/2026 11:04:55] "GET / HTTP/1.1" 200 -
+2026-06-14 11:04:55,099 127.0.0.1 - - [14/Jun/2026 11:04:55] "[36mGET /static/js/map.js HTTP/1.1[0m" 304 -
+2026-06-14 11:04:55,100 127.0.0.1 - - [14/Jun/2026 11:04:55] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-14 11:04:55,100 127.0.0.1 - - [14/Jun/2026 11:04:55] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-14 11:04:55,101 127.0.0.1 - - [14/Jun/2026 11:04:55] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-14 11:04:55,103 127.0.0.1 - - [14/Jun/2026 11:04:55] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-14 11:04:55,205 127.0.0.1 - - [14/Jun/2026 11:04:55] "GET /static/js/serviceWorker.js HTTP/1.1" 200 -
+2026-06-14 11:05:00,831 127.0.0.1 - - [14/Jun/2026 11:05:00] "GET / HTTP/1.1" 200 -
+2026-06-14 11:05:00,932 127.0.0.1 - - [14/Jun/2026 11:05:00] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-14 11:05:00,933 127.0.0.1 - - [14/Jun/2026 11:05:00] "[36mGET /static/js/map.js HTTP/1.1[0m" 304 -
+2026-06-14 11:05:00,939 127.0.0.1 - - [14/Jun/2026 11:05:00] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-14 11:05:00,941 127.0.0.1 - - [14/Jun/2026 11:05:00] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-14 11:05:00,947 127.0.0.1 - - [14/Jun/2026 11:05:00] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-14 11:05:01,038 127.0.0.1 - - [14/Jun/2026 11:05:01] "GET /static/js/serviceWorker.js HTTP/1.1" 200 -
+2026-06-14 11:05:14,420 127.0.0.1 - - [14/Jun/2026 11:05:14] "GET / HTTP/1.1" 200 -
+2026-06-14 11:05:14,554 127.0.0.1 - - [14/Jun/2026 11:05:14] "[36mGET /static/js/map.js HTTP/1.1[0m" 304 -
+2026-06-14 11:05:14,555 127.0.0.1 - - [14/Jun/2026 11:05:14] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-14 11:05:14,559 127.0.0.1 - - [14/Jun/2026 11:05:14] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-14 11:05:14,616 127.0.0.1 - - [14/Jun/2026 11:05:14] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-14 11:05:14,619 127.0.0.1 - - [14/Jun/2026 11:05:14] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-14 11:05:14,698 127.0.0.1 - - [14/Jun/2026 11:05:14] "GET /static/js/serviceWorker.js HTTP/1.1" 200 -
+2026-06-14 11:05:29,594 127.0.0.1 - - [14/Jun/2026 11:05:29] "[33mGET /static/css/bootstrap.min.css.map HTTP/1.1[0m" 404 -
+2026-06-14 11:05:35,860 127.0.0.1 - - [14/Jun/2026 11:05:35] "GET / HTTP/1.1" 200 -
+2026-06-14 11:05:35,958 127.0.0.1 - - [14/Jun/2026 11:05:35] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-14 11:05:35,960 127.0.0.1 - - [14/Jun/2026 11:05:35] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-14 11:05:35,964 127.0.0.1 - - [14/Jun/2026 11:05:35] "[36mGET /static/js/map.js HTTP/1.1[0m" 304 -
+2026-06-14 11:05:35,970 127.0.0.1 - - [14/Jun/2026 11:05:35] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-14 11:05:35,974 127.0.0.1 - - [14/Jun/2026 11:05:35] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-14 11:05:36,070 127.0.0.1 - - [14/Jun/2026 11:05:36] "GET /static/js/serviceWorker.js HTTP/1.1" 200 -
+2026-06-14 11:05:44,534 127.0.0.1 - - [14/Jun/2026 11:05:44] "GET /privacy.html HTTP/1.1" 200 -
+2026-06-14 11:05:44,676 127.0.0.1 - - [14/Jun/2026 11:05:44] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-14 11:05:44,683 127.0.0.1 - - [14/Jun/2026 11:05:44] "[36mGET /static/js/map.js HTTP/1.1[0m" 304 -
+2026-06-14 11:05:44,688 127.0.0.1 - - [14/Jun/2026 11:05:44] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-14 11:05:44,688 127.0.0.1 - - [14/Jun/2026 11:05:44] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-14 11:05:44,694 127.0.0.1 - - [14/Jun/2026 11:05:44] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-14 11:05:44,810 127.0.0.1 - - [14/Jun/2026 11:05:44] "GET /static/js/serviceWorker.js HTTP/1.1" 200 -
+2026-06-14 11:05:50,985 127.0.0.1 - - [14/Jun/2026 11:05:50] "GET /privacy.html HTTP/1.1" 200 -
+2026-06-14 11:05:51,070 127.0.0.1 - - [14/Jun/2026 11:05:51] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-14 11:05:51,077 127.0.0.1 - - [14/Jun/2026 11:05:51] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-14 11:05:51,081 127.0.0.1 - - [14/Jun/2026 11:05:51] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-14 11:05:51,087 127.0.0.1 - - [14/Jun/2026 11:05:51] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-14 11:05:51,270 127.0.0.1 - - [14/Jun/2026 11:05:51] "GET /static/js/serviceWorker.js HTTP/1.1" 200 -
+2026-06-14 11:05:51,802 127.0.0.1 - - [14/Jun/2026 11:05:51] "GET / HTTP/1.1" 200 -
+2026-06-14 11:05:51,914 127.0.0.1 - - [14/Jun/2026 11:05:51] "[36mGET /static/js/map.js HTTP/1.1[0m" 304 -
+2026-06-14 11:05:51,917 127.0.0.1 - - [14/Jun/2026 11:05:51] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-14 11:05:51,920 127.0.0.1 - - [14/Jun/2026 11:05:51] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-14 11:05:51,939 127.0.0.1 - - [14/Jun/2026 11:05:51] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-14 11:05:51,939 127.0.0.1 - - [14/Jun/2026 11:05:51] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-14 11:05:52,031 127.0.0.1 - - [14/Jun/2026 11:05:52] "GET /static/js/serviceWorker.js HTTP/1.1" 200 -
