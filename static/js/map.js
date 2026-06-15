@@ -19,6 +19,7 @@ function handleLocationError(browserHasGeolocation, infoWindowInstance, pos) {
 
 async function init() {
   await google.maps.importLibrary("maps");
+  await google.maps.importLibrary("places");
 
   const mapElement = document.querySelector("gmp-map");
   const innerMap = mapElement.innerMap;

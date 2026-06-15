@@ -15496,3 +15496,51 @@
 2026-06-15 03:54:01,567 127.0.0.1 - - [15/Jun/2026 03:54:01] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
 2026-06-15 03:54:01,615 127.0.0.1 - - [15/Jun/2026 03:54:01] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
 2026-06-15 03:54:01,619 127.0.0.1 - - [15/Jun/2026 03:54:01] "[36mGET /static/images/favicon.png HTTP/1.1[0m" 304 -
+2026-06-15 04:14:51,465 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.1.189:5000
+2026-06-15 04:14:51,465 [33mPress CTRL+C to quit[0m
+2026-06-15 04:14:51,466  * Restarting with stat
+2026-06-15 04:14:51,878  * Debugger is active!
+2026-06-15 04:14:51,878  * Debugger PIN: 123-651-007
+2026-06-15 04:14:52,081 127.0.0.1 - - [15/Jun/2026 04:14:52] "GET / HTTP/1.1" 200 -
+2026-06-15 04:14:52,305 127.0.0.1 - - [15/Jun/2026 04:14:52] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-15 04:14:52,318 127.0.0.1 - - [15/Jun/2026 04:14:52] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-15 04:14:52,342 127.0.0.1 - - [15/Jun/2026 04:14:52] "GET /static/js/map.js HTTP/1.1" 200 -
+2026-06-15 04:14:52,365 {"csp-report":{"document-uri":"https://jubilant-chainsaw-qrr5pqpp9j6hxrjq-5000.app.github.dev/","referrer":"https://jubilant-chainsaw-qrr5pqpp9j6hxrjq.github.dev/","violated-directive":"manifest-src","effective-directive":"manifest-src","original-policy":"script-src 'self' 'unsafe-inline' 'unsafe-eval' https://maps.googleapis.com https://maps.gstatic.com; img-src 'self' data: blob: https://maps.gstatic.com https://maps.googleapis.com https://*.gstatic.com; child-src 'self' blob:; default-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; media-src 'self'; object-src 'none'; connect-src 'self' data: blob: https://maps.googleapis.com https://maps.gstatic.com https://www.gstatic.com https://*.gstatic.com; base-uri 'self'; report-uri /csp_report; style-src-attr 'unsafe-inline'; style-src-elem 'self' 'unsafe-inline' https://fonts.googleapis.com; script-src-elem 'self' 'unsafe-inline' https://maps.googleapis.com https://maps.gstatic.com; font-src 'self' https://fonts.gstatic.com data:; worker-src 'self' blob:; manifest-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"https://jubilant-chainsaw-qrr5pqpp9j6hxrjq-5000.app.github.dev/static/manifest.json","status-code":200,"script-sample":""}}
+2026-06-15 04:14:52,366 127.0.0.1 - - [15/Jun/2026 04:14:52] "POST /csp_report HTTP/1.1" 200 -
+2026-06-15 04:14:52,443 127.0.0.1 - - [15/Jun/2026 04:14:52] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-15 04:14:52,481 127.0.0.1 - - [15/Jun/2026 04:14:52] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-15 04:14:52,531 127.0.0.1 - - [15/Jun/2026 04:14:52] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2026-06-15 04:14:52,577 127.0.0.1 - - [15/Jun/2026 04:14:52] "[36mGET /static/images/favicon.png HTTP/1.1[0m" 304 -
+2026-06-15 04:15:32,573 127.0.0.1 - - [15/Jun/2026 04:15:32] "GET / HTTP/1.1" 200 -
+2026-06-15 04:15:32,625 127.0.0.1 - - [15/Jun/2026 04:15:32] "[36mGET /static/js/map.js HTTP/1.1[0m" 304 -
+2026-06-15 04:15:32,630 127.0.0.1 - - [15/Jun/2026 04:15:32] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-15 04:15:32,634 127.0.0.1 - - [15/Jun/2026 04:15:32] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-15 04:15:32,638 {"csp-report":{"document-uri":"https://jubilant-chainsaw-qrr5pqpp9j6hxrjq-5000.app.github.dev/","referrer":"https://jubilant-chainsaw-qrr5pqpp9j6hxrjq.github.dev/","violated-directive":"manifest-src","effective-directive":"manifest-src","original-policy":"script-src 'self' 'unsafe-inline' 'unsafe-eval' https://maps.googleapis.com https://maps.gstatic.com; img-src 'self' data: blob: https://maps.gstatic.com https://maps.googleapis.com https://*.gstatic.com; child-src 'self' blob:; default-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; media-src 'self'; object-src 'none'; connect-src 'self' data: blob: https://maps.googleapis.com https://maps.gstatic.com https://www.gstatic.com https://*.gstatic.com; base-uri 'self'; report-uri /csp_report; style-src-attr 'unsafe-inline'; style-src-elem 'self' 'unsafe-inline' https://fonts.googleapis.com; script-src-elem 'self' 'unsafe-inline' https://maps.googleapis.com https://maps.gstatic.com; font-src 'self' https://fonts.gstatic.com data:; worker-src 'self' blob:; manifest-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"https://jubilant-chainsaw-qrr5pqpp9j6hxrjq-5000.app.github.dev/static/manifest.json","status-code":200,"script-sample":""}}
+2026-06-15 04:15:32,638 127.0.0.1 - - [15/Jun/2026 04:15:32] "POST /csp_report HTTP/1.1" 200 -
+2026-06-15 04:15:32,668 127.0.0.1 - - [15/Jun/2026 04:15:32] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-15 04:15:32,721 127.0.0.1 - - [15/Jun/2026 04:15:32] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-15 04:15:32,774 127.0.0.1 - - [15/Jun/2026 04:15:32] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2026-06-15 04:15:32,793 127.0.0.1 - - [15/Jun/2026 04:15:32] "[36mGET /static/images/favicon.png HTTP/1.1[0m" 304 -
+2026-06-15 04:16:11,726 127.0.0.1 - - [15/Jun/2026 04:16:11] "GET / HTTP/1.1" 200 -
+2026-06-15 04:16:11,774 127.0.0.1 - - [15/Jun/2026 04:16:11] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-15 04:16:11,779 127.0.0.1 - - [15/Jun/2026 04:16:11] "[36mGET /static/js/map.js HTTP/1.1[0m" 304 -
+2026-06-15 04:16:11,782 127.0.0.1 - - [15/Jun/2026 04:16:11] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-15 04:16:11,793 {"csp-report":{"document-uri":"https://jubilant-chainsaw-qrr5pqpp9j6hxrjq-5000.app.github.dev/","referrer":"https://jubilant-chainsaw-qrr5pqpp9j6hxrjq.github.dev/","violated-directive":"manifest-src","effective-directive":"manifest-src","original-policy":"script-src 'self' 'unsafe-inline' 'unsafe-eval' https://maps.googleapis.com https://maps.gstatic.com; img-src 'self' data: blob: https://maps.gstatic.com https://maps.googleapis.com https://*.gstatic.com; child-src 'self' blob:; default-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; media-src 'self'; object-src 'none'; connect-src 'self' data: blob: https://maps.googleapis.com https://maps.gstatic.com https://www.gstatic.com https://*.gstatic.com; base-uri 'self'; report-uri /csp_report; style-src-attr 'unsafe-inline'; style-src-elem 'self' 'unsafe-inline' https://fonts.googleapis.com; script-src-elem 'self' 'unsafe-inline' https://maps.googleapis.com https://maps.gstatic.com; font-src 'self' https://fonts.gstatic.com data:; worker-src 'self' blob:; manifest-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"https://jubilant-chainsaw-qrr5pqpp9j6hxrjq-5000.app.github.dev/static/manifest.json","status-code":200,"script-sample":""}}
+2026-06-15 04:16:11,793 127.0.0.1 - - [15/Jun/2026 04:16:11] "POST /csp_report HTTP/1.1" 200 -
+2026-06-15 04:16:11,813 127.0.0.1 - - [15/Jun/2026 04:16:11] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-15 04:16:11,862 127.0.0.1 - - [15/Jun/2026 04:16:11] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-15 04:16:11,897 127.0.0.1 - - [15/Jun/2026 04:16:11] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2026-06-15 04:16:11,913 127.0.0.1 - - [15/Jun/2026 04:16:11] "[36mGET /static/images/favicon.png HTTP/1.1[0m" 304 -
+2026-06-15 04:16:33,249 127.0.0.1 - - [15/Jun/2026 04:16:33] "GET / HTTP/1.1" 200 -
+2026-06-15 04:16:33,295 127.0.0.1 - - [15/Jun/2026 04:16:33] "[36mGET /static/js/map.js HTTP/1.1[0m" 304 -
+2026-06-15 04:16:33,300 127.0.0.1 - - [15/Jun/2026 04:16:33] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-15 04:16:33,305 127.0.0.1 - - [15/Jun/2026 04:16:33] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-15 04:16:33,315 {"csp-report":{"document-uri":"https://jubilant-chainsaw-qrr5pqpp9j6hxrjq-5000.app.github.dev/","referrer":"https://jubilant-chainsaw-qrr5pqpp9j6hxrjq.github.dev/","violated-directive":"manifest-src","effective-directive":"manifest-src","original-policy":"script-src 'self' 'unsafe-inline' 'unsafe-eval' https://maps.googleapis.com https://maps.gstatic.com; img-src 'self' data: blob: https://maps.gstatic.com https://maps.googleapis.com https://*.gstatic.com; child-src 'self' blob:; default-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; media-src 'self'; object-src 'none'; connect-src 'self' data: blob: https://maps.googleapis.com https://maps.gstatic.com https://www.gstatic.com https://*.gstatic.com; base-uri 'self'; report-uri /csp_report; style-src-attr 'unsafe-inline'; style-src-elem 'self' 'unsafe-inline' https://fonts.googleapis.com; script-src-elem 'self' 'unsafe-inline' https://maps.googleapis.com https://maps.gstatic.com; font-src 'self' https://fonts.gstatic.com data:; worker-src 'self' blob:; manifest-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"https://jubilant-chainsaw-qrr5pqpp9j6hxrjq-5000.app.github.dev/static/manifest.json","status-code":200,"script-sample":""}}
+2026-06-15 04:16:33,315 127.0.0.1 - - [15/Jun/2026 04:16:33] "POST /csp_report HTTP/1.1" 200 -
+2026-06-15 04:16:33,345 127.0.0.1 - - [15/Jun/2026 04:16:33] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-15 04:16:33,399 127.0.0.1 - - [15/Jun/2026 04:16:33] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-15 04:16:33,451 127.0.0.1 - - [15/Jun/2026 04:16:33] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2026-06-15 04:16:33,454 127.0.0.1 - - [15/Jun/2026 04:16:33] "[36mGET /static/images/favicon.png HTTP/1.1[0m" 304 -
