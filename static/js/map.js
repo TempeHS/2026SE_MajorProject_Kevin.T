@@ -6,6 +6,18 @@
 
 let map;
 let infoWindow;
+let nearbyMarkers = [];
+let searchRadiusCircle = null;
+
+function getSliderRadiusMeters() {
+  const distanceSlider = document.getElementById("range-distance");
+  if (!distanceSlider) return null;
+
+  const km = Number(distanceSlider.value);
+  if (!Number.isFinite(km) || km <= 0) return null; // 0 = auto radius
+
+  return Math.min(km * 1000, 50000); // Places API max 50,000m
+}
 
 function handleLocationError(browserHasGeolocation, infoWindowInstance, pos) {
   infoWindowInstance.setPosition(pos);
@@ -17,9 +29,150 @@ function handleLocationError(browserHasGeolocation, infoWindowInstance, pos) {
   infoWindowInstance.open(map);
 }
 
+function clearNearbyMarkers() {
+  for (const marker of nearbyMarkers) {
+    marker.map = null;
+  }
+  nearbyMarkers = [];
+}
+
+function buildInfoContent(place) {
+  const content = document.createElement("div");
+
+  const title = document.createElement("strong");
+  title.textContent = place.displayName || "Restaurant";
+  content.appendChild(title);
+
+  if (place.formattedAddress) {
+    const address = document.createElement("div");
+    address.textContent = place.formattedAddress;
+    content.appendChild(address);
+  }
+
+  if (place.googleMapsURI) {
+    const link = document.createElement("a");
+    link.href = place.googleMapsURI;
+    link.target = "_blank";
+    link.rel = "noopener noreferrer";
+    link.textContent = "View on Google Maps";
+    content.appendChild(link);
+  }
+
+  return content;
+}
+
+function updateSearchRadiusCircle(innerMap, center, radius) {
+  if (!searchRadiusCircle) {
+    searchRadiusCircle = new google.maps.Circle({
+      map: innerMap,
+      strokeColor: "#0d6efd",
+      strokeOpacity: 0.5,
+      strokeWeight: 2,
+      fillColor: "#0d6efd",
+      fillOpacity: 0.05,
+      clickable: false,
+      zIndex: 1,
+    });
+  }
+
+  searchRadiusCircle.setCenter(center);
+  searchRadiusCircle.setRadius(radius); // meters
+  searchRadiusCircle.setMap(innerMap);
+}
+
+async function nearbySearch(innerMap) {
+  const [
+    { Place, SearchNearbyRankPreference },
+    { AdvancedMarkerElement },
+    { spherical },
+  ] = await Promise.all([
+    google.maps.importLibrary("places"),
+    google.maps.importLibrary("marker"),
+    google.maps.importLibrary("geometry"),
+  ]);
+
+  const bounds = innerMap.getBounds();
+  const center = innerMap.getCenter();
+
+  if (!bounds || !center) return;
+
+  const ne = bounds.getNorthEast();
+  const sw = bounds.getSouthWest();
+  const diameter = spherical.computeDistanceBetween(ne, sw);
+  const autoRadius = Math.min(diameter / 2, 50000);
+
+  const sliderRadius = getSliderRadiusMeters();
+  const radius = sliderRadius ?? autoRadius;
+
+  // Draw/update visible search area
+  updateSearchRadiusCircle(innerMap, center, radius);
+
+  const request = {
+    fields: [
+      "id",
+      "displayName",
+      "location",
+      "formattedAddress",
+      "googleMapsURI",
+    ],
+    locationRestriction: {
+      center,
+      radius,
+    },
+    includedPrimaryTypes: ["restaurant"],
+    rankPreference: SearchNearbyRankPreference.POPULARITY,
+  };
+
+  try {
+    const { places } = await Place.searchNearby(request);
+
+    clearNearbyMarkers();
+
+    if (!places?.length) {
+      console.log("No nearby restaurants found.");
+      return;
+    }
+
+    const fitBounds = new google.maps.LatLngBounds();
+
+    for (const place of places) {
+      if (!place.location) continue;
+
+      fitBounds.extend(place.location);
+
+      const marker = new AdvancedMarkerElement({
+        map: innerMap,
+        position: place.location,
+        title: place.displayName || "Restaurant",
+      });
+
+      marker.addListener("gmp-click", () => {
+        const content = buildInfoContent(place);
+        infoWindow.setContent(content);
+        infoWindow.open({
+          map: innerMap,
+          anchor: marker,
+        });
+      });
+
+      nearbyMarkers.push(marker);
+    }
+
+    if (!fitBounds.isEmpty()) {
+      innerMap.fitBounds(fitBounds, 100);
+    }
+  } catch (error) {
+    console.error("Nearby search failed:", error);
+  }
+}
+
 async function init() {
-  await google.maps.importLibrary("maps");
-  await google.maps.importLibrary("places");
+  const [{ event }] = await Promise.all([
+    google.maps.importLibrary("core"),
+    google.maps.importLibrary("maps"),
+    google.maps.importLibrary("places"),
+    google.maps.importLibrary("marker"),
+  ]);
 
   const mapElement = document.querySelector("gmp-map");
   const innerMap = mapElement.innerMap;
@@ -32,7 +185,6 @@ async function init() {
       position: google.maps.ControlPosition.TOP_RIGHT,
     },
 
-    // Re-enabled Map/Satellite toggle
     mapTypeControl: true,
     mapTypeControlOptions: {
       position: google.maps.ControlPosition.TOP_RIGHT,
@@ -61,7 +213,7 @@ async function init() {
   locationButton.addEventListener("click", () => {
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(
-        (position) => {
+        async (position) => {
           const pos = {
             lat: position.coords.latitude,
             lng: position.coords.longitude,
@@ -71,6 +223,8 @@ async function init() {
           infoWindow.setContent("Location found.");
           infoWindow.open(innerMap);
           innerMap.setCenter(pos);
+
+          await nearbySearch(innerMap);
         },
         () => {
           handleLocationError(true, infoWindow, innerMap.getCenter());
@@ -79,6 +233,27 @@ async function init() {
     } else {
       handleLocationError(false, infoWindow, innerMap.getCenter());
     }
+  });
+
+  // Hook up bottom-center Search button
+  const searchBtn = document.getElementById("search-nearby-btn");
+  if (searchBtn) {
+    searchBtn.addEventListener("click", () => {
+      void nearbySearch(innerMap);
+    });
+  }
+
+  // Hook up distance slider
+  const distanceSlider = document.getElementById("range-distance");
+  if (distanceSlider) {
+    distanceSlider.addEventListener("change", () => {
+      void nearbySearch(innerMap);
+    });
+  }
+
+  // Initial nearby restaurant search after map is ready.
+  event.addListenerOnce(innerMap, "idle", () => {
+    void nearbySearch(innerMap);
   });
 
   console.log({ mapElement, innerMap });

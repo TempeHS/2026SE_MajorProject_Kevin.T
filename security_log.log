@@ -15544,3 +15544,424 @@
 2026-06-15 04:16:33,399 127.0.0.1 - - [15/Jun/2026 04:16:33] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
 2026-06-15 04:16:33,451 127.0.0.1 - - [15/Jun/2026 04:16:33] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
 2026-06-15 04:16:33,454 127.0.0.1 - - [15/Jun/2026 04:16:33] "[36mGET /static/images/favicon.png HTTP/1.1[0m" 304 -
+2026-06-15 04:17:20,738 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.1.189:5000
+2026-06-15 04:17:20,738 [33mPress CTRL+C to quit[0m
+2026-06-15 04:17:20,739  * Restarting with stat
+2026-06-15 04:17:21,104  * Debugger is active!
+2026-06-15 04:17:21,104  * Debugger PIN: 123-651-007
+2026-06-15 04:17:21,967 127.0.0.1 - - [15/Jun/2026 04:17:21] "GET / HTTP/1.1" 200 -
+2026-06-15 04:17:22,045 127.0.0.1 - - [15/Jun/2026 04:17:22] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-15 04:17:22,046 127.0.0.1 - - [15/Jun/2026 04:17:22] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-15 04:17:22,048 {"csp-report":{"document-uri":"https://jubilant-chainsaw-qrr5pqpp9j6hxrjq-5000.app.github.dev/","referrer":"https://jubilant-chainsaw-qrr5pqpp9j6hxrjq.github.dev/","violated-directive":"manifest-src","effective-directive":"manifest-src","original-policy":"script-src 'self' 'unsafe-inline' 'unsafe-eval' https://maps.googleapis.com https://maps.gstatic.com; img-src 'self' data: blob: https://maps.gstatic.com https://maps.googleapis.com https://*.gstatic.com; child-src 'self' blob:; default-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; media-src 'self'; object-src 'none'; connect-src 'self' data: blob: https://maps.googleapis.com https://maps.gstatic.com https://www.gstatic.com https://*.gstatic.com; base-uri 'self'; report-uri /csp_report; style-src-attr 'unsafe-inline'; style-src-elem 'self' 'unsafe-inline' https://fonts.googleapis.com; script-src-elem 'self' 'unsafe-inline' https://maps.googleapis.com https://maps.gstatic.com; font-src 'self' https://fonts.gstatic.com data:; worker-src 'self' blob:; manifest-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"https://jubilant-chainsaw-qrr5pqpp9j6hxrjq-5000.app.github.dev/static/manifest.json","status-code":200,"script-sample":""}}
+2026-06-15 04:17:22,050 127.0.0.1 - - [15/Jun/2026 04:17:22] "POST /csp_report HTTP/1.1" 200 -
+2026-06-15 04:17:22,106 127.0.0.1 - - [15/Jun/2026 04:17:22] "[36mGET /static/js/map.js HTTP/1.1[0m" 304 -
+2026-06-15 04:17:22,130 127.0.0.1 - - [15/Jun/2026 04:17:22] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-15 04:17:22,167 127.0.0.1 - - [15/Jun/2026 04:17:22] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-15 04:17:22,188 127.0.0.1 - - [15/Jun/2026 04:17:22] "GET / HTTP/1.1" 200 -
+2026-06-15 04:17:22,251 127.0.0.1 - - [15/Jun/2026 04:17:22] "[36mGET /static/js/map.js HTTP/1.1[0m" 304 -
+2026-06-15 04:17:22,256 127.0.0.1 - - [15/Jun/2026 04:17:22] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-15 04:17:22,260 127.0.0.1 - - [15/Jun/2026 04:17:22] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-15 04:17:22,271 {"csp-report":{"document-uri":"https://jubilant-chainsaw-qrr5pqpp9j6hxrjq-5000.app.github.dev/","referrer":"https://jubilant-chainsaw-qrr5pqpp9j6hxrjq.github.dev/","violated-directive":"manifest-src","effective-directive":"manifest-src","original-policy":"script-src 'self' 'unsafe-inline' 'unsafe-eval' https://maps.googleapis.com https://maps.gstatic.com; img-src 'self' data: blob: https://maps.gstatic.com https://maps.googleapis.com https://*.gstatic.com; child-src 'self' blob:; default-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; media-src 'self'; object-src 'none'; connect-src 'self' data: blob: https://maps.googleapis.com https://maps.gstatic.com https://www.gstatic.com https://*.gstatic.com; base-uri 'self'; report-uri /csp_report; style-src-attr 'unsafe-inline'; style-src-elem 'self' 'unsafe-inline' https://fonts.googleapis.com; script-src-elem 'self' 'unsafe-inline' https://maps.googleapis.com https://maps.gstatic.com; font-src 'self' https://fonts.gstatic.com data:; worker-src 'self' blob:; manifest-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"https://jubilant-chainsaw-qrr5pqpp9j6hxrjq-5000.app.github.dev/static/manifest.json","status-code":200,"script-sample":""}}
+2026-06-15 04:17:22,271 127.0.0.1 - - [15/Jun/2026 04:17:22] "POST /csp_report HTTP/1.1" 200 -
+2026-06-15 04:17:22,290 127.0.0.1 - - [15/Jun/2026 04:17:22] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-15 04:17:22,347 127.0.0.1 - - [15/Jun/2026 04:17:22] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-15 04:17:22,393 127.0.0.1 - - [15/Jun/2026 04:17:22] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2026-06-15 04:17:22,397 127.0.0.1 - - [15/Jun/2026 04:17:22] "[36mGET /static/images/favicon.png HTTP/1.1[0m" 304 -
+2026-06-15 04:17:23,647 127.0.0.1 - - [15/Jun/2026 04:17:23] "GET / HTTP/1.1" 200 -
+2026-06-15 04:17:23,706 127.0.0.1 - - [15/Jun/2026 04:17:23] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-15 04:17:23,708 127.0.0.1 - - [15/Jun/2026 04:17:23] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-15 04:17:23,714 127.0.0.1 - - [15/Jun/2026 04:17:23] "[36mGET /static/js/map.js HTTP/1.1[0m" 304 -
+2026-06-15 04:17:23,724 {"csp-report":{"document-uri":"https://jubilant-chainsaw-qrr5pqpp9j6hxrjq-5000.app.github.dev/","referrer":"https://jubilant-chainsaw-qrr5pqpp9j6hxrjq.github.dev/","violated-directive":"manifest-src","effective-directive":"manifest-src","original-policy":"script-src 'self' 'unsafe-inline' 'unsafe-eval' https://maps.googleapis.com https://maps.gstatic.com; img-src 'self' data: blob: https://maps.gstatic.com https://maps.googleapis.com https://*.gstatic.com; child-src 'self' blob:; default-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; media-src 'self'; object-src 'none'; connect-src 'self' data: blob: https://maps.googleapis.com https://maps.gstatic.com https://www.gstatic.com https://*.gstatic.com; base-uri 'self'; report-uri /csp_report; style-src-attr 'unsafe-inline'; style-src-elem 'self' 'unsafe-inline' https://fonts.googleapis.com; script-src-elem 'self' 'unsafe-inline' https://maps.googleapis.com https://maps.gstatic.com; font-src 'self' https://fonts.gstatic.com data:; worker-src 'self' blob:; manifest-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"https://jubilant-chainsaw-qrr5pqpp9j6hxrjq-5000.app.github.dev/static/manifest.json","status-code":200,"script-sample":""}}
+2026-06-15 04:17:23,724 127.0.0.1 - - [15/Jun/2026 04:17:23] "POST /csp_report HTTP/1.1" 200 -
+2026-06-15 04:17:23,746 127.0.0.1 - - [15/Jun/2026 04:17:23] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-15 04:17:23,803 127.0.0.1 - - [15/Jun/2026 04:17:23] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-15 04:17:23,843 127.0.0.1 - - [15/Jun/2026 04:17:23] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2026-06-15 04:17:23,848 127.0.0.1 - - [15/Jun/2026 04:17:23] "[36mGET /static/images/favicon.png HTTP/1.1[0m" 304 -
+2026-06-15 07:15:19,955 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.1.169:5000
+2026-06-15 07:15:19,955 [33mPress CTRL+C to quit[0m
+2026-06-15 07:15:19,956  * Restarting with stat
+2026-06-15 07:15:20,312  * Debugger is active!
+2026-06-15 07:15:20,312  * Debugger PIN: 561-269-134
+2026-06-15 07:15:38,713 127.0.0.1 - - [15/Jun/2026 07:15:38] "GET / HTTP/1.1" 200 -
+2026-06-15 07:15:38,982 127.0.0.1 - - [15/Jun/2026 07:15:38] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-15 07:15:39,044 127.0.0.1 - - [15/Jun/2026 07:15:39] "GET /static/js/map.js HTTP/1.1" 200 -
+2026-06-15 07:15:39,081 127.0.0.1 - - [15/Jun/2026 07:15:39] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-15 07:15:39,091 127.0.0.1 - - [15/Jun/2026 07:15:39] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-15 07:15:39,091 127.0.0.1 - - [15/Jun/2026 07:15:39] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-15 07:15:39,490 127.0.0.1 - - [15/Jun/2026 07:15:39] "GET /static/js/serviceWorker.js HTTP/1.1" 200 -
+2026-06-15 07:16:18,065 127.0.0.1 - - [15/Jun/2026 07:16:18] "GET / HTTP/1.1" 200 -
+2026-06-15 07:16:18,159 127.0.0.1 - - [15/Jun/2026 07:16:18] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-15 07:16:18,162 127.0.0.1 - - [15/Jun/2026 07:16:18] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-15 07:16:18,164 127.0.0.1 - - [15/Jun/2026 07:16:18] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-15 07:16:18,164 127.0.0.1 - - [15/Jun/2026 07:16:18] "[36mGET /static/js/map.js HTTP/1.1[0m" 304 -
+2026-06-15 07:16:18,174 127.0.0.1 - - [15/Jun/2026 07:16:18] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-15 07:16:18,251 127.0.0.1 - - [15/Jun/2026 07:16:18] "GET /static/js/serviceWorker.js HTTP/1.1" 200 -
+2026-06-15 07:25:01,963 127.0.0.1 - - [15/Jun/2026 07:25:01] "GET / HTTP/1.1" 200 -
+2026-06-15 07:25:02,389 127.0.0.1 - - [15/Jun/2026 07:25:02] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-15 07:25:02,390 127.0.0.1 - - [15/Jun/2026 07:25:02] "GET /static/js/map.js HTTP/1.1" 200 -
+2026-06-15 07:25:02,405 127.0.0.1 - - [15/Jun/2026 07:25:02] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-15 07:25:02,415 127.0.0.1 - - [15/Jun/2026 07:25:02] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-15 07:25:02,424 127.0.0.1 - - [15/Jun/2026 07:25:02] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-15 07:25:02,590 127.0.0.1 - - [15/Jun/2026 07:25:02] "GET /static/js/serviceWorker.js HTTP/1.1" 200 -
+2026-06-15 07:25:14,723 127.0.0.1 - - [15/Jun/2026 07:25:14] "GET /static/images/favicon.png HTTP/1.1" 200 -
+2026-06-15 07:27:22,752 127.0.0.1 - - [15/Jun/2026 07:27:22] "GET / HTTP/1.1" 200 -
+2026-06-15 07:27:22,975 127.0.0.1 - - [15/Jun/2026 07:27:22] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-15 07:27:23,063 127.0.0.1 - - [15/Jun/2026 07:27:23] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-15 07:27:23,108 127.0.0.1 - - [15/Jun/2026 07:27:23] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-15 07:27:23,147 127.0.0.1 - - [15/Jun/2026 07:27:23] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-15 07:27:23,172 127.0.0.1 - - [15/Jun/2026 07:27:23] "GET /static/js/map.js HTTP/1.1" 200 -
+2026-06-15 07:27:23,258 127.0.0.1 - - [15/Jun/2026 07:27:23] "GET /static/js/serviceWorker.js HTTP/1.1" 200 -
+2026-06-15 07:27:56,796 127.0.0.1 - - [15/Jun/2026 07:27:56] "GET / HTTP/1.1" 200 -
+2026-06-15 07:27:56,884 127.0.0.1 - - [15/Jun/2026 07:27:56] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-15 07:27:56,886 127.0.0.1 - - [15/Jun/2026 07:27:56] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-15 07:27:56,895 127.0.0.1 - - [15/Jun/2026 07:27:56] "GET /static/js/map.js HTTP/1.1" 200 -
+2026-06-15 07:27:56,911 127.0.0.1 - - [15/Jun/2026 07:27:56] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-15 07:27:56,912 127.0.0.1 - - [15/Jun/2026 07:27:56] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-15 07:27:56,987 127.0.0.1 - - [15/Jun/2026 07:27:56] "GET /static/js/serviceWorker.js HTTP/1.1" 200 -
+2026-06-15 07:34:33,760 127.0.0.1 - - [15/Jun/2026 07:34:33] "GET / HTTP/1.1" 200 -
+2026-06-15 07:34:34,115 127.0.0.1 - - [15/Jun/2026 07:34:34] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-15 07:34:34,139 127.0.0.1 - - [15/Jun/2026 07:34:34] "GET /static/js/map.js HTTP/1.1" 200 -
+2026-06-15 07:34:34,148 127.0.0.1 - - [15/Jun/2026 07:34:34] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-15 07:34:34,192 127.0.0.1 - - [15/Jun/2026 07:34:34] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-15 07:34:34,228 127.0.0.1 - - [15/Jun/2026 07:34:34] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-15 07:34:34,602 127.0.0.1 - - [15/Jun/2026 07:34:34] "GET /static/js/serviceWorker.js HTTP/1.1" 200 -
+2026-06-15 07:36:12,902 127.0.0.1 - - [15/Jun/2026 07:36:12] "GET / HTTP/1.1" 200 -
+2026-06-15 07:36:13,235 127.0.0.1 - - [15/Jun/2026 07:36:13] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-15 07:36:13,335 127.0.0.1 - - [15/Jun/2026 07:36:13] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-15 07:36:13,340 127.0.0.1 - - [15/Jun/2026 07:36:13] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-15 07:36:13,351 127.0.0.1 - - [15/Jun/2026 07:36:13] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-15 07:36:13,359 127.0.0.1 - - [15/Jun/2026 07:36:13] "GET /static/js/map.js HTTP/1.1" 200 -
+2026-06-15 07:36:13,449 127.0.0.1 - - [15/Jun/2026 07:36:13] "GET /static/js/serviceWorker.js HTTP/1.1" 200 -
+2026-06-15 07:38:44,457 127.0.0.1 - - [15/Jun/2026 07:38:44] "GET / HTTP/1.1" 200 -
+2026-06-15 07:38:44,783 127.0.0.1 - - [15/Jun/2026 07:38:44] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-15 07:38:44,797 127.0.0.1 - - [15/Jun/2026 07:38:44] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-15 07:38:44,874 127.0.0.1 - - [15/Jun/2026 07:38:44] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-15 07:38:44,877 127.0.0.1 - - [15/Jun/2026 07:38:44] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-15 07:38:44,893 127.0.0.1 - - [15/Jun/2026 07:38:44] "GET /static/js/map.js HTTP/1.1" 200 -
+2026-06-15 07:38:45,040 127.0.0.1 - - [15/Jun/2026 07:38:45] "GET /static/js/serviceWorker.js HTTP/1.1" 200 -
+2026-06-15 07:56:23,332 127.0.0.1 - - [15/Jun/2026 07:56:23] "GET / HTTP/1.1" 200 -
+2026-06-15 07:56:23,551 127.0.0.1 - - [15/Jun/2026 07:56:23] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-15 07:56:23,565 127.0.0.1 - - [15/Jun/2026 07:56:23] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-15 07:56:23,577 127.0.0.1 - - [15/Jun/2026 07:56:23] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-15 07:56:23,638 127.0.0.1 - - [15/Jun/2026 07:56:23] "GET /static/js/map.js HTTP/1.1" 200 -
+2026-06-15 07:56:23,648 127.0.0.1 - - [15/Jun/2026 07:56:23] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-15 07:56:23,800 127.0.0.1 - - [15/Jun/2026 07:56:23] "GET /static/js/serviceWorker.js HTTP/1.1" 200 -
+2026-06-15 07:57:00,442 127.0.0.1 - - [15/Jun/2026 07:57:00] "GET / HTTP/1.1" 200 -
+2026-06-15 07:57:00,507 127.0.0.1 - - [15/Jun/2026 07:57:00] "GET /static/js/map.js HTTP/1.1" 200 -
+2026-06-15 07:57:00,513 127.0.0.1 - - [15/Jun/2026 07:57:00] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-15 07:57:00,535 127.0.0.1 - - [15/Jun/2026 07:57:00] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-15 07:57:00,537 127.0.0.1 - - [15/Jun/2026 07:57:00] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-15 07:57:00,542 127.0.0.1 - - [15/Jun/2026 07:57:00] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-15 07:57:00,683 127.0.0.1 - - [15/Jun/2026 07:57:00] "GET /static/js/serviceWorker.js HTTP/1.1" 200 -
+2026-06-15 07:57:27,599 127.0.0.1 - - [15/Jun/2026 07:57:27] "GET / HTTP/1.1" 200 -
+2026-06-15 07:57:27,690 127.0.0.1 - - [15/Jun/2026 07:57:27] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-15 07:57:27,700 127.0.0.1 - - [15/Jun/2026 07:57:27] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-15 07:57:27,709 127.0.0.1 - - [15/Jun/2026 07:57:27] "[36mGET /static/js/map.js HTTP/1.1[0m" 304 -
+2026-06-15 07:57:27,718 127.0.0.1 - - [15/Jun/2026 07:57:27] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-15 07:57:27,756 127.0.0.1 - - [15/Jun/2026 07:57:27] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-15 07:57:27,844 127.0.0.1 - - [15/Jun/2026 07:57:27] "GET /static/js/serviceWorker.js HTTP/1.1" 200 -
+2026-06-15 07:58:07,558 127.0.0.1 - - [15/Jun/2026 07:58:07] "GET / HTTP/1.1" 200 -
+2026-06-15 07:58:07,644 127.0.0.1 - - [15/Jun/2026 07:58:07] "[36mGET /static/js/map.js HTTP/1.1[0m" 304 -
+2026-06-15 07:58:07,647 127.0.0.1 - - [15/Jun/2026 07:58:07] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-15 07:58:07,649 127.0.0.1 - - [15/Jun/2026 07:58:07] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-15 07:58:07,666 127.0.0.1 - - [15/Jun/2026 07:58:07] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-15 07:58:07,671 127.0.0.1 - - [15/Jun/2026 07:58:07] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-15 07:58:07,751 127.0.0.1 - - [15/Jun/2026 07:58:07] "GET /static/js/serviceWorker.js HTTP/1.1" 200 -
+2026-06-15 07:58:15,851 127.0.0.1 - - [15/Jun/2026 07:58:15] "GET / HTTP/1.1" 200 -
+2026-06-15 07:58:15,921 127.0.0.1 - - [15/Jun/2026 07:58:15] "[36mGET /static/js/map.js HTTP/1.1[0m" 304 -
+2026-06-15 07:58:15,924 127.0.0.1 - - [15/Jun/2026 07:58:15] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-15 07:58:15,926 127.0.0.1 - - [15/Jun/2026 07:58:15] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-15 07:58:15,949 127.0.0.1 - - [15/Jun/2026 07:58:15] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-15 07:58:15,954 127.0.0.1 - - [15/Jun/2026 07:58:15] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-15 07:58:16,029 127.0.0.1 - - [15/Jun/2026 07:58:16] "GET /static/js/serviceWorker.js HTTP/1.1" 200 -
+2026-06-15 07:58:29,910 127.0.0.1 - - [15/Jun/2026 07:58:29] "GET / HTTP/1.1" 200 -
+2026-06-15 07:58:30,086 127.0.0.1 - - [15/Jun/2026 07:58:30] "[36mGET /static/js/map.js HTTP/1.1[0m" 304 -
+2026-06-15 07:58:30,089 127.0.0.1 - - [15/Jun/2026 07:58:30] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-15 07:58:30,091 127.0.0.1 - - [15/Jun/2026 07:58:30] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-15 07:58:30,116 127.0.0.1 - - [15/Jun/2026 07:58:30] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-15 07:58:30,119 127.0.0.1 - - [15/Jun/2026 07:58:30] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-15 07:58:30,280 127.0.0.1 - - [15/Jun/2026 07:58:30] "GET /static/js/serviceWorker.js HTTP/1.1" 200 -
+2026-06-15 08:01:10,791 127.0.0.1 - - [15/Jun/2026 08:01:10] "GET / HTTP/1.1" 200 -
+2026-06-15 08:01:11,088 127.0.0.1 - - [15/Jun/2026 08:01:11] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-15 08:01:11,192 127.0.0.1 - - [15/Jun/2026 08:01:11] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-15 08:01:11,216 127.0.0.1 - - [15/Jun/2026 08:01:11] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-15 08:01:11,250 127.0.0.1 - - [15/Jun/2026 08:01:11] "GET /static/js/map.js HTTP/1.1" 200 -
+2026-06-15 08:01:11,251 127.0.0.1 - - [15/Jun/2026 08:01:11] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-15 08:01:11,402 127.0.0.1 - - [15/Jun/2026 08:01:11] "GET /static/js/serviceWorker.js HTTP/1.1" 200 -
+2026-06-15 08:01:24,276 127.0.0.1 - - [15/Jun/2026 08:01:24] "GET / HTTP/1.1" 200 -
+2026-06-15 08:01:24,364 127.0.0.1 - - [15/Jun/2026 08:01:24] "GET /static/js/map.js HTTP/1.1" 200 -
+2026-06-15 08:01:24,366 127.0.0.1 - - [15/Jun/2026 08:01:24] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-15 08:01:24,373 127.0.0.1 - - [15/Jun/2026 08:01:24] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-15 08:01:24,383 127.0.0.1 - - [15/Jun/2026 08:01:24] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-15 08:01:24,441 127.0.0.1 - - [15/Jun/2026 08:01:24] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-15 08:01:24,521 127.0.0.1 - - [15/Jun/2026 08:01:24] "GET /static/js/serviceWorker.js HTTP/1.1" 200 -
+2026-06-15 08:01:51,949 127.0.0.1 - - [15/Jun/2026 08:01:51] "GET / HTTP/1.1" 200 -
+2026-06-15 08:01:52,030 127.0.0.1 - - [15/Jun/2026 08:01:52] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-15 08:01:52,032 127.0.0.1 - - [15/Jun/2026 08:01:52] "GET /static/js/map.js HTTP/1.1" 200 -
+2026-06-15 08:01:52,046 127.0.0.1 - - [15/Jun/2026 08:01:52] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-15 08:01:52,051 127.0.0.1 - - [15/Jun/2026 08:01:52] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-15 08:01:52,056 127.0.0.1 - - [15/Jun/2026 08:01:52] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-15 08:01:52,144 127.0.0.1 - - [15/Jun/2026 08:01:52] "GET /static/js/serviceWorker.js HTTP/1.1" 200 -
+2026-06-15 08:01:57,620 127.0.0.1 - - [15/Jun/2026 08:01:57] "[33mGET /static/css/bootstrap.min.css.map HTTP/1.1[0m" 404 -
+2026-06-15 08:02:15,461 127.0.0.1 - - [15/Jun/2026 08:02:15] "[33mGET /static/css/bootstrap.min.css.map HTTP/1.1[0m" 404 -
+2026-06-15 08:04:09,949 127.0.0.1 - - [15/Jun/2026 08:04:09] "GET / HTTP/1.1" 200 -
+2026-06-15 08:04:10,175 127.0.0.1 - - [15/Jun/2026 08:04:10] "GET /static/js/map.js HTTP/1.1" 200 -
+2026-06-15 08:04:10,188 127.0.0.1 - - [15/Jun/2026 08:04:10] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-15 08:04:10,285 127.0.0.1 - - [15/Jun/2026 08:04:10] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-15 08:04:10,309 127.0.0.1 - - [15/Jun/2026 08:04:10] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-15 08:04:10,322 127.0.0.1 - - [15/Jun/2026 08:04:10] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-15 08:04:10,402 127.0.0.1 - - [15/Jun/2026 08:04:10] "GET /static/js/serviceWorker.js HTTP/1.1" 200 -
+2026-06-15 08:04:46,308 127.0.0.1 - - [15/Jun/2026 08:04:46] "GET / HTTP/1.1" 200 -
+2026-06-15 08:04:46,409 127.0.0.1 - - [15/Jun/2026 08:04:46] "GET /static/js/map.js HTTP/1.1" 200 -
+2026-06-15 08:04:46,417 127.0.0.1 - - [15/Jun/2026 08:04:46] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-15 08:04:46,420 127.0.0.1 - - [15/Jun/2026 08:04:46] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-15 08:04:46,436 127.0.0.1 - - [15/Jun/2026 08:04:46] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-15 08:04:46,439 127.0.0.1 - - [15/Jun/2026 08:04:46] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-15 08:04:46,593 127.0.0.1 - - [15/Jun/2026 08:04:46] "GET /static/js/serviceWorker.js HTTP/1.1" 200 -
+2026-06-15 08:05:22,508 127.0.0.1 - - [15/Jun/2026 08:05:22] "GET / HTTP/1.1" 200 -
+2026-06-15 08:05:22,590 127.0.0.1 - - [15/Jun/2026 08:05:22] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-15 08:05:22,600 127.0.0.1 - - [15/Jun/2026 08:05:22] "GET /static/js/map.js HTTP/1.1" 200 -
+2026-06-15 08:05:22,601 127.0.0.1 - - [15/Jun/2026 08:05:22] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-15 08:05:22,610 127.0.0.1 - - [15/Jun/2026 08:05:22] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-15 08:05:22,613 127.0.0.1 - - [15/Jun/2026 08:05:22] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-15 08:05:22,702 127.0.0.1 - - [15/Jun/2026 08:05:22] "GET /static/js/serviceWorker.js HTTP/1.1" 200 -
+2026-06-15 08:05:32,496 127.0.0.1 - - [15/Jun/2026 08:05:32] "GET / HTTP/1.1" 200 -
+2026-06-15 08:05:32,590 127.0.0.1 - - [15/Jun/2026 08:05:32] "GET /static/js/map.js HTTP/1.1" 200 -
+2026-06-15 08:05:32,590 127.0.0.1 - - [15/Jun/2026 08:05:32] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-15 08:05:32,594 127.0.0.1 - - [15/Jun/2026 08:05:32] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-15 08:05:32,596 127.0.0.1 - - [15/Jun/2026 08:05:32] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-15 08:05:32,602 127.0.0.1 - - [15/Jun/2026 08:05:32] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-15 08:05:32,682 127.0.0.1 - - [15/Jun/2026 08:05:32] "GET /static/js/serviceWorker.js HTTP/1.1" 200 -
+2026-06-15 08:19:25,801 127.0.0.1 - - [15/Jun/2026 08:19:25] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x00÷\x01\x00\x00ó\x03\x038Vv\x84ú-;\x8awß¾Â')
+2026-06-15 08:19:25,801 127.0.0.1 - - [15/Jun/2026 08:19:25] "[31m[1m\x16\x03\x01\x00÷\x01\x00\x00ó\x03\x038Vv\x84ú-;\x8awß¾Â \x97¸Ò®f#¬°.RÇÅýé«:¬\x9f\x7f\x00\x00\x84\x003\x009\x005\x00/À,À0\x00£\x00\x9fÌ©Ì¨ÌªÀ¯À­À£À\x9fÀ+À/\x00¢\x00\x9eÀ®À¬À¢À\x9eÀ$À(\x00k\x00jÀsÀw\x00Ä\x00ÃÀ#À'\x00g\x00@ÀrÀv\x00¾\x00½À[0m" 400 -
+2026-06-15 08:19:25,846 127.0.0.1 - - [15/Jun/2026 08:19:25] code 400, message Bad request version ('\x00\x02\x01\x00\x00')
+2026-06-15 08:19:25,846 127.0.0.1 - - [15/Jun/2026 08:19:25] code 400, message Bad request syntax ('\x16\x03\x03\x00ã\x01\x00\x00ß\x03\x03j/µ\x8dÐn¼0±ì_ãñ¬\x98é±=×·*cë¹\x97ÇïïX')
+2026-06-15 08:19:25,846 127.0.0.1 - - [15/Jun/2026 08:19:25] code 400, message Bad request version ('8K\x87ñÞ·¬$ÌJZ¬ª°\x9bÃ\x16Ì\x00\x00')
+2026-06-15 08:19:25,846 127.0.0.1 - - [15/Jun/2026 08:19:25] code 400, message Bad request version ('\x00\x02\x01\x00\x00')
+2026-06-15 08:19:25,846 127.0.0.1 - - [15/Jun/2026 08:19:25] "[31m[1m\x16\x03\x02\x00Ã\x01\x00\x00¿\x03\x02j/µ\x8dÏÑ\x85cü/Ðc\x00Ñå?¡Ð.+\x14®bÎ\x09ÇÄÐûy­H\x00\x00\x80\x00\x1d\x00\x1cþÿþþ\x00c\x00e\x00\x11\x00r\x00\x13\x00s\x002\x00@\x00¢\x00t\x008\x00j\x00£ÀBÀVÀCÀW\x00D\x00½À\x80\x00\x87\x00ÃÀ\x81\x00\x12\x00f\x00\x99\x00\x8f\x00\x90\x00²À¦\x00ª\x00\x91\x00³À§\x00«ÀfÀlÀgÀmÀ\x96À\x90À\x97À\x91Ì­\x00-\x00´\x00µ\x00\x8e\x00\x14\x00w\x00\x16\x00x\x003\x00gÀ\x9eÀ¢\x00\x9e\x00y\x009\x00k\x01\x00\x00\x16\x00\x0b\x00\x02\x01\x00\x00[0m" 400 -
+2026-06-15 08:19:25,846 127.0.0.1 - - [15/Jun/2026 08:19:25] code 400, message Bad request version ('\x00\x02\x01\x00\x00')
+2026-06-15 08:19:25,846 127.0.0.1 - - [15/Jun/2026 08:19:25] "HEAD / HTTP/1.1" 200 -
+2026-06-15 08:19:25,846 127.0.0.1 - - [15/Jun/2026 08:19:25] "[31m[1m\x16\x03\x03\x00ã\x01\x00\x00ß\x03\x03j/µ\x8dÐn¼0±ì_ãñ¬\x98é±=×·*cë¹\x97ÇïïX[0m" 400 -
+2026-06-15 08:19:25,847 127.0.0.1 - - [15/Jun/2026 08:19:25] "[31m[1m\x16\x03\x01\x00W\x01\x00\x00S\x03\x03j/µ\x8d¹w½[é\x8a\x9a\x1e\x06\x0c8K\x87ñÞ·¬$ÌJZ¬ª°\x9bÃ\x16Ì\x00\x00[0m" 400 -
+2026-06-15 08:19:25,847 127.0.0.1 - - [15/Jun/2026 08:19:25] "[31m[1m\x16\x03\x03\x00\x8c\x01\x00\x00\x88\x03\x03j/µ\x8d\x02ú\x1f\x8ePÞí\x8dÔ$vî³\x7fÅ<ÈÓ|<ví;\x8e\x8e\x0cdè\x00\x00\x1a\x13\x05\x13\x04\x13\x01\x13\x02\x13\x03À´Àµ\x00Ç\x00ÆÀ²À°À³À±\x01\x00\x00E\x00\x0b\x00\x02\x01\x00\x00[0m" 400 -
+2026-06-15 08:19:25,847 127.0.0.1 - - [15/Jun/2026 08:19:25] "[31m[1m\x16\x03\x01\x00Ã\x01\x00\x00¿\x03\x01j/µ\x8dO!/÷¾\x10ñüàÀÆÅàÏtXå¤¿\x03\x1aüÃá¼÷\x03 \x00\x00\x80\x00\x1d\x00\x1cþÿþþ\x00c\x00e\x00\x11\x00r\x00\x13\x00s\x002\x00@\x00¢\x00t\x008\x00j\x00£ÀBÀVÀCÀW\x00D\x00½À\x80\x00\x87\x00ÃÀ\x81\x00\x12\x00f\x00\x99\x00\x8f\x00\x90\x00²À¦\x00ª\x00\x91\x00³À§\x00«ÀfÀlÀgÀmÀ\x96À\x90À\x97À\x91Ì­\x00-\x00´\x00µ\x00\x8e\x00\x14\x00w\x00\x16\x00x\x003\x00gÀ\x9eÀ¢\x00\x9e\x00y\x009\x00k\x01\x00\x00\x16\x00\x0b\x00\x02\x01\x00\x00[0m" 400 -
+2026-06-15 08:19:25,948 127.0.0.1 - - [15/Jun/2026 08:19:25] code 400, message Bad request version ('\x00\x02\x01\x00\x00')
+2026-06-15 08:19:25,949 127.0.0.1 - - [15/Jun/2026 08:19:25] "[31m[1m\x16\x03\x01\x00Ã\x01\x00\x00¿\x03\x01j/µ\x8d4\x97\x0cã¤;ZSU`4\x9aFR\x16ECÂ~ôõÛ  ±·ß\x9b\x00\x00\x80À\x9fÀ£\x00\x9fÀDÀRÀEÀS\x00E\x00¾À|\x00\x88\x00ÄÀ}ÌªÌ\x15\x00\x15\x00\x9a\x00\x0b\x00\x0d\x000\x00>\x00¤\x006\x00h\x00¥À>ÀXÀ?ÀY\x00B\x00»À\x82\x00\x85\x00ÁÀ\x83\x00\x0c\x00\x97\x00\x0e\x00\x10\x001\x00?\x00 \x007\x00i\x00¡À@ÀTÀAÀU\x00C\x00¼À~\x00\x86\x00ÂÀ\x7f\x00\x0f\x00\x98\x00\x19\x00\x17\x00\x1b\x004\x00l\x00¦\x00:\x01\x00\x00\x16\x00\x0b\x00\x02\x01\x00\x00[0m" 400 -
+2026-06-15 08:19:25,949 127.0.0.1 - - [15/Jun/2026 08:19:25] code 400, message Bad request version ('\x00\x02\x01\x00\x00')
+2026-06-15 08:19:25,949 127.0.0.1 - - [15/Jun/2026 08:19:25] code 400, message Bad request version ('\x00\x02\x01\x00\x00')
+2026-06-15 08:19:25,949 127.0.0.1 - - [15/Jun/2026 08:19:25] "[31m[1m\x16\x03\x02\x00Ã\x01\x00\x00¿\x03\x02j/µ\x8d\x8aìF×e$l·Úúåðì)È=Ï¡¼Ð3c\x94rJîß\x1c\x00\x00\x80À\x9fÀ£\x00\x9fÀDÀRÀEÀS\x00E\x00¾À|\x00\x88\x00ÄÀ}ÌªÌ\x15\x00\x15\x00\x9a\x00\x0b\x00\x0d\x000\x00>\x00¤\x006\x00h\x00¥À>ÀXÀ?ÀY\x00B\x00»À\x82\x00\x85\x00ÁÀ\x83\x00\x0c\x00\x97\x00\x0e\x00\x10\x001\x00?\x00 \x007\x00i\x00¡À@ÀTÀAÀU\x00C\x00¼À~\x00\x86\x00ÂÀ\x7f\x00\x0f\x00\x98\x00\x19\x00\x17\x00\x1b\x004\x00l\x00¦\x00:\x01\x00\x00\x16\x00\x0b\x00\x02\x01\x00\x00[0m" 400 -
+2026-06-15 08:19:25,949 127.0.0.1 - - [15/Jun/2026 08:19:25] "[31m[1m\x16\x03\x03\x00ã\x01\x00\x00ß\x03\x03j/µ\x8d\x11Ü\x89NÈW\x8aWÿ¡h)Ò\x13¤;ÙÑÏÓ,\x92\x14ú\x7fË\x10k\x00\x00\x80À\x9fÀ£\x00\x9fÀDÀRÀEÀS\x00E\x00¾À|\x00\x88\x00ÄÀ}ÌªÌ\x15\x00\x15\x00\x9a\x00\x0b\x00\x0d\x000\x00>\x00¤\x006\x00h\x00¥À>ÀXÀ?ÀY\x00B\x00»À\x82\x00\x85\x00ÁÀ\x83\x00\x0c\x00\x97\x00\x0e\x00\x10\x001\x00?\x00 \x007\x00i\x00¡À@ÀTÀAÀU\x00C\x00¼À~\x00\x86\x00ÂÀ\x7f\x00\x0f\x00\x98\x00\x19\x00\x17\x00\x1b\x004\x00l\x00¦\x00:\x01\x00\x006\x00\x0b\x00\x02\x01\x00\x00[0m" 400 -
+2026-06-15 08:19:25,998 127.0.0.1 - - [15/Jun/2026 08:19:25] code 400, message Bad request version ('\x00/\x00')
+2026-06-15 08:19:25,998 127.0.0.1 - - [15/Jun/2026 08:19:25] "[31m[1m\x16\x03\x00\x00i\x01\x00\x00e\x03\x03U\x1c§ärandom1random2random3random4\x00\x00\x0c\x00/\x00[0m" 400 -
+2026-06-15 08:19:26,098 127.0.0.1 - - [15/Jun/2026 08:19:26] code 400, message Bad request version ('À#À¬À®À+À')
+2026-06-15 08:19:26,098 127.0.0.1 - - [15/Jun/2026 08:19:26] code 400, message Bad request version ('À#À¬À®À+À')
+2026-06-15 08:19:26,098 127.0.0.1 - - [15/Jun/2026 08:19:26] code 400, message Bad request version ('À#À¬À®À+À')
+2026-06-15 08:19:26,099 127.0.0.1 - - [15/Jun/2026 08:19:26] "[31m[1m\x16\x03\x02\x00Ã\x01\x00\x00¿\x03\x02j/µ\x8e\x15â°ÿÛÑ\x9aHÛ\x8c\x8cd\x83:®{ÿ[ß­\x04Ó\x06\x1bz\x166\x0c\x00\x00\x80\x00m\x00§ÀFÀZÀGÀ[\x00F\x00¿À\x84\x00\x89\x00ÅÀ\x85\x00\x1a\x00\x18\x00\x9bÀ²À°À³À±À\x08À\x09À#À¬À®À+À[0m" 400 -
+2026-06-15 08:19:26,099 127.0.0.1 - - [15/Jun/2026 08:19:26] "[31m[1m\x16\x03\x03\x00ã\x01\x00\x00ß\x03\x03j/µ\x8eg\x06\x9a#:<Â11\x07\x09o\x02m0Ð£Ê¢º[y/g£uD\x0e\x00\x00\x80\x00m\x00§ÀFÀZÀGÀ[\x00F\x00¿À\x84\x00\x89\x00ÅÀ\x85\x00\x1a\x00\x18\x00\x9bÀ²À°À³À±À\x08À\x09À#À¬À®À+À[0m" 400 -
+2026-06-15 08:19:26,099 127.0.0.1 - - [15/Jun/2026 08:19:26] "[31m[1m\x16\x03\x01\x00Ã\x01\x00\x00¿\x03\x01j/µ\x8e\x06ó\x9d\x85gÛ\x1c»\x92Æ8©=9¾Ùª\x93\x9eK\x04\x8aÌL¬´?ò\x00\x00\x80\x00m\x00§ÀFÀZÀGÀ[\x00F\x00¿À\x84\x00\x89\x00ÅÀ\x85\x00\x1a\x00\x18\x00\x9bÀ²À°À³À±À\x08À\x09À#À¬À®À+À[0m" 400 -
+2026-06-15 08:19:26,246 127.0.0.1 - - [15/Jun/2026 08:19:26] code 400, message Bad request version ('\x00\x02\x01\x00\x00')
+2026-06-15 08:19:26,247 127.0.0.1 - - [15/Jun/2026 08:19:26] code 400, message Bad request version ('\x00\x02\x01\x00\x00')
+2026-06-15 08:19:26,247 127.0.0.1 - - [15/Jun/2026 08:19:26] code 400, message Bad request version ('\x00\x02\x01\x00\x00')
+2026-06-15 08:19:26,247 127.0.0.1 - - [15/Jun/2026 08:19:26] "[31m[1m\x16\x03\x02\x00Ã\x01\x00\x00¿\x03\x02j/µ\x8eôÕÿ#¥ü)¥\x88hN\x0f\x18º¨B\x95¿'M{6\x92a>Â$o\x00\x00\x80À\x14À(À0ÀLÀ`ÀMÀaÀvÀ\x8aÀwÀ\x8bÌ¨Ì\x13À\x10À\x11À\x03\x00JÀ\x04\x00KÀ%À-À\x05\x00LÀ&À.ÀJÀ^ÀKÀ_ÀtÀ\x88ÀuÀ\x89\x00IÀ\x01\x00GÀ\x02\x00H\x00N\x00MÀ\x0dÀ\x0eÀ)À1À\x0fÀ*À2ÀNÀbÀOÀcÀxÀ\x8cÀyÀ\x8dÀ\x0bÀ\x0c\x00[\x00\\\x00WÀ\x17\x00ZÀ\x18À\x19\x01\x00\x00\x16\x00\x0b\x00\x02\x01\x00\x00[0m" 400 -
+2026-06-15 08:19:26,247 127.0.0.1 - - [15/Jun/2026 08:19:26] "[31m[1m\x16\x03\x03\x00ã\x01\x00\x00ß\x03\x03j/µ\x8e\x96 §Âþ%ë\x9f¿Ûù\x90#[4µo\x14d®ó q,¯\x03÷È\x00\x00\x80À\x14À(À0ÀLÀ`ÀMÀaÀvÀ\x8aÀwÀ\x8bÌ¨Ì\x13À\x10À\x11À\x03\x00JÀ\x04\x00KÀ%À-À\x05\x00LÀ&À.ÀJÀ^ÀKÀ_ÀtÀ\x88ÀuÀ\x89\x00IÀ\x01\x00GÀ\x02\x00H\x00N\x00MÀ\x0dÀ\x0eÀ)À1À\x0fÀ*À2ÀNÀbÀOÀcÀxÀ\x8cÀyÀ\x8dÀ\x0bÀ\x0c\x00[\x00\\\x00WÀ\x17\x00ZÀ\x18À\x19\x01\x00\x006\x00\x0b\x00\x02\x01\x00\x00[0m" 400 -
+2026-06-15 08:19:26,247 127.0.0.1 - - [15/Jun/2026 08:19:26] "[31m[1m\x16\x03\x01\x00Ã\x01\x00\x00¿\x03\x01j/µ\x8eñ\x9d\x96Ç\x91\x9e\x1bÙFrs\x8fINp«"¯âây\x0c\x85þç3zÖ\x00\x00\x80À\x14À(À0ÀLÀ`ÀMÀaÀvÀ\x8aÀwÀ\x8bÌ¨Ì\x13À\x10À\x11À\x03\x00JÀ\x04\x00KÀ%À-À\x05\x00LÀ&À.ÀJÀ^ÀKÀ_ÀtÀ\x88ÀuÀ\x89\x00IÀ\x01\x00GÀ\x02\x00H\x00N\x00MÀ\x0dÀ\x0eÀ)À1À\x0fÀ*À2ÀNÀbÀOÀcÀxÀ\x8cÀyÀ\x8dÀ\x0bÀ\x0c\x00[\x00\\\x00WÀ\x17\x00ZÀ\x18À\x19\x01\x00\x00\x16\x00\x0b\x00\x02\x01\x00\x00[0m" 400 -
+2026-06-15 08:19:26,395 127.0.0.1 - - [15/Jun/2026 08:19:26] code 400, message Bad request version ('\x00\x02\x01\x00\x00')
+2026-06-15 08:19:26,395 127.0.0.1 - - [15/Jun/2026 08:19:26] code 400, message Bad request version ('\x00\x02\x01\x00\x00')
+2026-06-15 08:19:26,395 127.0.0.1 - - [15/Jun/2026 08:19:26] code 400, message Bad request version ('\x00\x02\x01\x00\x00')
+2026-06-15 08:19:26,395 127.0.0.1 - - [15/Jun/2026 08:19:26] "[31m[1m\x16\x03\x02\x00Ã\x01\x00\x00¿\x03\x02j/µ\x8eÊÿ\x8d¿(,¥\x8dsà\x8aÀõª\x87\x0b/\x94»\x86\x1f\x84ãçxF±d\x00\x00\x80\x00YÀ\x15À\x16\x00X\x00O\x00R\x00Q\x00P\x00S\x00V\x00U\x00T\x00\x81\x00\x83\x00\x80\x00\x82\x00)\x00&\x00*\x00'\x00+\x00(\x00#\x00\x1f\x00"\x00\x1e\x00%\x00!\x00$\x00 \x00\x00ÀªÀ«\x00\x8b\x00\x8c\x00®À¤À¨\x00¨\x00\x8d\x00¯À¥À©\x00©ÀdÀjÀeÀkÀ\x94À\x8eÀ\x95À\x8fÌ«\x00,\x00°\x00±\x00\x8a\x00b\x00a\x00`\x00d\x00\x08\x00\x06\x00\x03\x01\x00\x00\x16\x00\x0b\x00\x02\x01\x00\x00[0m" 400 -
+2026-06-15 08:19:26,396 127.0.0.1 - - [15/Jun/2026 08:19:26] "[31m[1m\x16\x03\x03\x00ã\x01\x00\x00ß\x03\x03j/µ\x8e?\x8bÍORÈÅ\x80\x99·\x00\x1b°¯ïSDë+88C@³\x1eÑaÃ\x00\x00\x80\x00YÀ\x15À\x16\x00X\x00O\x00R\x00Q\x00P\x00S\x00V\x00U\x00T\x00\x81\x00\x83\x00\x80\x00\x82\x00)\x00&\x00*\x00'\x00+\x00(\x00#\x00\x1f\x00"\x00\x1e\x00%\x00!\x00$\x00 \x00\x00ÀªÀ«\x00\x8b\x00\x8c\x00®À¤À¨\x00¨\x00\x8d\x00¯À¥À©\x00©ÀdÀjÀeÀkÀ\x94À\x8eÀ\x95À\x8fÌ«\x00,\x00°\x00±\x00\x8a\x00b\x00a\x00`\x00d\x00\x08\x00\x06\x00\x03\x01\x00\x006\x00\x0b\x00\x02\x01\x00\x00[0m" 400 -
+2026-06-15 08:19:26,396 127.0.0.1 - - [15/Jun/2026 08:19:26] "[31m[1m\x16\x03\x01\x00Ã\x01\x00\x00¿\x03\x01j/µ\x8eÞ\x0fû\x7f\x91ßl2\x9aã\x1fè¯¹|<·\x95¬ zÞ\x1d\x99!\x8e¿H\x00\x00\x80\x00YÀ\x15À\x16\x00X\x00O\x00R\x00Q\x00P\x00S\x00V\x00U\x00T\x00\x81\x00\x83\x00\x80\x00\x82\x00)\x00&\x00*\x00'\x00+\x00(\x00#\x00\x1f\x00"\x00\x1e\x00%\x00!\x00$\x00 \x00\x00ÀªÀ«\x00\x8b\x00\x8c\x00®À¤À¨\x00¨\x00\x8d\x00¯À¥À©\x00©ÀdÀjÀeÀkÀ\x94À\x8eÀ\x95À\x8fÌ«\x00,\x00°\x00±\x00\x8a\x00b\x00a\x00`\x00d\x00\x08\x00\x06\x00\x03\x01\x00\x00\x16\x00\x0b\x00\x02\x01\x00\x00[0m" 400 -
+2026-06-15 08:19:26,543 127.0.0.1 - - [15/Jun/2026 08:19:26] code 400, message Bad request version ('\x00\x00z\x00\x93\x00\x94\x00¶\x00¬\x00\x95\x00·\x00\xadÀhÀnÀiÀoÀ\x98À\x92À\x99À\x93Ì®\x00.\x00¸\x00¹\x00\x92\x00|\x00')
+2026-06-15 08:19:26,544 127.0.0.1 - - [15/Jun/2026 08:19:26] code 400, message Bad request syntax ('\x16\x03\x03\x00Ý\x01\x00\x00Ù\x03\x03j/µ\x8eæ#')
+2026-06-15 08:19:26,544 127.0.0.1 - - [15/Jun/2026 08:19:26] code 400, message Bad request syntax ('\x16\x03\x01\x00½\x01\x00\x00¹\x03\x01j/µ\x8eRóãO]\x9dÕ4\x8e\x91¾éWéuyjfµ\x10pù\x08\x88¥×ÍJ\x00\x00z\x00\x93\x00\x94\x00¶\x00¬\x00\x95\x00·\x00\xadÀhÀnÀiÀoÀ\x98À\x92À\x99À\x93Ì®\x00.\x00¸\x00¹\x00\x92\x00|\x00')
+2026-06-15 08:19:26,544 127.0.0.1 - - [15/Jun/2026 08:19:26] "[31m[1m\x16\x03\x02\x00½\x01\x00\x00¹\x03\x02j/µ\x8eº·\x12\x9aäÂ\x18ÀI"»4\x8f\x94\x17\x13Ô5Ï; R\x90À<Ë;\x09\x00\x00z\x00\x93\x00\x94\x00¶\x00¬\x00\x95\x00·\x00­ÀhÀnÀiÀoÀ\x98À\x92À\x99À\x93Ì®\x00.\x00¸\x00¹\x00\x92\x00|\x00[0m" 400 -
+2026-06-15 08:19:26,544 127.0.0.1 - - [15/Jun/2026 08:19:26] "[31m[1m\x16\x03\x03\x00Ý\x01\x00\x00Ù\x03\x03j/µ\x8eæ#[0m" 400 -
+2026-06-15 08:19:26,544 127.0.0.1 - - [15/Jun/2026 08:19:26] "[31m[1m\x16\x03\x01\x00½\x01\x00\x00¹\x03\x01j/µ\x8eRóãO]\x9dÕ4\x8e\x91¾éWéuyjfµ\x10pù\x08\x88¥×ÍJ\x00\x00z\x00\x93\x00\x94\x00¶\x00¬\x00\x95\x00·\x00­ÀhÀnÀiÀoÀ\x98À\x92À\x99À\x93Ì®\x00.\x00¸\x00¹\x00\x92\x00|\x00[0m" 400 -
+2026-06-15 08:19:30,948 127.0.0.1 - - [15/Jun/2026 08:19:30] code 400, message Bad request version ('þÿþþ\x00c\x00e\x00\x11\x00r\x00\x13\x00s\x002\x00@\x00¢\x00t\x008\x00j\x00£ÀBÀVÀCÀW\x00D\x00½À\x80\x00\x87\x00ÃÀ\x81\x00\x12\x00f\x00\x99\x00\x8f\x00\x90\x00²À¦\x00ª\x00\x91\x00³À§\x00«ÀfÀlÀgÀmÀ\x96À\x90À\x97À\x91Ì\xad\x00-\x00´\x00µ\x00\x8e\x00\x14\x00w\x00\x16\x00x\x003\x00gÀ\x9eÀ¢\x00\x9e\x00y\x009\x00k\x01\x00')
+2026-06-15 08:19:30,948 127.0.0.1 - - [15/Jun/2026 08:19:30] "[31m[1m\x16\x03\x00\x00«\x01\x00\x00§\x03\x00j/µ\x8dð\x19%CÏ1°\x9c×6\x95ËB¬þFÍ¿FÚlîÕiÕ Ð¥\x00\x00\x80\x00\x1d\x00\x1cþÿþþ\x00c\x00e\x00\x11\x00r\x00\x13\x00s\x002\x00@\x00¢\x00t\x008\x00j\x00£ÀBÀVÀCÀW\x00D\x00½À\x80\x00\x87\x00ÃÀ\x81\x00\x12\x00f\x00\x99\x00\x8f\x00\x90\x00²À¦\x00ª\x00\x91\x00³À§\x00«ÀfÀlÀgÀmÀ\x96À\x90À\x97À\x91Ì­\x00-\x00´\x00µ\x00\x8e\x00\x14\x00w\x00\x16\x00x\x003\x00gÀ\x9eÀ¢\x00\x9e\x00y\x009\x00k\x01\x00[0m" 400 -
+2026-06-15 08:19:36,048 127.0.0.1 - - [15/Jun/2026 08:19:36] code 400, message Bad request version ('\x007\x00i\x00¡À@ÀTÀAÀU\x00C\x00¼À~\x00\x86\x00ÂÀ\x7f\x00\x0f\x00\x98\x00\x19\x00\x17\x00\x1b\x004\x00l\x00¦\x00:\x01\x00')
+2026-06-15 08:19:36,048 127.0.0.1 - - [15/Jun/2026 08:19:36] "[31m[1m\x16\x03\x00\x00«\x01\x00\x00§\x03\x00j/µ\x92Óõ÷÷5ù\x9f©/\x13â\x9dÐ|Ç×ø\x85w\x08ÊF\x9f\x12¿UÖ9\x00\x00\x80À\x9fÀ£\x00\x9fÀDÀRÀEÀS\x00E\x00¾À|\x00\x88\x00ÄÀ}ÌªÌ\x15\x00\x15\x00\x9a\x00\x0b\x00\x0d\x000\x00>\x00¤\x006\x00h\x00¥À>ÀXÀ?ÀY\x00B\x00»À\x82\x00\x85\x00ÁÀ\x83\x00\x0c\x00\x97\x00\x0e\x00\x10\x001\x00?\x00 \x007\x00i\x00¡À@ÀTÀAÀU\x00C\x00¼À~\x00\x86\x00ÂÀ\x7f\x00\x0f\x00\x98\x00\x19\x00\x17\x00\x1b\x004\x00l\x00¦\x00:\x01\x00[0m" 400 -
+2026-06-15 08:19:36,049 127.0.0.1 - - [15/Jun/2026 08:19:36] code 400, message Bad request version ('À#À¬À®À+À')
+2026-06-15 08:19:36,049 127.0.0.1 - - [15/Jun/2026 08:19:36] "[31m[1m\x16\x03\x00\x00«\x01\x00\x00§\x03\x00j/µ\x98_\x1eú¾\x9eS¨\x87\x02\x13µágÂE^\x13\x91ä7¾É\x87Ã)í3ü\x00\x00\x80\x00m\x00§ÀFÀZÀGÀ[\x00F\x00¿À\x84\x00\x89\x00ÅÀ\x85\x00\x1a\x00\x18\x00\x9bÀ²À°À³À±À\x08À\x09À#À¬À®À+À[0m" 400 -
+2026-06-15 08:19:41,150 127.0.0.1 - - [15/Jun/2026 08:19:41] code 400, message Bad request version ('\x00[\x00\\\x00WÀ\x17\x00ZÀ\x18À\x19\x01\x00')
+2026-06-15 08:19:41,150 127.0.0.1 - - [15/Jun/2026 08:19:41] "[31m[1m\x16\x03\x00\x00«\x01\x00\x00§\x03\x00j/µ\x98\x96·_6é\x11j\x9b3\x87{%õê¦Je\x82¯ª\x83_Id\x9a\x04Gh\x00\x00\x80À\x14À(À0ÀLÀ`ÀMÀaÀvÀ\x8aÀwÀ\x8bÌ¨Ì\x13À\x10À\x11À\x03\x00JÀ\x04\x00KÀ%À-À\x05\x00LÀ&À.ÀJÀ^ÀKÀ_ÀtÀ\x88ÀuÀ\x89\x00IÀ\x01\x00GÀ\x02\x00H\x00N\x00MÀ\x0dÀ\x0eÀ)À1À\x0fÀ*À2ÀNÀbÀOÀcÀxÀ\x8cÀyÀ\x8dÀ\x0bÀ\x0c\x00[\x00\\\x00WÀ\x17\x00ZÀ\x18À\x19\x01\x00[0m" 400 -
+2026-06-15 08:19:46,251 127.0.0.1 - - [15/Jun/2026 08:19:46] code 400, message Bad request version ('\x00\x00ÀªÀ«\x00\x8b\x00\x8c\x00®À¤À¨\x00¨\x00\x8d\x00¯À¥À©\x00©ÀdÀjÀeÀkÀ\x94À\x8eÀ\x95À\x8fÌ«\x00,\x00°\x00±\x00\x8a\x00b\x00a\x00`\x00d\x00\x08\x00\x06\x00\x03\x01\x00')
+2026-06-15 08:19:46,251 127.0.0.1 - - [15/Jun/2026 08:19:46] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x00\x00¥\x01\x00\x00¡\x03\x00j/µ¢Ë\x14P\x8c-í\x8d\x90¸')
+2026-06-15 08:19:46,251 127.0.0.1 - - [15/Jun/2026 08:19:46] "[31m[1m\x16\x03\x00\x00«\x01\x00\x00§\x03\x00j/µ\x9d\x06à\x06\x93ÿl'\x15\x8b\x16òúx³T ÷÷#æö\x15\x8eÕ\x11vDW\x00\x00\x80\x00YÀ\x15À\x16\x00X\x00O\x00R\x00Q\x00P\x00S\x00V\x00U\x00T\x00\x81\x00\x83\x00\x80\x00\x82\x00)\x00&\x00*\x00'\x00+\x00(\x00#\x00\x1f\x00"\x00\x1e\x00%\x00!\x00$\x00 \x00\x00ÀªÀ«\x00\x8b\x00\x8c\x00®À¤À¨\x00¨\x00\x8d\x00¯À¥À©\x00©ÀdÀjÀeÀkÀ\x94À\x8eÀ\x95À\x8fÌ«\x00,\x00°\x00±\x00\x8a\x00b\x00a\x00`\x00d\x00\x08\x00\x06\x00\x03\x01\x00[0m" 400 -
+2026-06-15 08:19:46,251 127.0.0.1 - - [15/Jun/2026 08:19:46] "[31m[1m\x16\x03\x00\x00¥\x01\x00\x00¡\x03\x00j/µ¢Ë\x14P\x8c-í\x8d\x90¸ M\x95Û\x03±\x92-\x10Êjqà\x96Çv·uµ\x00\x00z\x00\x93\x00\x94\x00¶\x00¬\x00\x95\x00·\x00­ÀhÀnÀiÀoÀ\x98À\x92À\x99À\x93Ì®\x00.\x00¸\x00¹\x00\x92\x00|\x00[0m" 400 -
+2026-06-15 10:36:16,612 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.0.235:5000
+2026-06-15 10:36:16,613 [33mPress CTRL+C to quit[0m
+2026-06-15 10:36:16,614  * Restarting with stat
+2026-06-15 10:36:17,077  * Debugger is active!
+2026-06-15 10:36:17,078  * Debugger PIN: 244-273-188
+2026-06-15 10:37:03,678 127.0.0.1 - - [15/Jun/2026 10:37:03] "GET / HTTP/1.1" 200 -
+2026-06-15 10:37:04,058 127.0.0.1 - - [15/Jun/2026 10:37:04] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-15 10:37:04,082 127.0.0.1 - - [15/Jun/2026 10:37:04] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-15 10:37:04,084 127.0.0.1 - - [15/Jun/2026 10:37:04] "[36mGET /static/js/map.js HTTP/1.1[0m" 304 -
+2026-06-15 10:37:04,084 127.0.0.1 - - [15/Jun/2026 10:37:04] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-15 10:37:04,089 127.0.0.1 - - [15/Jun/2026 10:37:04] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-15 10:37:04,242 127.0.0.1 - - [15/Jun/2026 10:37:04] "GET /static/js/serviceWorker.js HTTP/1.1" 200 -
+2026-06-15 10:39:07,040 127.0.0.1 - - [15/Jun/2026 10:39:07] "GET / HTTP/1.1" 200 -
+2026-06-15 10:39:07,306 127.0.0.1 - - [15/Jun/2026 10:39:07] "GET /static/js/map.js HTTP/1.1" 200 -
+2026-06-15 10:39:07,336 127.0.0.1 - - [15/Jun/2026 10:39:07] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-15 10:39:07,369 127.0.0.1 - - [15/Jun/2026 10:39:07] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-15 10:39:07,406 127.0.0.1 - - [15/Jun/2026 10:39:07] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-15 10:39:07,437 127.0.0.1 - - [15/Jun/2026 10:39:07] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-15 10:39:07,518 127.0.0.1 - - [15/Jun/2026 10:39:07] "GET /static/js/serviceWorker.js HTTP/1.1" 200 -
+2026-06-15 10:39:19,654 127.0.0.1 - - [15/Jun/2026 10:39:19] "GET / HTTP/1.1" 200 -
+2026-06-15 10:39:19,724 127.0.0.1 - - [15/Jun/2026 10:39:19] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-15 10:39:19,728 127.0.0.1 - - [15/Jun/2026 10:39:19] "GET /static/js/map.js HTTP/1.1" 200 -
+2026-06-15 10:39:19,733 127.0.0.1 - - [15/Jun/2026 10:39:19] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-15 10:39:19,761 127.0.0.1 - - [15/Jun/2026 10:39:19] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-15 10:39:19,826 127.0.0.1 - - [15/Jun/2026 10:39:19] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-15 10:39:19,897 127.0.0.1 - - [15/Jun/2026 10:39:19] "GET /static/js/serviceWorker.js HTTP/1.1" 200 -
+2026-06-15 10:39:56,307 127.0.0.1 - - [15/Jun/2026 10:39:56] "GET / HTTP/1.1" 200 -
+2026-06-15 10:39:56,404 127.0.0.1 - - [15/Jun/2026 10:39:56] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-15 10:39:56,413 127.0.0.1 - - [15/Jun/2026 10:39:56] "GET /static/js/map.js HTTP/1.1" 200 -
+2026-06-15 10:39:56,416 127.0.0.1 - - [15/Jun/2026 10:39:56] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-15 10:39:56,422 127.0.0.1 - - [15/Jun/2026 10:39:56] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-15 10:39:56,425 127.0.0.1 - - [15/Jun/2026 10:39:56] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-15 10:39:56,524 127.0.0.1 - - [15/Jun/2026 10:39:56] "GET /static/js/serviceWorker.js HTTP/1.1" 200 -
+2026-06-15 10:41:34,541 127.0.0.1 - - [15/Jun/2026 10:41:34] "GET / HTTP/1.1" 200 -
+2026-06-15 10:41:34,919 127.0.0.1 - - [15/Jun/2026 10:41:34] "GET /static/js/map.js HTTP/1.1" 200 -
+2026-06-15 10:41:34,943 127.0.0.1 - - [15/Jun/2026 10:41:34] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-15 10:41:34,951 127.0.0.1 - - [15/Jun/2026 10:41:34] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-15 10:41:34,952 127.0.0.1 - - [15/Jun/2026 10:41:34] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-15 10:41:34,972 127.0.0.1 - - [15/Jun/2026 10:41:34] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-15 10:41:35,281 127.0.0.1 - - [15/Jun/2026 10:41:35] "GET /static/js/serviceWorker.js HTTP/1.1" 200 -
+2026-06-15 10:41:48,735 127.0.0.1 - - [15/Jun/2026 10:41:48] "GET / HTTP/1.1" 200 -
+2026-06-15 10:41:48,895 127.0.0.1 - - [15/Jun/2026 10:41:48] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-15 10:41:48,908 127.0.0.1 - - [15/Jun/2026 10:41:48] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-15 10:41:48,915 127.0.0.1 - - [15/Jun/2026 10:41:48] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-15 10:41:49,022 127.0.0.1 - - [15/Jun/2026 10:41:49] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-15 10:41:49,022 127.0.0.1 - - [15/Jun/2026 10:41:49] "[36mGET /static/js/map.js HTTP/1.1[0m" 304 -
+2026-06-15 10:41:49,135 127.0.0.1 - - [15/Jun/2026 10:41:49] "GET /static/js/serviceWorker.js HTTP/1.1" 200 -
+2026-06-15 10:43:23,069 127.0.0.1 - - [15/Jun/2026 10:43:23] "GET / HTTP/1.1" 200 -
+2026-06-15 10:43:23,244 127.0.0.1 - - [15/Jun/2026 10:43:23] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-15 10:43:23,282 127.0.0.1 - - [15/Jun/2026 10:43:23] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-15 10:43:23,331 127.0.0.1 - - [15/Jun/2026 10:43:23] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-15 10:43:23,341 127.0.0.1 - - [15/Jun/2026 10:43:23] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-15 10:43:23,351 127.0.0.1 - - [15/Jun/2026 10:43:23] "[36mGET /static/js/map.js HTTP/1.1[0m" 304 -
+2026-06-15 10:43:23,489 127.0.0.1 - - [15/Jun/2026 10:43:23] "GET /static/js/serviceWorker.js HTTP/1.1" 200 -
+2026-06-15 10:43:26,419 127.0.0.1 - - [15/Jun/2026 10:43:26] "GET / HTTP/1.1" 200 -
+2026-06-15 10:43:26,492 127.0.0.1 - - [15/Jun/2026 10:43:26] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-15 10:43:26,498 127.0.0.1 - - [15/Jun/2026 10:43:26] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-15 10:43:26,524 127.0.0.1 - - [15/Jun/2026 10:43:26] "[36mGET /static/js/map.js HTTP/1.1[0m" 304 -
+2026-06-15 10:43:26,539 127.0.0.1 - - [15/Jun/2026 10:43:26] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-15 10:43:26,605 127.0.0.1 - - [15/Jun/2026 10:43:26] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-15 10:43:26,694 127.0.0.1 - - [15/Jun/2026 10:43:26] "GET /static/js/serviceWorker.js HTTP/1.1" 200 -
+2026-06-15 10:44:10,739  * Detected change in '/workspaces/2026SE_MajorProject_Kevin.T/main.py', reloading
+2026-06-15 10:44:10,793  * Restarting with stat
+2026-06-15 10:44:11,339  * Debugger is active!
+2026-06-15 10:44:11,339  * Debugger PIN: 244-273-188
+2026-06-15 10:44:12,389  * Detected change in '/workspaces/2026SE_MajorProject_Kevin.T/main.py', reloading
+2026-06-15 10:44:12,427  * Restarting with stat
+2026-06-15 10:44:12,746  * Debugger is active!
+2026-06-15 10:44:12,746  * Debugger PIN: 244-273-188
+2026-06-15 10:44:13,453 127.0.0.1 - - [15/Jun/2026 10:44:13] "GET / HTTP/1.1" 200 -
+2026-06-15 10:44:13,603 127.0.0.1 - - [15/Jun/2026 10:44:13] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-15 10:44:13,603 127.0.0.1 - - [15/Jun/2026 10:44:13] "[36mGET /static/js/map.js HTTP/1.1[0m" 304 -
+2026-06-15 10:44:13,604 127.0.0.1 - - [15/Jun/2026 10:44:13] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-15 10:44:13,605 127.0.0.1 - - [15/Jun/2026 10:44:13] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-15 10:44:13,605 127.0.0.1 - - [15/Jun/2026 10:44:13] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-15 10:44:13,788 127.0.0.1 - - [15/Jun/2026 10:44:13] "GET /static/js/serviceWorker.js HTTP/1.1" 200 -
+2026-06-15 10:45:54,194 127.0.0.1 - - [15/Jun/2026 10:45:54] "GET / HTTP/1.1" 200 -
+2026-06-15 10:45:54,369 127.0.0.1 - - [15/Jun/2026 10:45:54] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-15 10:45:54,465 127.0.0.1 - - [15/Jun/2026 10:45:54] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-15 10:45:54,536 127.0.0.1 - - [15/Jun/2026 10:45:54] "GET /static/js/map.js HTTP/1.1" 200 -
+2026-06-15 10:45:54,547 127.0.0.1 - - [15/Jun/2026 10:45:54] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-15 10:45:54,567 127.0.0.1 - - [15/Jun/2026 10:45:54] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-15 10:45:54,657 127.0.0.1 - - [15/Jun/2026 10:45:54] "GET /static/js/serviceWorker.js HTTP/1.1" 200 -
+2026-06-15 10:46:02,806 127.0.0.1 - - [15/Jun/2026 10:46:02] "GET / HTTP/1.1" 200 -
+2026-06-15 10:46:02,892 127.0.0.1 - - [15/Jun/2026 10:46:02] "[36mGET /static/js/map.js HTTP/1.1[0m" 304 -
+2026-06-15 10:46:02,940 127.0.0.1 - - [15/Jun/2026 10:46:02] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-15 10:46:03,040 127.0.0.1 - - [15/Jun/2026 10:46:03] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-15 10:46:03,044 127.0.0.1 - - [15/Jun/2026 10:46:03] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-15 10:46:03,047 127.0.0.1 - - [15/Jun/2026 10:46:03] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-15 10:46:03,144 127.0.0.1 - - [15/Jun/2026 10:46:03] "GET /static/js/serviceWorker.js HTTP/1.1" 200 -
+2026-06-15 10:50:58,392 127.0.0.1 - - [15/Jun/2026 10:50:58] "GET / HTTP/1.1" 200 -
+2026-06-15 10:50:58,595 127.0.0.1 - - [15/Jun/2026 10:50:58] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-15 10:50:58,683 127.0.0.1 - - [15/Jun/2026 10:50:58] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-15 10:50:58,759 127.0.0.1 - - [15/Jun/2026 10:50:58] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-15 10:50:58,768 127.0.0.1 - - [15/Jun/2026 10:50:58] "GET /static/js/map.js HTTP/1.1" 200 -
+2026-06-15 10:50:58,778 127.0.0.1 - - [15/Jun/2026 10:50:58] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-15 10:50:58,868 127.0.0.1 - - [15/Jun/2026 10:50:58] "GET /static/js/serviceWorker.js HTTP/1.1" 200 -
+2026-06-15 10:57:24,180 127.0.0.1 - - [15/Jun/2026 10:57:24] "GET / HTTP/1.1" 200 -
+2026-06-15 10:57:24,401 127.0.0.1 - - [15/Jun/2026 10:57:24] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-15 10:57:24,436 127.0.0.1 - - [15/Jun/2026 10:57:24] "GET /static/js/map.js HTTP/1.1" 200 -
+2026-06-15 10:57:24,440 127.0.0.1 - - [15/Jun/2026 10:57:24] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-15 10:57:24,527 127.0.0.1 - - [15/Jun/2026 10:57:24] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-15 10:57:24,533 127.0.0.1 - - [15/Jun/2026 10:57:24] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-15 10:57:24,631 127.0.0.1 - - [15/Jun/2026 10:57:24] "GET /static/js/serviceWorker.js HTTP/1.1" 200 -
+2026-06-15 10:59:44,026 127.0.0.1 - - [15/Jun/2026 10:59:44] "GET / HTTP/1.1" 200 -
+2026-06-15 10:59:44,263 127.0.0.1 - - [15/Jun/2026 10:59:44] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-15 10:59:44,352 127.0.0.1 - - [15/Jun/2026 10:59:44] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-15 10:59:44,363 127.0.0.1 - - [15/Jun/2026 10:59:44] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-15 10:59:44,412 127.0.0.1 - - [15/Jun/2026 10:59:44] "[36mGET /static/js/map.js HTTP/1.1[0m" 304 -
+2026-06-15 10:59:44,413 127.0.0.1 - - [15/Jun/2026 10:59:44] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-15 10:59:44,567 127.0.0.1 - - [15/Jun/2026 10:59:44] "GET /static/js/serviceWorker.js HTTP/1.1" 200 -
+2026-06-15 11:02:55,394 127.0.0.1 - - [15/Jun/2026 11:02:55] "GET / HTTP/1.1" 200 -
+2026-06-15 11:02:55,658 127.0.0.1 - - [15/Jun/2026 11:02:55] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-15 11:02:55,781 127.0.0.1 - - [15/Jun/2026 11:02:55] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-15 11:02:55,782 127.0.0.1 - - [15/Jun/2026 11:02:55] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-15 11:02:55,791 127.0.0.1 - - [15/Jun/2026 11:02:55] "[36mGET /static/js/map.js HTTP/1.1[0m" 304 -
+2026-06-15 11:02:55,795 127.0.0.1 - - [15/Jun/2026 11:02:55] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-15 11:02:55,935 127.0.0.1 - - [15/Jun/2026 11:02:55] "GET /static/js/serviceWorker.js HTTP/1.1" 200 -
+2026-06-15 11:04:47,434 127.0.0.1 - - [15/Jun/2026 11:04:47] "GET / HTTP/1.1" 200 -
+2026-06-15 11:04:47,657 127.0.0.1 - - [15/Jun/2026 11:04:47] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-15 11:04:47,669 127.0.0.1 - - [15/Jun/2026 11:04:47] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-15 11:04:47,674 127.0.0.1 - - [15/Jun/2026 11:04:47] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-15 11:04:47,758 127.0.0.1 - - [15/Jun/2026 11:04:47] "GET /static/js/map.js HTTP/1.1" 200 -
+2026-06-15 11:04:47,770 127.0.0.1 - - [15/Jun/2026 11:04:47] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-15 11:04:47,891 127.0.0.1 - - [15/Jun/2026 11:04:47] "GET /static/js/serviceWorker.js HTTP/1.1" 200 -
+2026-06-15 11:05:31,174 127.0.0.1 - - [15/Jun/2026 11:05:31] "GET / HTTP/1.1" 200 -
+2026-06-15 11:05:31,263 127.0.0.1 - - [15/Jun/2026 11:05:31] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-15 11:05:31,265 127.0.0.1 - - [15/Jun/2026 11:05:31] "GET /static/js/map.js HTTP/1.1" 200 -
+2026-06-15 11:05:31,271 127.0.0.1 - - [15/Jun/2026 11:05:31] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-15 11:05:31,272 127.0.0.1 - - [15/Jun/2026 11:05:31] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-15 11:05:31,281 127.0.0.1 - - [15/Jun/2026 11:05:31] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-15 11:05:31,370 127.0.0.1 - - [15/Jun/2026 11:05:31] "GET /static/js/serviceWorker.js HTTP/1.1" 200 -
+2026-06-15 11:05:36,170 127.0.0.1 - - [15/Jun/2026 11:05:36] "GET / HTTP/1.1" 200 -
+2026-06-15 11:05:36,261 127.0.0.1 - - [15/Jun/2026 11:05:36] "GET /static/js/map.js HTTP/1.1" 200 -
+2026-06-15 11:05:36,271 127.0.0.1 - - [15/Jun/2026 11:05:36] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-15 11:05:36,274 127.0.0.1 - - [15/Jun/2026 11:05:36] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-15 11:05:36,275 127.0.0.1 - - [15/Jun/2026 11:05:36] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-15 11:05:36,282 127.0.0.1 - - [15/Jun/2026 11:05:36] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-15 11:05:36,377 127.0.0.1 - - [15/Jun/2026 11:05:36] "GET /static/js/serviceWorker.js HTTP/1.1" 200 -
+2026-06-15 11:05:41,512 127.0.0.1 - - [15/Jun/2026 11:05:41] "GET / HTTP/1.1" 200 -
+2026-06-15 11:05:41,593 127.0.0.1 - - [15/Jun/2026 11:05:41] "GET /static/js/map.js HTTP/1.1" 200 -
+2026-06-15 11:05:41,597 127.0.0.1 - - [15/Jun/2026 11:05:41] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-15 11:05:41,609 127.0.0.1 - - [15/Jun/2026 11:05:41] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-15 11:05:41,616 127.0.0.1 - - [15/Jun/2026 11:05:41] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-15 11:05:41,617 127.0.0.1 - - [15/Jun/2026 11:05:41] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-15 11:05:41,713 127.0.0.1 - - [15/Jun/2026 11:05:41] "GET /static/js/serviceWorker.js HTTP/1.1" 200 -
+2026-06-15 11:05:53,260 127.0.0.1 - - [15/Jun/2026 11:05:53] "GET / HTTP/1.1" 200 -
+2026-06-15 11:05:53,350 127.0.0.1 - - [15/Jun/2026 11:05:53] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-15 11:05:53,352 127.0.0.1 - - [15/Jun/2026 11:05:53] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-15 11:05:53,356 127.0.0.1 - - [15/Jun/2026 11:05:53] "GET /static/js/map.js HTTP/1.1" 200 -
+2026-06-15 11:05:53,361 127.0.0.1 - - [15/Jun/2026 11:05:53] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-15 11:05:53,376 127.0.0.1 - - [15/Jun/2026 11:05:53] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-15 11:05:53,459 127.0.0.1 - - [15/Jun/2026 11:05:53] "GET /static/js/serviceWorker.js HTTP/1.1" 200 -
+2026-06-15 11:05:58,890 127.0.0.1 - - [15/Jun/2026 11:05:58] "GET / HTTP/1.1" 200 -
+2026-06-15 11:05:58,973 127.0.0.1 - - [15/Jun/2026 11:05:58] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-15 11:05:58,983 127.0.0.1 - - [15/Jun/2026 11:05:58] "GET /static/js/map.js HTTP/1.1" 200 -
+2026-06-15 11:05:58,988 127.0.0.1 - - [15/Jun/2026 11:05:58] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-15 11:05:58,997 127.0.0.1 - - [15/Jun/2026 11:05:58] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-15 11:05:59,001 127.0.0.1 - - [15/Jun/2026 11:05:59] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-15 11:05:59,088 127.0.0.1 - - [15/Jun/2026 11:05:59] "GET /static/js/serviceWorker.js HTTP/1.1" 200 -
+2026-06-15 11:07:14,036 127.0.0.1 - - [15/Jun/2026 11:07:14] "GET / HTTP/1.1" 200 -
+2026-06-15 11:07:14,224 127.0.0.1 - - [15/Jun/2026 11:07:14] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-15 11:07:14,244 127.0.0.1 - - [15/Jun/2026 11:07:14] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-15 11:07:14,248 127.0.0.1 - - [15/Jun/2026 11:07:14] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-15 11:07:14,251 127.0.0.1 - - [15/Jun/2026 11:07:14] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-15 11:07:14,272 127.0.0.1 - - [15/Jun/2026 11:07:14] "GET /static/js/map.js HTTP/1.1" 200 -
+2026-06-15 11:07:14,366 127.0.0.1 - - [15/Jun/2026 11:07:14] "GET /static/js/serviceWorker.js HTTP/1.1" 200 -

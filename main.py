@@ -63,7 +63,7 @@ def root():
         "font-src": "'self' https://fonts.gstatic.com data:",
         "object-src": "'none'",
         "child-src": "'self' blob:",
-        "connect-src": "'self' data: blob: https://maps.googleapis.com https://maps.gstatic.com https://www.gstatic.com https://*.gstatic.com",
+        "connect-src": "'self' data: blob: https://maps.googleapis.com https://maps.gstatic.com https://www.gstatic.com https://*.gstatic.com https://places.googleapis.com",
         "worker-src": "'self' blob:",
         "manifest-src": "'self'",
         "report-uri": "/csp_report",

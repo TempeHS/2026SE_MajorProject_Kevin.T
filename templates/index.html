@@ -7,6 +7,7 @@
     center="-33.9119874,151.1579341"
     zoom="17"
     style="height: calc(100vh - 56px)"
+    map-id="DEMO_MAP_ID"
   >
   </gmp-map>
 
@@ -203,9 +204,28 @@
           class="form-range w-100 m-0"
           min="0"
           max="5"
-          step="0.5"
+          step="0.1"
+          value="0"
           id="range-distance"
         />
+        <output
+          for="range-distance"
+          id="rangeValue"
+          aria-hidden="true"
+        ></output>
+        <small class="text-muted">0 = auto (map view)</small>
+        <script>
+          // show value script
+          const rangeInput = document.getElementById("range-distance");
+          const rangeOutput = document.getElementById("rangeValue");
+
+          // Set initial value
+          rangeOutput.textContent = rangeInput.value;
+
+          rangeInput.addEventListener("input", function () {
+            rangeOutput.textContent = this.value;
+          });
+        </script>
       </div>
     </div>
   </div>
@@ -237,6 +257,7 @@
   <!-- Bottom center search button -->
   <div class="position-absolute bottom-0 start-50 translate-middle-x p-3">
     <button
+      id="search-nearby-btn"
       type="button"
       class="btn btn-primary d-flex align-items-center gap-2"
       style="padding: 0.375rem 0.75rem"
