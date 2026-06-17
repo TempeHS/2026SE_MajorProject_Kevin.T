@@ -65,8 +65,50 @@
       </button>
       <ul class="dropdown-menu">
         <li><h6 class="dropdown-header">Cuisine</h6></li>
-        <li><a class="dropdown-item" href="#">italian</a></li>
-        <li><a class="dropdown-item" href="#">Another action</a></li>
+        <li><a class="dropdown-item" data-type="restaurant">Any</a></li>
+        <li>
+          <a class="dropdown-item" data-type="italian_restaurant">Italian</a>
+        </li>
+        <li>
+          <a class="dropdown-item" data-type="chinese_restaurant">Chinese</a>
+        </li>
+        <li>
+          <a class="dropdown-item" data-type="japanese_restaurant">Japanese</a>
+        </li>
+        <li>
+          <a class="dropdown-item" data-type="indian_restaurant">Indian</a>
+        </li>
+        <li>
+          <a class="dropdown-item" data-type="mexican_restaurant">Mexican</a>
+        </li>
+        <li><a class="dropdown-item" data-type="thai_restaurant">Thai</a></li>
+        <li>
+          <a class="dropdown-item" data-type="american_restaurant">American</a>
+        </li>
+        <li>
+          <a class="dropdown-item" data-type="korean_restaurant">Korean</a>
+        </li>
+        <li>
+          <a class="dropdown-item" data-type="vietnamese_restaurant"
+            >Vietnamese</a
+          >
+        </li>
+        <li>
+          <a class="dropdown-item" data-type="mediterranean_restaurant"
+            >Mediterranean</a
+          >
+        </li>
+        <li><a class="dropdown-item" data-type="greek_restaurant">Greek</a></li>
+        <li><a class="dropdown-item" data-type="pizza_restaurant">Pizza</a></li>
+        <li><a class="dropdown-item" data-type="sushi_restaurant">Sushi</a></li>
+        <li>
+          <a class="dropdown-item" data-type="hamburger_restaurant"
+            >Hamburger</a
+          >
+        </li>
+        <li>
+          <a class="dropdown-item" data-type="seafood_restaurant">Seafood</a>
+        </li>
       </ul>
     </div>
 
@@ -176,66 +218,6 @@
         </div>
       </div>
     </div>
-
-    <div class="btn-group dropstart">
-      <button
-        type="button"
-        class="btn btn-primary dropdown-toggle"
-        data-bs-toggle="dropdown"
-        aria-expanded="false"
-      >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          fill="currentColor"
-          class="bi bi-rulers"
-          viewBox="0 0 16 16"
-        >
-          <path
-            d="M1 0a1 1 0 0 0-1 1v14a1 1 0 0 0 1 1h5v-1H2v-1h4v-1H4v-1h2v-1H2v-1h4V9H4V8h2V7H2V6h4V2h1v4h1V4h1v2h1V2h1v4h1V4h1v2h1V2h1v4h1V1a1 1 0 0 0-1-1z"
-          />
-        </svg>
-      </button>
-      <div class="dropdown-menu p-3" style="--bs-dropdown-min-width: 22rem">
-        <div class="row">
-          <div class="col">
-            <h6 class="dropdown-header mb-2 p-0">Distance</h6>
-          </div>
-          <div class="col">
-            <output
-              for="range-distance"
-              id="rangeValue"
-              aria-hidden="true"
-            ></output>
-          </div>
-        </div>
-
-        <input
-          type="range"
-          class="form-range w-100 m-0"
-          min="0"
-          max="5"
-          step="0.1"
-          value="0"
-          id="range-distance"
-        />
-
-        <small class="text-muted">0 = auto (map view)</small>
-        <script>
-          // show value script
-          const rangeInput = document.getElementById("range-distance");
-          const rangeOutput = document.getElementById("rangeValue");
-
-          // Set initial value
-          rangeOutput.textContent = rangeInput.value;
-
-          rangeInput.addEventListener("input", function () {
-            rangeOutput.textContent = this.value;
-          });
-        </script>
-      </div>
-    </div>
   </div>
 
   <!-- Bottom left button (dice only) -->
@@ -263,7 +245,9 @@
   </div>
 
   <!-- Bottom center search button -->
-  <div class="position-absolute bottom-0 start-50 translate-middle-x p-3">
+  <div
+    class="position-absolute bottom-0 start-50 translate-middle-x p-3 d-flex flex-column align-items-center"
+  >
     <button
       id="search-nearby-btn"
       type="button"
@@ -284,6 +268,72 @@
       </svg>
       <span>Search</span>
     </button>
+
+    <!-- distance: always visible on md+, dropup on mobile -->
+    <div class="btn-group dropup mt-2 w-100">
+      <button
+        type="button"
+        class="btn btn-primary btn-sm dropdown-toggle d-md-none w-100"
+        data-bs-toggle="dropdown"
+        aria-expanded="false"
+      >
+        Distance
+      </button>
+
+      <div
+        class="dropdown-menu p-3 distance-menu"
+        style="--bs-dropdown-min-width: 22rem"
+      >
+        <!-- Row 1: label + value -->
+        <div class="d-flex justify-content-between align-items-center mb-1">
+          <div class="d-flex align-items-center gap-2">
+            <h6 class="m-0">Distance</h6>
+            <output
+              for="range-distance"
+              id="rangeValue"
+              aria-hidden="true"
+              class="fw-bold"
+            ></output>
+          </div>
+          <small class="text-muted">0 = auto (map view)</small>
+        </div>
+
+        <!-- Row 2: slider -->
+        <input
+          type="range"
+          class="form-range w-100 m-0"
+          min="0"
+          max="5"
+          step="0.1"
+          value="0"
+          id="range-distance"
+        />
+      </div>
+    </div>
   </div>
+
+  <style>
+    @media (min-width: 768px) {
+      .distance-menu {
+        display: block;
+        position: static;
+        inset: auto;
+        transform: none;
+        margin-top: 0;
+      }
+    }
+  </style>
+
+  <script>
+    const rangeInput = document.getElementById("range-distance");
+    const rangeOutput = document.getElementById("rangeValue");
+
+    if (rangeInput && rangeOutput) {
+      rangeOutput.textContent = rangeInput.value + " km";
+      rangeInput.addEventListener("input", function () {
+        rangeOutput.textContent = this.value + " km";
+      });
+    }
+  </script>
 </div>
 {% endblock %}

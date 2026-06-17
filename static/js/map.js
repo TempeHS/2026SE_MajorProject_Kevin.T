@@ -9,6 +9,7 @@ let map;
 let infoWindow;
 let nearbyMarkers = [];
 let searchRadiusCircle = null;
+let selectedType = "restaurant"; // <- add this
 
 function getSliderRadiusMeters() {
   const distanceSlider = document.getElementById("range-distance");
@@ -109,7 +110,7 @@ async function nearbySearch(innerMap) {
         lat: center.lat(),
         lng: center.lng(),
         radius: Math.round(radius),
-        type: "restaurant",
+        type: selectedType,
       }),
     });
 
@@ -251,6 +252,14 @@ async function init() {
   // Initial nearby restaurant search after map is ready.
   event.addListenerOnce(innerMap, "idle", () => {
     void nearbySearch(innerMap);
+  });
+
+  // Hook up cuisine dropdown
+  document.querySelectorAll(".dropdown-item[data-type]").forEach((item) => {
+    item.addEventListener("click", (e) => {
+      e.preventDefault(); // needed if using <a>
+      selectedType = item.dataset.type || "restaurant";
+    });
   });
 
   console.log({ mapElement, innerMap });
