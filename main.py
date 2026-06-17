@@ -200,6 +200,7 @@ def privacy():
     return render_template("/privacy.html")
 
 
+# i must say that this was mostly ai but i went through it and understood it
 @app.route("/api/search", methods=["POST"])
 @csrf.exempt
 def search_places():
@@ -218,26 +219,32 @@ def search_places():
 
     # invalid coordinates here if i want to
 
-    place_type = data.get("type", "restaurant")  # default search type
+    dietary = data.get("dietary", "any")
+    place_type = data.get("cuisine", "restaurant")
 
     url = "https://places.googleapis.com/v1/places:searchNearby"  # Places API endpoint
     # json thing for google api
     headers = {
         "Content-Type": "application/json",
         "X-Goog-Api-Key": "AIzaSyADzNnIA-zf9LSniYX8Z7uAo-VmfsiKz-c",  # hide this api key!!!!!!!!!!!!!!!!!!!!!!!!!!!
-        "X-Goog-FieldMask": ",".join(  # request only needed fields
+        "X-Goog-FieldMask": ",".join(
             [
                 "places.id",
                 "places.displayName",
                 "places.location",
                 "places.formattedAddress",
                 "places.googleMapsUri",
+                "places.types",
             ]
         ),
     }
 
+    included_types = [place_type]  # e.g. restaurant
+    if dietary != "none":
+        included_types.append(dietary)
+
     payload = {
-        "includedTypes": [place_type],  # e.g. restaurant
+        "includedTypes": included_types,
         "maxResultCount": 20,  # cap result count
         "locationRestriction": {
             "circle": {

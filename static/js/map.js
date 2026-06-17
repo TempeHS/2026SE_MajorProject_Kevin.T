@@ -1,3 +1,5 @@
+// this is like all ai or just taken from the google maps docs cos i do not know a lick of javascript
+
 // prettier-ignore
 (g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})({
   key: "AIzaSyADzNnIA-zf9LSniYX8Z7uAo-VmfsiKz-c",
@@ -9,7 +11,9 @@ let map;
 let infoWindow;
 let nearbyMarkers = [];
 let searchRadiusCircle = null;
-let selectedType = "restaurant"; // <- add this
+let selectedType = "restaurant";
+let selectedCuisine = "restaurant";
+let selectedDietary = "none";
 
 function getSliderRadiusMeters() {
   const distanceSlider = document.getElementById("range-distance");
@@ -110,7 +114,8 @@ async function nearbySearch(innerMap) {
         lat: center.lat(),
         lng: center.lng(),
         radius: Math.round(radius),
-        type: selectedType,
+        cuisine: selectedCuisine,
+        dietary: selectedDietary,
       }),
     });
 
@@ -255,10 +260,18 @@ async function init() {
   });
 
   // Hook up cuisine dropdown
-  document.querySelectorAll(".dropdown-item[data-type]").forEach((item) => {
+  document.querySelectorAll(".dropdown-item[data-cuisine]").forEach((item) => {
     item.addEventListener("click", (e) => {
-      e.preventDefault(); // needed if using <a>
-      selectedType = item.dataset.type || "restaurant";
+      e.preventDefault();
+      selectedCuisine = item.dataset.cuisine || "restaurant";
+    });
+  });
+
+  // Hook up dietary dropdown
+  document.querySelectorAll(".dropdown-item[data-dietary]").forEach((item) => {
+    item.addEventListener("click", (e) => {
+      e.preventDefault();
+      selectedDietary = item.dataset.dietary || "none";
     });
   });
 
