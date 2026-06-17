@@ -15965,3 +15965,221 @@
 2026-06-15 11:07:14,251 127.0.0.1 - - [15/Jun/2026 11:07:14] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
 2026-06-15 11:07:14,272 127.0.0.1 - - [15/Jun/2026 11:07:14] "GET /static/js/map.js HTTP/1.1" 200 -
 2026-06-15 11:07:14,366 127.0.0.1 - - [15/Jun/2026 11:07:14] "GET /static/js/serviceWorker.js HTTP/1.1" 200 -
+2026-06-15 11:11:24,062 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.0.235:5000
+2026-06-15 11:11:24,062 [33mPress CTRL+C to quit[0m
+2026-06-15 11:11:24,063  * Restarting with stat
+2026-06-15 11:11:24,567  * Debugger is active!
+2026-06-15 11:11:24,568  * Debugger PIN: 244-273-188
+2026-06-15 11:11:25,969 127.0.0.1 - - [15/Jun/2026 11:11:25] "GET / HTTP/1.1" 200 -
+2026-06-15 11:11:26,234 127.0.0.1 - - [15/Jun/2026 11:11:26] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-15 11:11:26,290 127.0.0.1 - - [15/Jun/2026 11:11:26] "[36mGET /static/js/map.js HTTP/1.1[0m" 304 -
+2026-06-15 11:11:26,339 127.0.0.1 - - [15/Jun/2026 11:11:26] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-15 11:11:26,384 127.0.0.1 - - [15/Jun/2026 11:11:26] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-15 11:11:26,385 127.0.0.1 - - [15/Jun/2026 11:11:26] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-15 11:11:26,488 127.0.0.1 - - [15/Jun/2026 11:11:26] "GET /static/js/serviceWorker.js HTTP/1.1" 200 -
+2026-06-15 11:11:37,471 127.0.0.1 - - [15/Jun/2026 11:11:37] "GET / HTTP/1.1" 200 -
+2026-06-15 11:11:37,540 127.0.0.1 - - [15/Jun/2026 11:11:37] "[36mGET /static/js/map.js HTTP/1.1[0m" 304 -
+2026-06-15 11:11:37,544 127.0.0.1 - - [15/Jun/2026 11:11:37] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-15 11:11:37,553 127.0.0.1 - - [15/Jun/2026 11:11:37] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-15 11:11:37,571 127.0.0.1 - - [15/Jun/2026 11:11:37] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-15 11:11:37,575 127.0.0.1 - - [15/Jun/2026 11:11:37] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-15 11:11:37,651 127.0.0.1 - - [15/Jun/2026 11:11:37] "GET /static/js/serviceWorker.js HTTP/1.1" 200 -
+2026-06-15 11:12:19,290 127.0.0.1 - - [15/Jun/2026 11:12:19] "GET / HTTP/1.1" 200 -
+2026-06-15 11:12:19,375 127.0.0.1 - - [15/Jun/2026 11:12:19] "[36mGET /static/js/map.js HTTP/1.1[0m" 304 -
+2026-06-15 11:12:19,376 127.0.0.1 - - [15/Jun/2026 11:12:19] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-15 11:12:19,384 127.0.0.1 - - [15/Jun/2026 11:12:19] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-15 11:12:19,400 127.0.0.1 - - [15/Jun/2026 11:12:19] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-15 11:12:19,405 127.0.0.1 - - [15/Jun/2026 11:12:19] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-15 11:12:19,484 127.0.0.1 - - [15/Jun/2026 11:12:19] "GET /static/js/serviceWorker.js HTTP/1.1" 200 -
+2026-06-15 11:12:36,003 127.0.0.1 - - [15/Jun/2026 11:12:36] "GET / HTTP/1.1" 200 -
+2026-06-15 11:12:36,122 127.0.0.1 - - [15/Jun/2026 11:12:36] "[36mGET /static/js/map.js HTTP/1.1[0m" 304 -
+2026-06-15 11:12:36,125 127.0.0.1 - - [15/Jun/2026 11:12:36] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-15 11:12:36,128 127.0.0.1 - - [15/Jun/2026 11:12:36] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-15 11:12:36,133 127.0.0.1 - - [15/Jun/2026 11:12:36] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-15 11:12:36,187 127.0.0.1 - - [15/Jun/2026 11:12:36] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-15 11:12:36,302 127.0.0.1 - - [15/Jun/2026 11:12:36] "GET /static/js/serviceWorker.js HTTP/1.1" 200 -
+2026-06-15 11:12:58,453 127.0.0.1 - - [15/Jun/2026 11:12:58] "GET / HTTP/1.1" 200 -
+2026-06-15 11:12:58,538 127.0.0.1 - - [15/Jun/2026 11:12:58] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-15 11:12:58,541 127.0.0.1 - - [15/Jun/2026 11:12:58] "[36mGET /static/js/map.js HTTP/1.1[0m" 304 -
+2026-06-15 11:12:58,544 127.0.0.1 - - [15/Jun/2026 11:12:58] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-15 11:12:58,546 127.0.0.1 - - [15/Jun/2026 11:12:58] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-15 11:12:58,548 127.0.0.1 - - [15/Jun/2026 11:12:58] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-15 11:12:58,642 127.0.0.1 - - [15/Jun/2026 11:12:58] "GET /static/js/serviceWorker.js HTTP/1.1" 200 -
+2026-06-16 01:03:41,836 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.0.226:5000
+2026-06-16 01:03:41,876 [33mPress CTRL+C to quit[0m
+2026-06-16 01:03:41,879  * Restarting with stat
+2026-06-16 01:03:42,414  * Debugger is active!
+2026-06-16 01:03:42,414  * Debugger PIN: 448-614-642
+2026-06-16 01:03:58,597 127.0.0.1 - - [16/Jun/2026 01:03:58] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-06-16 01:04:05,607 127.0.0.1 - - [16/Jun/2026 01:04:05] "GET / HTTP/1.1" 200 -
+2026-06-16 01:04:05,671 127.0.0.1 - - [16/Jun/2026 01:04:05] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-16 01:04:05,707 {"csp-report":{"document-uri":"https://jubilant-chainsaw-qrr5pqpp9j6hxrjq-5000.app.github.dev/","referrer":"https://jubilant-chainsaw-qrr5pqpp9j6hxrjq-5000.app.github.dev/","violated-directive":"manifest-src","effective-directive":"manifest-src","original-policy":"script-src 'self' 'unsafe-inline' 'unsafe-eval' https://maps.googleapis.com https://maps.gstatic.com; img-src 'self' data: blob: https://maps.gstatic.com https://maps.googleapis.com https://*.gstatic.com; child-src 'self' blob:; default-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; media-src 'self'; object-src 'none'; connect-src 'self' data: blob: https://maps.googleapis.com https://maps.gstatic.com https://www.gstatic.com https://*.gstatic.com https://places.googleapis.com; base-uri 'self'; report-uri /csp_report; style-src-attr 'unsafe-inline'; style-src-elem 'self' 'unsafe-inline' https://fonts.googleapis.com; script-src-elem 'self' 'unsafe-inline' https://maps.googleapis.com https://maps.gstatic.com; font-src 'self' https://fonts.gstatic.com data:; worker-src 'self' blob:; manifest-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"https://jubilant-chainsaw-qrr5pqpp9j6hxrjq-5000.app.github.dev/static/manifest.json","status-code":200,"script-sample":""}}
+2026-06-16 01:04:05,707 127.0.0.1 - - [16/Jun/2026 01:04:05] "POST /csp_report HTTP/1.1" 200 -
+2026-06-16 01:04:05,776 127.0.0.1 - - [16/Jun/2026 01:04:05] "GET /static/js/map.js HTTP/1.1" 200 -
+2026-06-16 01:04:05,777 127.0.0.1 - - [16/Jun/2026 01:04:05] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-16 01:04:05,876 127.0.0.1 - - [16/Jun/2026 01:04:05] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-16 01:04:05,912 127.0.0.1 - - [16/Jun/2026 01:04:05] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-16 01:04:06,960 127.0.0.1 - - [16/Jun/2026 01:04:06] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2026-06-16 01:04:15,088 127.0.0.1 - - [16/Jun/2026 01:04:15] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-16 01:04:15,092 127.0.0.1 - - [16/Jun/2026 01:04:15] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-16 01:04:15,334 127.0.0.1 - - [16/Jun/2026 01:04:15] "[33mGET /static/js/bootstrap.bundle.min.js.map HTTP/1.1[0m" 404 -
+2026-06-16 01:04:15,374 127.0.0.1 - - [16/Jun/2026 01:04:15] "[33mGET /static/css/bootstrap.min.css.map HTTP/1.1[0m" 404 -
+2026-06-16 01:04:47,726 127.0.0.1 - - [16/Jun/2026 01:04:47] "[33mGET /static/css/bootstrap.min.css.map HTTP/1.1[0m" 404 -
+2026-06-16 01:04:47,740 127.0.0.1 - - [16/Jun/2026 01:04:47] "[33mGET /static/js/bootstrap.bundle.min.js.map HTTP/1.1[0m" 404 -
+2026-06-16 01:06:59,836 127.0.0.1 - - [16/Jun/2026 01:06:59] "[33mGET /static/css/bootstrap.min.css.map HTTP/1.1[0m" 404 -
+2026-06-16 01:06:59,846 127.0.0.1 - - [16/Jun/2026 01:06:59] "[33mGET /static/js/bootstrap.bundle.min.js.map HTTP/1.1[0m" 404 -
+2026-06-16 07:02:48,059 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.1.151:5000
+2026-06-16 07:02:48,105 [33mPress CTRL+C to quit[0m
+2026-06-16 07:02:48,106  * Restarting with stat
+2026-06-16 07:02:48,411  * Debugger is active!
+2026-06-16 07:02:48,411  * Debugger PIN: 952-571-317
+2026-06-16 07:02:55,411 127.0.0.1 - - [16/Jun/2026 07:02:55] "GET / HTTP/1.1" 200 -
+2026-06-16 07:02:55,714 127.0.0.1 - - [16/Jun/2026 07:02:55] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-16 07:02:55,714 127.0.0.1 - - [16/Jun/2026 07:02:55] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-16 07:02:55,768 127.0.0.1 - - [16/Jun/2026 07:02:55] "[36mGET /static/js/map.js HTTP/1.1[0m" 304 -
+2026-06-16 07:02:55,769 127.0.0.1 - - [16/Jun/2026 07:02:55] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-16 07:02:55,769 127.0.0.1 - - [16/Jun/2026 07:02:55] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-16 07:02:56,311 127.0.0.1 - - [16/Jun/2026 07:02:56] "GET /static/js/serviceWorker.js HTTP/1.1" 200 -
+2026-06-16 07:22:25,179 127.0.0.1 - - [16/Jun/2026 07:22:25] "GET / HTTP/1.1" 200 -
+2026-06-16 07:22:25,404 127.0.0.1 - - [16/Jun/2026 07:22:25] "[36mGET /static/js/map.js HTTP/1.1[0m" 304 -
+2026-06-16 07:22:25,430 127.0.0.1 - - [16/Jun/2026 07:22:25] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-16 07:22:25,439 127.0.0.1 - - [16/Jun/2026 07:22:25] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-16 07:22:25,503 127.0.0.1 - - [16/Jun/2026 07:22:25] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-16 07:22:25,595 127.0.0.1 - - [16/Jun/2026 07:22:25] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-16 07:22:25,699 127.0.0.1 - - [16/Jun/2026 07:22:25] "GET /static/js/serviceWorker.js HTTP/1.1" 200 -
+2026-06-16 07:34:39,290  * Detected change in '/workspaces/2026SE_MajorProject_Kevin.T/main.py', reloading
+2026-06-16 07:34:39,325  * Restarting with stat
+2026-06-17 01:09:50,253 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.1.160:5000
+2026-06-17 01:09:50,257 [33mPress CTRL+C to quit[0m
+2026-06-17 01:09:50,258  * Restarting with stat
+2026-06-17 01:09:50,837  * Debugger is active!
+2026-06-17 01:09:50,838  * Debugger PIN: 576-051-989
+2026-06-17 01:09:54,545 127.0.0.1 - - [17/Jun/2026 01:09:54] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-06-17 01:09:55,662 127.0.0.1 - - [17/Jun/2026 01:09:55] "GET / HTTP/1.1" 200 -
+2026-06-17 01:09:55,792 {"csp-report":{"document-uri":"https://jubilant-chainsaw-qrr5pqpp9j6hxrjq-5000.app.github.dev/","referrer":"https://jubilant-chainsaw-qrr5pqpp9j6hxrjq-5000.app.github.dev/","violated-directive":"manifest-src","effective-directive":"manifest-src","original-policy":"script-src 'self' 'unsafe-inline' 'unsafe-eval' https://maps.googleapis.com https://maps.gstatic.com; img-src 'self' data: blob: https://maps.gstatic.com https://maps.googleapis.com https://*.gstatic.com; child-src 'self' blob:; default-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; media-src 'self'; object-src 'none'; connect-src 'self' data: blob: https://maps.googleapis.com https://maps.gstatic.com https://www.gstatic.com https://*.gstatic.com https://places.googleapis.com; base-uri 'self'; report-uri /csp_report; style-src-attr 'unsafe-inline'; style-src-elem 'self' 'unsafe-inline' https://fonts.googleapis.com; script-src-elem 'self' 'unsafe-inline' https://maps.googleapis.com https://maps.gstatic.com; font-src 'self' https://fonts.gstatic.com data:; worker-src 'self' blob:; manifest-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"https://jubilant-chainsaw-qrr5pqpp9j6hxrjq-5000.app.github.dev/static/manifest.json","status-code":200,"script-sample":""}}
+2026-06-17 01:09:55,792 127.0.0.1 - - [17/Jun/2026 01:09:55] "POST /csp_report HTTP/1.1" 200 -
+2026-06-17 01:09:55,855 127.0.0.1 - - [17/Jun/2026 01:09:55] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-17 01:09:55,859 127.0.0.1 - - [17/Jun/2026 01:09:55] "[36mGET /static/js/map.js HTTP/1.1[0m" 304 -
+2026-06-17 01:09:55,861 127.0.0.1 - - [17/Jun/2026 01:09:55] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-17 01:09:55,897 127.0.0.1 - - [17/Jun/2026 01:09:55] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-17 01:09:55,924 127.0.0.1 - - [17/Jun/2026 01:09:55] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-17 01:09:57,229 127.0.0.1 - - [17/Jun/2026 01:09:57] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2026-06-17 01:09:57,273 127.0.0.1 - - [17/Jun/2026 01:09:57] "[36mGET /static/images/favicon.png HTTP/1.1[0m" 304 -
+2026-06-17 01:10:41,457  * Detected change in '/workspaces/2026SE_MajorProject_Kevin.T/main.py', reloading
+2026-06-17 01:10:41,492  * Restarting with stat
+2026-06-17 01:43:21,244 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.1.160:5000
+2026-06-17 01:43:21,244 [33mPress CTRL+C to quit[0m
+2026-06-17 01:43:21,245  * Restarting with stat
+2026-06-17 01:43:21,541  * Debugger is active!
+2026-06-17 01:43:21,542  * Debugger PIN: 576-051-989
+2026-06-17 01:43:21,869 127.0.0.1 - - [17/Jun/2026 01:43:21] "GET / HTTP/1.1" 200 -
+2026-06-17 01:43:22,096 127.0.0.1 - - [17/Jun/2026 01:43:22] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-17 01:43:22,101 127.0.0.1 - - [17/Jun/2026 01:43:22] "GET /static/js/map.js HTTP/1.1" 200 -
+2026-06-17 01:43:22,113 127.0.0.1 - - [17/Jun/2026 01:43:22] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-17 01:43:22,124 {"csp-report":{"document-uri":"https://jubilant-chainsaw-qrr5pqpp9j6hxrjq-5000.app.github.dev/","referrer":"https://jubilant-chainsaw-qrr5pqpp9j6hxrjq.github.dev/","violated-directive":"manifest-src","effective-directive":"manifest-src","original-policy":"script-src 'self' 'unsafe-inline' 'unsafe-eval' https://maps.googleapis.com https://maps.gstatic.com; img-src 'self' data: blob: https://maps.gstatic.com https://maps.googleapis.com https://*.gstatic.com; child-src 'self' blob:; default-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; media-src 'self'; object-src 'none'; connect-src 'self' data: blob: https://maps.googleapis.com https://maps.gstatic.com https://www.gstatic.com https://*.gstatic.com https://places.googleapis.com; base-uri 'self'; report-uri /csp_report; style-src-attr 'unsafe-inline'; style-src-elem 'self' 'unsafe-inline' https://fonts.googleapis.com; script-src-elem 'self' 'unsafe-inline' https://maps.googleapis.com https://maps.gstatic.com; font-src 'self' https://fonts.gstatic.com data:; worker-src 'self' blob:; manifest-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"https://jubilant-chainsaw-qrr5pqpp9j6hxrjq-5000.app.github.dev/static/manifest.json","status-code":200,"script-sample":""}}
+2026-06-17 01:43:22,124 127.0.0.1 - - [17/Jun/2026 01:43:22] "POST /csp_report HTTP/1.1" 200 -
+2026-06-17 01:43:22,214 127.0.0.1 - - [17/Jun/2026 01:43:22] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-17 01:43:22,244 127.0.0.1 - - [17/Jun/2026 01:43:22] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-17 01:43:22,452 Starting new HTTPS connection (1): places.googleapis.com:443
+2026-06-17 01:43:22,453 127.0.0.1 - - [17/Jun/2026 01:43:22] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2026-06-17 01:43:22,757 https://places.googleapis.com:443 "POST /v1/places:searchNearby HTTP/1.1" 200 None
+2026-06-17 01:43:22,759 127.0.0.1 - - [17/Jun/2026 01:43:22] "POST /api/search HTTP/1.1" 200 -
+2026-06-17 01:44:24,001 127.0.0.1 - - [17/Jun/2026 01:44:24] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-17 01:44:24,002 127.0.0.1 - - [17/Jun/2026 01:44:24] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-17 01:44:24,045 127.0.0.1 - - [17/Jun/2026 01:44:24] "[33mGET /static/js/bootstrap.bundle.min.js.map HTTP/1.1[0m" 404 -
+2026-06-17 01:44:24,074 127.0.0.1 - - [17/Jun/2026 01:44:24] "[33mGET /static/css/bootstrap.min.css.map HTTP/1.1[0m" 404 -
+2026-06-17 01:44:46,849 Starting new HTTPS connection (1): places.googleapis.com:443
+2026-06-17 01:44:47,126 https://places.googleapis.com:443 "POST /v1/places:searchNearby HTTP/1.1" 200 None
+2026-06-17 01:44:47,130 127.0.0.1 - - [17/Jun/2026 01:44:47] "POST /api/search HTTP/1.1" 200 -
+2026-06-17 01:44:56,824 Starting new HTTPS connection (1): places.googleapis.com:443
+2026-06-17 01:44:57,079 https://places.googleapis.com:443 "POST /v1/places:searchNearby HTTP/1.1" 200 None
+2026-06-17 01:44:57,087 127.0.0.1 - - [17/Jun/2026 01:44:57] "POST /api/search HTTP/1.1" 200 -
+2026-06-17 01:45:00,471 Starting new HTTPS connection (1): places.googleapis.com:443
+2026-06-17 01:45:00,713 https://places.googleapis.com:443 "POST /v1/places:searchNearby HTTP/1.1" 200 None
+2026-06-17 01:45:00,718 127.0.0.1 - - [17/Jun/2026 01:45:00] "POST /api/search HTTP/1.1" 200 -
+2026-06-17 01:45:07,515 Starting new HTTPS connection (1): places.googleapis.com:443
+2026-06-17 01:45:07,749 https://places.googleapis.com:443 "POST /v1/places:searchNearby HTTP/1.1" 200 None
+2026-06-17 01:45:07,753 127.0.0.1 - - [17/Jun/2026 01:45:07] "POST /api/search HTTP/1.1" 200 -
+2026-06-17 01:45:10,280 Starting new HTTPS connection (1): places.googleapis.com:443
+2026-06-17 01:45:10,630 https://places.googleapis.com:443 "POST /v1/places:searchNearby HTTP/1.1" 200 None
+2026-06-17 01:45:10,632 127.0.0.1 - - [17/Jun/2026 01:45:10] "POST /api/search HTTP/1.1" 200 -
+2026-06-17 01:45:27,354 Starting new HTTPS connection (1): places.googleapis.com:443
+2026-06-17 01:45:27,620 https://places.googleapis.com:443 "POST /v1/places:searchNearby HTTP/1.1" 200 None
+2026-06-17 01:45:27,622 127.0.0.1 - - [17/Jun/2026 01:45:27] "POST /api/search HTTP/1.1" 200 -
+2026-06-17 01:45:43,537 Starting new HTTPS connection (1): places.googleapis.com:443
+2026-06-17 01:45:43,793 https://places.googleapis.com:443 "POST /v1/places:searchNearby HTTP/1.1" 200 None
+2026-06-17 01:45:43,797 127.0.0.1 - - [17/Jun/2026 01:45:43] "POST /api/search HTTP/1.1" 200 -
+2026-06-17 01:45:57,327 Starting new HTTPS connection (1): places.googleapis.com:443
+2026-06-17 01:45:57,764 https://places.googleapis.com:443 "POST /v1/places:searchNearby HTTP/1.1" 200 None
+2026-06-17 01:45:57,766 127.0.0.1 - - [17/Jun/2026 01:45:57] "POST /api/search HTTP/1.1" 200 -
+2026-06-17 01:46:46,039 Starting new HTTPS connection (1): places.googleapis.com:443
+2026-06-17 01:46:46,296 https://places.googleapis.com:443 "POST /v1/places:searchNearby HTTP/1.1" 200 None
+2026-06-17 01:46:46,300 127.0.0.1 - - [17/Jun/2026 01:46:46] "POST /api/search HTTP/1.1" 200 -
+2026-06-17 01:48:33,826 127.0.0.1 - - [17/Jun/2026 01:48:33] "[33mGET /static/css/bootstrap.min.css.map HTTP/1.1[0m" 404 -
+2026-06-17 01:48:33,829 127.0.0.1 - - [17/Jun/2026 01:48:33] "[33mGET /static/js/bootstrap.bundle.min.js.map HTTP/1.1[0m" 404 -
+2026-06-17 01:49:54,287 Starting new HTTPS connection (1): places.googleapis.com:443
+2026-06-17 01:49:54,632 https://places.googleapis.com:443 "POST /v1/places:searchNearby HTTP/1.1" 200 None
+2026-06-17 01:49:54,634 127.0.0.1 - - [17/Jun/2026 01:49:54] "POST /api/search HTTP/1.1" 200 -
+2026-06-17 01:50:24,283 Starting new HTTPS connection (1): places.googleapis.com:443
+2026-06-17 01:50:24,509 https://places.googleapis.com:443 "POST /v1/places:searchNearby HTTP/1.1" 400 None
+2026-06-17 01:50:24,512 127.0.0.1 - - [17/Jun/2026 01:50:24] "[35m[1mPOST /api/search HTTP/1.1[0m" 502 -
+2026-06-17 01:53:52,510 127.0.0.1 - - [17/Jun/2026 01:53:52] "[33mGET /static/css/bootstrap.min.css.map HTTP/1.1[0m" 404 -
+2026-06-17 01:53:52,522 127.0.0.1 - - [17/Jun/2026 01:53:52] "[33mGET /static/js/bootstrap.bundle.min.js.map HTTP/1.1[0m" 404 -
+2026-06-17 01:54:46,708 127.0.0.1 - - [17/Jun/2026 01:54:46] "GET / HTTP/1.1" 200 -
+2026-06-17 01:54:46,852 {"csp-report":{"document-uri":"https://jubilant-chainsaw-qrr5pqpp9j6hxrjq-5000.app.github.dev/","referrer":"https://jubilant-chainsaw-qrr5pqpp9j6hxrjq.github.dev/","violated-directive":"manifest-src","effective-directive":"manifest-src","original-policy":"script-src 'self' 'unsafe-inline' 'unsafe-eval' https://maps.googleapis.com https://maps.gstatic.com; img-src 'self' data: blob: https://maps.gstatic.com https://maps.googleapis.com https://*.gstatic.com; child-src 'self' blob:; default-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; media-src 'self'; object-src 'none'; connect-src 'self' data: blob: https://maps.googleapis.com https://maps.gstatic.com https://www.gstatic.com https://*.gstatic.com https://places.googleapis.com; base-uri 'self'; report-uri /csp_report; style-src-attr 'unsafe-inline'; style-src-elem 'self' 'unsafe-inline' https://fonts.googleapis.com; script-src-elem 'self' 'unsafe-inline' https://maps.googleapis.com https://maps.gstatic.com; font-src 'self' https://fonts.gstatic.com data:; worker-src 'self' blob:; manifest-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"https://jubilant-chainsaw-qrr5pqpp9j6hxrjq-5000.app.github.dev/static/manifest.json","status-code":200,"script-sample":""}}
+2026-06-17 01:54:46,852 127.0.0.1 - - [17/Jun/2026 01:54:46] "POST /csp_report HTTP/1.1" 200 -
+2026-06-17 01:54:46,904 127.0.0.1 - - [17/Jun/2026 01:54:46] "[36mGET /static/js/map.js HTTP/1.1[0m" 304 -
+2026-06-17 01:54:47,448 127.0.0.1 - - [17/Jun/2026 01:54:47] "GET /static/css/style.css HTTP/1.1" 200 -
+2026-06-17 01:54:47,480 127.0.0.1 - - [17/Jun/2026 01:54:47] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 -
+2026-06-17 01:54:47,560 127.0.0.1 - - [17/Jun/2026 01:54:47] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-17 01:54:47,605 127.0.0.1 - - [17/Jun/2026 01:54:47] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-17 01:54:47,618 Starting new HTTPS connection (1): places.googleapis.com:443
+2026-06-17 01:54:47,662 127.0.0.1 - - [17/Jun/2026 01:54:47] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2026-06-17 01:54:47,665 127.0.0.1 - - [17/Jun/2026 01:54:47] "[36mGET /static/images/favicon.png HTTP/1.1[0m" 304 -
+2026-06-17 01:54:47,889 https://places.googleapis.com:443 "POST /v1/places:searchNearby HTTP/1.1" 200 None
+2026-06-17 01:54:47,891 127.0.0.1 - - [17/Jun/2026 01:54:47] "POST /api/search HTTP/1.1" 200 -
+2026-06-17 01:54:51,519 127.0.0.1 - - [17/Jun/2026 01:54:51] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-17 01:54:51,523 127.0.0.1 - - [17/Jun/2026 01:54:51] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-17 01:54:51,713 127.0.0.1 - - [17/Jun/2026 01:54:51] "[33mGET /static/js/bootstrap.bundle.min.js.map HTTP/1.1[0m" 404 -
+2026-06-17 01:54:51,754 127.0.0.1 - - [17/Jun/2026 01:54:51] "[33mGET /static/css/bootstrap.min.css.map HTTP/1.1[0m" 404 -
+2026-06-17 02:05:58,790 127.0.0.1 - - [17/Jun/2026 02:05:58] "GET / HTTP/1.1" 200 -
+2026-06-17 02:05:59,027 127.0.0.1 - - [17/Jun/2026 02:05:59] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-17 02:05:59,034 127.0.0.1 - - [17/Jun/2026 02:05:59] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-17 02:05:59,066 127.0.0.1 - - [17/Jun/2026 02:05:59] "GET /static/js/map.js HTTP/1.1" 200 -
+2026-06-17 02:05:59,098 {"csp-report":{"document-uri":"https://jubilant-chainsaw-qrr5pqpp9j6hxrjq-5000.app.github.dev/","referrer":"https://jubilant-chainsaw-qrr5pqpp9j6hxrjq.github.dev/","violated-directive":"manifest-src","effective-directive":"manifest-src","original-policy":"script-src 'self' 'unsafe-inline' 'unsafe-eval' https://maps.googleapis.com https://maps.gstatic.com; img-src 'self' data: blob: https://maps.gstatic.com https://maps.googleapis.com https://*.gstatic.com; child-src 'self' blob:; default-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; media-src 'self'; object-src 'none'; connect-src 'self' data: blob: https://maps.googleapis.com https://maps.gstatic.com https://www.gstatic.com https://*.gstatic.com https://places.googleapis.com; base-uri 'self'; report-uri /csp_report; style-src-attr 'unsafe-inline'; style-src-elem 'self' 'unsafe-inline' https://fonts.googleapis.com; script-src-elem 'self' 'unsafe-inline' https://maps.googleapis.com https://maps.gstatic.com; font-src 'self' https://fonts.gstatic.com data:; worker-src 'self' blob:; manifest-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"https://jubilant-chainsaw-qrr5pqpp9j6hxrjq-5000.app.github.dev/static/manifest.json","status-code":200,"script-sample":""}}
+2026-06-17 02:05:59,099 127.0.0.1 - - [17/Jun/2026 02:05:59] "POST /csp_report HTTP/1.1" 200 -
+2026-06-17 02:05:59,146 Starting new HTTPS connection (1): places.googleapis.com:443
+2026-06-17 02:05:59,177 127.0.0.1 - - [17/Jun/2026 02:05:59] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-17 02:05:59,203 127.0.0.1 - - [17/Jun/2026 02:05:59] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-17 02:05:59,241 127.0.0.1 - - [17/Jun/2026 02:05:59] "[36mGET /static/images/favicon.png HTTP/1.1[0m" 304 -
+2026-06-17 02:05:59,244 127.0.0.1 - - [17/Jun/2026 02:05:59] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2026-06-17 02:05:59,477 https://places.googleapis.com:443 "POST /v1/places:searchNearby HTTP/1.1" 200 None
+2026-06-17 02:05:59,479 127.0.0.1 - - [17/Jun/2026 02:05:59] "POST /api/search HTTP/1.1" 200 -
+2026-06-17 02:06:05,549 127.0.0.1 - - [17/Jun/2026 02:06:05] "GET / HTTP/1.1" 200 -
+2026-06-17 02:06:05,606 127.0.0.1 - - [17/Jun/2026 02:06:05] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-17 02:06:05,611 127.0.0.1 - - [17/Jun/2026 02:06:05] "GET /static/js/map.js HTTP/1.1" 200 -
+2026-06-17 02:06:05,613 127.0.0.1 - - [17/Jun/2026 02:06:05] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-17 02:06:05,620 {"csp-report":{"document-uri":"https://jubilant-chainsaw-qrr5pqpp9j6hxrjq-5000.app.github.dev/","referrer":"https://jubilant-chainsaw-qrr5pqpp9j6hxrjq.github.dev/","violated-directive":"manifest-src","effective-directive":"manifest-src","original-policy":"script-src 'self' 'unsafe-inline' 'unsafe-eval' https://maps.googleapis.com https://maps.gstatic.com; img-src 'self' data: blob: https://maps.gstatic.com https://maps.googleapis.com https://*.gstatic.com; child-src 'self' blob:; default-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; media-src 'self'; object-src 'none'; connect-src 'self' data: blob: https://maps.googleapis.com https://maps.gstatic.com https://www.gstatic.com https://*.gstatic.com https://places.googleapis.com; base-uri 'self'; report-uri /csp_report; style-src-attr 'unsafe-inline'; style-src-elem 'self' 'unsafe-inline' https://fonts.googleapis.com; script-src-elem 'self' 'unsafe-inline' https://maps.googleapis.com https://maps.gstatic.com; font-src 'self' https://fonts.gstatic.com data:; worker-src 'self' blob:; manifest-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"https://jubilant-chainsaw-qrr5pqpp9j6hxrjq-5000.app.github.dev/static/manifest.json","status-code":200,"script-sample":""}}
+2026-06-17 02:06:05,620 127.0.0.1 - - [17/Jun/2026 02:06:05] "POST /csp_report HTTP/1.1" 200 -
+2026-06-17 02:06:05,648 127.0.0.1 - - [17/Jun/2026 02:06:05] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-17 02:06:05,682 127.0.0.1 - - [17/Jun/2026 02:06:05] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-17 02:06:05,686 Starting new HTTPS connection (1): places.googleapis.com:443
+2026-06-17 02:06:05,716 127.0.0.1 - - [17/Jun/2026 02:06:05] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2026-06-17 02:06:05,718 127.0.0.1 - - [17/Jun/2026 02:06:05] "[36mGET /static/images/favicon.png HTTP/1.1[0m" 304 -
+2026-06-17 02:06:05,927 https://places.googleapis.com:443 "POST /v1/places:searchNearby HTTP/1.1" 200 None
+2026-06-17 02:06:05,929 127.0.0.1 - - [17/Jun/2026 02:06:05] "POST /api/search HTTP/1.1" 200 -

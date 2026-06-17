@@ -63,7 +63,7 @@
           />
         </svg>
       </button>
-      <ul class="dropdown-menu" style="min-width: 18rem">
+      <ul class="dropdown-menu">
         <li><h6 class="dropdown-header">Cuisine</h6></li>
         <li><a class="dropdown-item" href="#">italian</a></li>
         <li><a class="dropdown-item" href="#">Another action</a></li>
@@ -150,7 +150,7 @@
           />
         </svg>
       </button>
-      <div class="dropdown-menu p-3" style="--bs-dropdown-min-width: 22rem">
+      <div class="dropdown-menu p-3">
         <h6 class="dropdown-header mb-2 p-0">Price range:</h6>
 
         <div class="input-group input-group-sm flex-nowrap" style="width: 8rem">
@@ -198,7 +198,19 @@
         </svg>
       </button>
       <div class="dropdown-menu p-3" style="--bs-dropdown-min-width: 22rem">
-        <h6 class="dropdown-header mb-2 p-0">Distance</h6>
+        <div class="row">
+          <div class="col">
+            <h6 class="dropdown-header mb-2 p-0">Distance</h6>
+          </div>
+          <div class="col">
+            <output
+              for="range-distance"
+              id="rangeValue"
+              aria-hidden="true"
+            ></output>
+          </div>
+        </div>
+
         <input
           type="range"
           class="form-range w-100 m-0"
@@ -208,11 +220,7 @@
           value="0"
           id="range-distance"
         />
-        <output
-          for="range-distance"
-          id="rangeValue"
-          aria-hidden="true"
-        ></output>
+
         <small class="text-muted">0 = auto (map view)</small>
         <script>
           // show value script

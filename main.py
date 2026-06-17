@@ -200,5 +200,68 @@ def privacy():
     return render_template("/privacy.html")
 
 
+@app.route("/api/search", methods=["POST"])
+@csrf.exempt
+def search_places():
+    data = request.get_json(silent=True) or {}  # read json body
+
+    # get location and search radius
+    try:
+        lat = float(data.get("lat"))
+        lng = float(data.get("lng"))
+        radius = int(data.get("radius", 2000))  # default radius is 2km
+    except:
+        return (
+            jsonify({"error": "Invalid lat/lng/radius"}),
+            400,
+        )  # if theres bad input types
+
+    # invalid coordinates here if i want to
+
+    place_type = data.get("type", "restaurant")  # default search type
+
+    url = "https://places.googleapis.com/v1/places:searchNearby"  # Places API endpoint
+    # json thing for google api
+    headers = {
+        "Content-Type": "application/json",
+        "X-Goog-Api-Key": "AIzaSyADzNnIA-zf9LSniYX8Z7uAo-VmfsiKz-c",  # hide this api key!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        "X-Goog-FieldMask": ",".join(  # request only needed fields
+            [
+                "places.id",
+                "places.displayName",
+                "places.location",
+                "places.formattedAddress",
+                "places.googleMapsUri",
+            ]
+        ),
+    }
+
+    payload = {
+        "includedTypes": [place_type],  # e.g. restaurant
+        "maxResultCount": 20,  # cap result count
+        "locationRestriction": {
+            "circle": {
+                "center": {"latitude": lat, "longitude": lng},  # center point
+                "radius": radius,  # meters
+            }
+        },
+    }
+
+    try:
+        resp = requests.post(
+            url, headers=headers, json=payload, timeout=12
+        )  # hello google
+    except requests.RequestException:
+        return jsonify({"error": "Google Places request failed"}), 502
+
+    if not resp.ok:
+        return (
+            jsonify({"error": "Places API error", "details": resp.text}),
+            502,
+        )  # Google returned error
+
+    return jsonify(resp.json()), 200  # send places data back to frontend
+
+
 if __name__ == "__main__":
     app.run(debug=True, host="0.0.0.0", port=5000)

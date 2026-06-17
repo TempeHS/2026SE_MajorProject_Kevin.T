@@ -3,6 +3,7 @@
   key: "AIzaSyADzNnIA-zf9LSniYX8Z7uAo-VmfsiKz-c",
   v: "weekly",
 });
+// remove the api key!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 let map;
 let infoWindow;
@@ -81,19 +82,13 @@ function updateSearchRadiusCircle(innerMap, center, radius) {
 }
 
 async function nearbySearch(innerMap) {
-  const [
-    { Place, SearchNearbyRankPreference },
-    { AdvancedMarkerElement },
-    { spherical },
-  ] = await Promise.all([
-    google.maps.importLibrary("places"),
+  const [{ AdvancedMarkerElement }, { spherical }] = await Promise.all([
     google.maps.importLibrary("marker"),
     google.maps.importLibrary("geometry"),
   ]);
 
   const bounds = innerMap.getBounds();
   const center = innerMap.getCenter();
-
   if (!bounds || !center) return;
 
   const ne = bounds.getNorthEast();
@@ -104,63 +99,66 @@ async function nearbySearch(innerMap) {
   const sliderRadius = getSliderRadiusMeters();
   const radius = sliderRadius ?? autoRadius;
 
-  // Draw/update visible search area
   updateSearchRadiusCircle(innerMap, center, radius);
 
-  const request = {
-    fields: [
-      "id",
-      "displayName",
-      "location",
-      "formattedAddress",
-      "googleMapsURI",
-    ],
-    locationRestriction: {
-      center,
-      radius,
-    },
-    includedPrimaryTypes: ["restaurant"],
-    rankPreference: SearchNearbyRankPreference.POPULARITY,
-  };
-
   try {
-    const { places } = await Place.searchNearby(request);
+    const res = await fetch("/api/search", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        lat: center.lat(),
+        lng: center.lng(),
+        radius: Math.round(radius),
+        type: "restaurant",
+      }),
+    });
+
+    if (!res.ok) throw new Error(`Backend search failed: ${res.status}`);
+
+    const data = await res.json();
+    const places = data.places || [];
 
     clearNearbyMarkers();
-
-    if (!places?.length) {
-      console.log("No nearby restaurants found.");
-      return;
-    }
+    if (!places.length) return;
 
     const fitBounds = new google.maps.LatLngBounds();
 
     for (const place of places) {
       if (!place.location) continue;
 
-      fitBounds.extend(place.location);
+      const loc = {
+        lat: place.location.latitude,
+        lng: place.location.longitude,
+      };
+
+      fitBounds.extend(loc);
 
       const marker = new AdvancedMarkerElement({
         map: innerMap,
-        position: place.location,
-        title: place.displayName || "Restaurant",
+        position: loc,
+        title:
+          (typeof place.displayName === "string"
+            ? place.displayName
+            : place.displayName?.text) || "Restaurant",
       });
 
       marker.addListener("gmp-click", () => {
-        const content = buildInfoContent(place);
-        infoWindow.setContent(content);
-        infoWindow.open({
-          map: innerMap,
-          anchor: marker,
+        const content = buildInfoContent({
+          displayName:
+            typeof place.displayName === "string"
+              ? place.displayName
+              : place.displayName?.text,
+          formattedAddress: place.formattedAddress,
+          googleMapsURI: place.googleMapsURI || place.googleMapsUri,
         });
+        infoWindow.setContent(content);
+        infoWindow.open({ map: innerMap, anchor: marker });
       });
 
       nearbyMarkers.push(marker);
     }
 
-    if (!fitBounds.isEmpty()) {
-      innerMap.fitBounds(fitBounds, 100);
-    }
+    if (!fitBounds.isEmpty()) innerMap.fitBounds(fitBounds, 100);
   } catch (error) {
     console.error("Nearby search failed:", error);
   }
@@ -170,7 +168,6 @@ async function init() {
   const [{ event }] = await Promise.all([
     google.maps.importLibrary("core"),
     google.maps.importLibrary("maps"),
-    google.maps.importLibrary("places"),
     google.maps.importLibrary("marker"),
   ]);
 
