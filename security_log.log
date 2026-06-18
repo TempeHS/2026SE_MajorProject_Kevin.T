@@ -16704,3 +16704,52 @@
 2026-06-17 13:43:38,882 Starting new HTTPS connection (1): places.googleapis.com:443
 2026-06-17 13:43:39,176 https://places.googleapis.com:443 "POST /v1/places:searchNearby HTTP/1.1" 200 None
 2026-06-17 13:43:39,178 127.0.0.1 - - [17/Jun/2026 13:43:39] "POST /api/search HTTP/1.1" 200 -
+2026-06-17 23:46:12,164 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.0.200:5000
+2026-06-17 23:46:12,192 [33mPress CTRL+C to quit[0m
+2026-06-17 23:46:12,195  * Restarting with stat
+2026-06-17 23:46:12,827  * Debugger is active!
+2026-06-17 23:46:12,828  * Debugger PIN: 144-687-163
+2026-06-17 23:46:23,860 127.0.0.1 - - [17/Jun/2026 23:46:23] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-06-17 23:46:25,479 127.0.0.1 - - [17/Jun/2026 23:46:25] "GET / HTTP/1.1" 200 -
+2026-06-17 23:46:25,609 {"csp-report":{"document-uri":"https://jubilant-chainsaw-qrr5pqpp9j6hxrjq-5000.app.github.dev/","referrer":"https://jubilant-chainsaw-qrr5pqpp9j6hxrjq-5000.app.github.dev/","violated-directive":"manifest-src","effective-directive":"manifest-src","original-policy":"script-src 'self' 'unsafe-inline' 'unsafe-eval' https://maps.googleapis.com https://maps.gstatic.com; img-src 'self' data: blob: https://maps.gstatic.com https://maps.googleapis.com https://*.gstatic.com; child-src 'self' blob:; default-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; media-src 'self'; object-src 'none'; connect-src 'self' data: blob: https://maps.googleapis.com https://maps.gstatic.com https://www.gstatic.com https://*.gstatic.com https://places.googleapis.com; base-uri 'self'; report-uri /csp_report; style-src-attr 'unsafe-inline'; style-src-elem 'self' 'unsafe-inline' https://fonts.googleapis.com; script-src-elem 'self' 'unsafe-inline' https://maps.googleapis.com https://maps.gstatic.com; font-src 'self' https://fonts.gstatic.com data:; worker-src 'self' blob:; manifest-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"https://jubilant-chainsaw-qrr5pqpp9j6hxrjq-5000.app.github.dev/static/manifest.json","status-code":200,"script-sample":""}}
+2026-06-17 23:46:25,609 127.0.0.1 - - [17/Jun/2026 23:46:25] "POST /csp_report HTTP/1.1" 200 -
+2026-06-17 23:46:25,772 127.0.0.1 - - [17/Jun/2026 23:46:25] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-17 23:46:25,773 127.0.0.1 - - [17/Jun/2026 23:46:25] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-17 23:46:25,829 127.0.0.1 - - [17/Jun/2026 23:46:25] "GET /static/js/map.js HTTP/1.1" 200 -
+2026-06-17 23:46:25,873 127.0.0.1 - - [17/Jun/2026 23:46:25] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-17 23:46:25,915 127.0.0.1 - - [17/Jun/2026 23:46:25] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-17 23:46:26,222 Starting new HTTPS connection (1): places.googleapis.com:443
+2026-06-17 23:46:26,613 https://places.googleapis.com:443 "POST /v1/places:searchNearby HTTP/1.1" 200 None
+2026-06-17 23:46:26,616 127.0.0.1 - - [17/Jun/2026 23:46:26] "POST /api/search HTTP/1.1" 200 -
+2026-06-17 23:46:27,090 127.0.0.1 - - [17/Jun/2026 23:46:27] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2026-06-17 23:46:27,135 127.0.0.1 - - [17/Jun/2026 23:46:27] "[36mGET /static/images/favicon.png HTTP/1.1[0m" 304 -
+2026-06-17 23:47:05,661 Starting new HTTPS connection (1): places.googleapis.com:443
+2026-06-17 23:47:05,937 https://places.googleapis.com:443 "POST /v1/places:searchNearby HTTP/1.1" 200 None
+2026-06-17 23:47:05,940 127.0.0.1 - - [17/Jun/2026 23:47:05] "POST /api/search HTTP/1.1" 200 -
+2026-06-17 23:47:08,027 127.0.0.1 - - [17/Jun/2026 23:47:08] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-17 23:47:08,030 127.0.0.1 - - [17/Jun/2026 23:47:08] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-17 23:47:08,127 127.0.0.1 - - [17/Jun/2026 23:47:08] "[33mGET /static/js/bootstrap.bundle.min.js.map HTTP/1.1[0m" 404 -
+2026-06-17 23:47:08,145 127.0.0.1 - - [17/Jun/2026 23:47:08] "[33mGET /static/css/bootstrap.min.css.map HTTP/1.1[0m" 404 -
+2026-06-17 23:47:17,463 Starting new HTTPS connection (1): places.googleapis.com:443
+2026-06-17 23:47:17,711 https://places.googleapis.com:443 "POST /v1/places:searchNearby HTTP/1.1" 200 None
+2026-06-17 23:47:17,713 127.0.0.1 - - [17/Jun/2026 23:47:17] "POST /api/search HTTP/1.1" 200 -
+2026-06-17 23:47:27,550 Starting new HTTPS connection (1): places.googleapis.com:443
+2026-06-17 23:47:27,817 https://places.googleapis.com:443 "POST /v1/places:searchNearby HTTP/1.1" 200 None
+2026-06-17 23:47:27,820 127.0.0.1 - - [17/Jun/2026 23:47:27] "POST /api/search HTTP/1.1" 200 -
+2026-06-17 23:47:32,356 Starting new HTTPS connection (1): places.googleapis.com:443
+2026-06-17 23:47:32,627 https://places.googleapis.com:443 "POST /v1/places:searchNearby HTTP/1.1" 200 None
+2026-06-17 23:47:32,631 127.0.0.1 - - [17/Jun/2026 23:47:32] "POST /api/search HTTP/1.1" 200 -
+2026-06-17 23:48:25,028 Starting new HTTPS connection (1): places.googleapis.com:443
+2026-06-17 23:48:25,291 https://places.googleapis.com:443 "POST /v1/places:searchNearby HTTP/1.1" 200 None
+2026-06-17 23:48:25,295 127.0.0.1 - - [17/Jun/2026 23:48:25] "POST /api/search HTTP/1.1" 200 -
+2026-06-17 23:48:40,576 Starting new HTTPS connection (1): places.googleapis.com:443
+2026-06-17 23:48:40,822 https://places.googleapis.com:443 "POST /v1/places:searchNearby HTTP/1.1" 200 None
+2026-06-17 23:48:40,825 127.0.0.1 - - [17/Jun/2026 23:48:40] "POST /api/search HTTP/1.1" 200 -
+2026-06-17 23:48:51,982 Starting new HTTPS connection (1): places.googleapis.com:443
+2026-06-17 23:48:52,216 https://places.googleapis.com:443 "POST /v1/places:searchNearby HTTP/1.1" 200 None
+2026-06-17 23:48:52,218 127.0.0.1 - - [17/Jun/2026 23:48:52] "POST /api/search HTTP/1.1" 200 -
+2026-06-18 00:00:01,506  * Detected change in '/workspaces/2026SE_MajorProject_Kevin.T/main.py', reloading
+2026-06-18 00:00:01,560  * Restarting with stat

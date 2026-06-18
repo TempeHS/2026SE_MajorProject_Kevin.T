@@ -200,6 +200,43 @@ def privacy():
     return render_template("/privacy.html")
 
 
+# function for checking if the place matches all the filters
+def place_matches_all_filters(place, filters):
+    """
+    filters is whatever the user picked e.g.
+    {
+        "cuisine": "japanese_restaurant",
+        "service_style": "takeaway_restaurant",
+        "dietary": "vegan_restaurant",
+        "star_min": 4.0,
+        and so on
+    }
+    """
+
+    types = place.get("types")
+
+    checks = []
+
+    # filters
+    if filters.get("cuisine") and filters["cuisine"] != "restaurant":
+        checks.append(filters["cuisine"] in types)
+
+    if filters.get("service-style") and filters["service-style"] != "any":
+        checks.append(filters["service-style"] in types)
+
+    # the rest of them later
+    # if filters.get("cuisine") and filters["cuisine"] != "restaurant":
+    #     checks.append(filters["cuisine"] in types)
+
+    # if filters.get("cuisine") and filters["cuisine"] != "restaurant":
+    #     checks.append(filters["cuisine"] in types)
+
+    # AND behaviour
+    # - If user selected filters, all selected checks must be True.
+    # - If no filters selected, checks is empty -> return True (do not exclude).
+    return all(checks)
+
+
 # i must say that this was mostly ai but i went through it and understood it
 @app.route("/api/search", methods=["POST"])
 @csrf.exempt
@@ -217,9 +254,6 @@ def search_places():
             400,
         )  # if theres bad input types
 
-    # invalid coordinates here if i want to
-
-    dietary = data.get("dietary", "any")
     place_type = data.get("cuisine", "restaurant")
 
     url = "https://places.googleapis.com/v1/places:searchNearby"  # Places API endpoint
@@ -239,12 +273,8 @@ def search_places():
         ),
     }
 
-    included_types = [place_type]  # e.g. restaurant
-    if dietary != "none":
-        included_types.append(dietary)
-
     payload = {
-        "includedTypes": included_types,
+        "includedTypes": [place_type],
         "maxResultCount": 20,  # cap result count
         "locationRestriction": {
             "circle": {
@@ -259,7 +289,10 @@ def search_places():
             url, headers=headers, json=payload, timeout=12
         )  # hello google
     except requests.RequestException:
-        return jsonify({"error": "Google Places request failed"}), 502
+        return (
+            jsonify({"error": "Google Places request failed"}),
+            502,
+        )  # request error (error from me not from google)
 
     if not resp.ok:
         return (

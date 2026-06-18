@@ -115,6 +115,7 @@ async function nearbySearch(innerMap) {
         lng: center.lng(),
         radius: Math.round(radius),
         cuisine: selectedCuisine,
+        serviceStyle: selectedServiceStyle,
         dietary: selectedDietary,
       }),
     });
@@ -266,6 +267,16 @@ async function init() {
       selectedCuisine = item.dataset.cuisine || "restaurant";
     });
   });
+
+  // hook up service style dropdown
+  document
+    .querySelectorAll(".dropdown-item[data-service-style]")
+    .forEach((item) => {
+      item.addEventListener("click", (e) => {
+        e.preventDefault();
+        selectedServiceStyle = item.dataset.serviceStyle || "any";
+      });
+    });
 
   // Hook up dietary dropdown
   document.querySelectorAll(".dropdown-item[data-dietary]").forEach((item) => {

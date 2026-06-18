@@ -146,11 +146,27 @@
       </button>
       <ul class="dropdown-menu">
         <li><h6 class="dropdown-header">Service Style</h6></li>
-        <li><a class="dropdown-item" href="#">Any</a></li>
-        <li><a class="dropdown-item" href="#">Buffet</a></li>
-        <li><a class="dropdown-item" href="#">Fast food</a></li>
-        <li><a class="dropdown-item" href="#">Fine dining</a></li>
-        <li><a class="dropdown-item" href="#">Takeaway</a></li>
+        <li><a class="dropdown-item" data-service-style="any">Any</a></li>
+        <li>
+          <a class="dropdown-item" data-service-style="buffet_restaurant"
+            >Buffet</a
+          >
+        </li>
+        <li>
+          <a class="dropdown-item" data-service-style="fast_food_restaurant"
+            >Fast food</a
+          >
+        </li>
+        <li>
+          <a class="dropdown-item" data-service-style="fine_dining_restaurant"
+            >Fine dining</a
+          >
+        </li>
+        <li>
+          <a class="dropdown-item" data-service-style="meal_takeaway"
+            >Takeaway</a
+          >
+        </li>
       </ul>
     </div>
 
@@ -175,7 +191,7 @@
         </svg>
       </button>
       <div class="dropdown-menu p-3" style="--bs-dropdown-min-width: 22rem">
-        <h6 class="dropdown-header mb-2 p-0">Star rating</h6>
+        <h6 class="dropdown-header mb-2 p-0">Minimum star rating</h6>
         <input
           type="range"
           class="form-range w-100 m-0"
