@@ -16753,3 +16753,168 @@
 2026-06-17 23:48:52,218 127.0.0.1 - - [17/Jun/2026 23:48:52] "POST /api/search HTTP/1.1" 200 -
 2026-06-18 00:00:01,506  * Detected change in '/workspaces/2026SE_MajorProject_Kevin.T/main.py', reloading
 2026-06-18 00:00:01,560  * Restarting with stat
+2026-06-18 12:20:39,860 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.0.179:5000
+2026-06-18 12:20:39,861 [33mPress CTRL+C to quit[0m
+2026-06-18 12:20:39,865  * Restarting with stat
+2026-06-18 12:20:40,418  * Debugger is active!
+2026-06-18 12:20:40,419  * Debugger PIN: 912-419-125
+2026-06-18 12:20:46,879 127.0.0.1 - - [18/Jun/2026 12:20:46] "GET / HTTP/1.1" 200 -
+2026-06-18 12:20:47,158 127.0.0.1 - - [18/Jun/2026 12:20:47] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-18 12:20:47,212 127.0.0.1 - - [18/Jun/2026 12:20:47] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-18 12:20:47,215 127.0.0.1 - - [18/Jun/2026 12:20:47] "GET /static/js/map.js HTTP/1.1" 200 -
+2026-06-18 12:20:47,269 127.0.0.1 - - [18/Jun/2026 12:20:47] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-18 12:20:47,270 127.0.0.1 - - [18/Jun/2026 12:20:47] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-18 12:20:47,677 127.0.0.1 - - [18/Jun/2026 12:20:47] "GET /static/js/serviceWorker.js HTTP/1.1" 200 -
+2026-06-18 12:21:14,535 Starting new HTTPS connection (1): places.googleapis.com:443
+2026-06-18 12:21:15,434 https://places.googleapis.com:443 "POST /v1/places:searchNearby HTTP/1.1" 200 None
+2026-06-18 12:21:15,437 127.0.0.1 - - [18/Jun/2026 12:21:15] "POST /api/search HTTP/1.1" 200 -
+2026-06-18 12:21:25,085 Starting new HTTPS connection (1): places.googleapis.com:443
+2026-06-18 12:21:25,854 https://places.googleapis.com:443 "POST /v1/places:searchNearby HTTP/1.1" 200 None
+2026-06-18 12:21:25,856 127.0.0.1 - - [18/Jun/2026 12:21:25] "POST /api/search HTTP/1.1" 200 -
+2026-06-18 12:21:30,129 Starting new HTTPS connection (1): places.googleapis.com:443
+2026-06-18 12:21:30,843 https://places.googleapis.com:443 "POST /v1/places:searchNearby HTTP/1.1" 200 None
+2026-06-18 12:21:30,845 127.0.0.1 - - [18/Jun/2026 12:21:30] "POST /api/search HTTP/1.1" 200 -
+2026-06-18 12:27:24,270  * Detected change in '/workspaces/2026SE_MajorProject_Kevin.T/main.py', reloading
+2026-06-18 12:27:24,315  * Restarting with stat
+2026-06-18 12:27:24,863  * Debugger is active!
+2026-06-18 12:27:24,864  * Debugger PIN: 912-419-125
+2026-06-18 12:28:35,693  * Detected change in '/workspaces/2026SE_MajorProject_Kevin.T/main.py', reloading
+2026-06-18 12:28:35,723  * Restarting with stat
+2026-06-18 12:28:36,047  * Debugger is active!
+2026-06-18 12:28:36,047  * Debugger PIN: 912-419-125
+2026-06-18 12:29:25,685  * Detected change in '/workspaces/2026SE_MajorProject_Kevin.T/main.py', reloading
+2026-06-18 12:29:25,718  * Restarting with stat
+2026-06-18 12:29:26,136  * Debugger is active!
+2026-06-18 12:29:26,136  * Debugger PIN: 912-419-125
+2026-06-18 12:29:46,404  * Detected change in '/workspaces/2026SE_MajorProject_Kevin.T/main.py', reloading
+2026-06-18 12:29:46,437  * Restarting with stat
+2026-06-18 12:29:46,767  * Debugger is active!
+2026-06-18 12:29:46,767  * Debugger PIN: 912-419-125
+2026-06-18 12:32:02,332  * Detected change in '/workspaces/2026SE_MajorProject_Kevin.T/main.py', reloading
+2026-06-18 12:32:02,363  * Restarting with stat
+2026-06-18 12:32:02,687  * Debugger is active!
+2026-06-18 12:32:02,687  * Debugger PIN: 912-419-125
+2026-06-18 12:35:36,170  * Detected change in '/workspaces/2026SE_MajorProject_Kevin.T/main.py', reloading
+2026-06-18 12:35:36,257  * Restarting with stat
+2026-06-18 12:35:36,847  * Debugger is active!
+2026-06-18 12:35:36,848  * Debugger PIN: 912-419-125
+2026-06-18 12:36:11,368  * Detected change in '/workspaces/2026SE_MajorProject_Kevin.T/main.py', reloading
+2026-06-18 12:36:11,422  * Restarting with stat
+2026-06-18 12:36:11,717  * Debugger is active!
+2026-06-18 12:36:11,718  * Debugger PIN: 912-419-125
+2026-06-18 12:41:43,526  * Detected change in '/workspaces/2026SE_MajorProject_Kevin.T/main.py', reloading
+2026-06-18 12:41:43,558  * Restarting with stat
+2026-06-18 12:41:43,856  * Debugger is active!
+2026-06-18 12:41:43,856  * Debugger PIN: 912-419-125
+2026-06-18 12:44:14,632  * Detected change in '/workspaces/2026SE_MajorProject_Kevin.T/main.py', reloading
+2026-06-18 12:44:14,672  * Restarting with stat
+2026-06-18 12:44:14,989  * Debugger is active!
+2026-06-18 12:44:14,990  * Debugger PIN: 912-419-125
+2026-06-18 12:44:47,401  * Detected change in '/workspaces/2026SE_MajorProject_Kevin.T/main.py', reloading
+2026-06-18 12:44:47,446  * Restarting with stat
+2026-06-18 12:44:47,749  * Debugger is active!
+2026-06-18 12:44:47,750  * Debugger PIN: 912-419-125
+2026-06-18 12:44:50,252 127.0.0.1 - - [18/Jun/2026 12:44:50] "GET / HTTP/1.1" 200 -
+2026-06-18 12:44:50,565 127.0.0.1 - - [18/Jun/2026 12:44:50] "GET /static/js/map.js HTTP/1.1" 200 -
+2026-06-18 12:44:50,577 127.0.0.1 - - [18/Jun/2026 12:44:50] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-18 12:44:50,693 127.0.0.1 - - [18/Jun/2026 12:44:50] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-18 12:44:50,703 127.0.0.1 - - [18/Jun/2026 12:44:50] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-18 12:44:50,755 127.0.0.1 - - [18/Jun/2026 12:44:50] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-18 12:44:50,845 127.0.0.1 - - [18/Jun/2026 12:44:50] "GET /static/js/serviceWorker.js HTTP/1.1" 200 -
+2026-06-18 12:44:50,992 Starting new HTTPS connection (1): places.googleapis.com:443
+2026-06-18 12:44:51,319 https://places.googleapis.com:443 "POST /v1/places:searchNearby HTTP/1.1" 200 None
+2026-06-18 12:44:51,321 127.0.0.1 - - [18/Jun/2026 12:44:51] "POST /api/search HTTP/1.1" 200 -
+2026-06-18 12:44:55,209 Starting new HTTPS connection (1): places.googleapis.com:443
+2026-06-18 12:44:55,514 https://places.googleapis.com:443 "POST /v1/places:searchNearby HTTP/1.1" 200 None
+2026-06-18 12:44:55,517 127.0.0.1 - - [18/Jun/2026 12:44:55] "POST /api/search HTTP/1.1" 200 -
+2026-06-18 12:45:02,085 Starting new HTTPS connection (1): places.googleapis.com:443
+2026-06-18 12:45:02,392 https://places.googleapis.com:443 "POST /v1/places:searchNearby HTTP/1.1" 200 None
+2026-06-18 12:45:02,394 127.0.0.1 - - [18/Jun/2026 12:45:02] "POST /api/search HTTP/1.1" 200 -
+2026-06-18 12:45:07,754 Starting new HTTPS connection (1): places.googleapis.com:443
+2026-06-18 12:45:07,999 https://places.googleapis.com:443 "POST /v1/places:searchNearby HTTP/1.1" 200 None
+2026-06-18 12:45:08,001 127.0.0.1 - - [18/Jun/2026 12:45:08] "POST /api/search HTTP/1.1" 200 -
+2026-06-18 12:45:11,883 Starting new HTTPS connection (1): places.googleapis.com:443
+2026-06-18 12:45:12,138 https://places.googleapis.com:443 "POST /v1/places:searchNearby HTTP/1.1" 200 None
+2026-06-18 12:45:12,139 127.0.0.1 - - [18/Jun/2026 12:45:12] "POST /api/search HTTP/1.1" 200 -
+2026-06-18 12:45:20,464 Starting new HTTPS connection (1): places.googleapis.com:443
+2026-06-18 12:45:20,747 https://places.googleapis.com:443 "POST /v1/places:searchNearby HTTP/1.1" 200 None
+2026-06-18 12:45:20,749 127.0.0.1 - - [18/Jun/2026 12:45:20] "POST /api/search HTTP/1.1" 200 -
+2026-06-18 12:45:32,849 Starting new HTTPS connection (1): places.googleapis.com:443
+2026-06-18 12:45:33,123 https://places.googleapis.com:443 "POST /v1/places:searchNearby HTTP/1.1" 200 None
+2026-06-18 12:45:33,124 127.0.0.1 - - [18/Jun/2026 12:45:33] "POST /api/search HTTP/1.1" 200 -
+2026-06-18 12:47:42,668 127.0.0.1 - - [18/Jun/2026 12:47:42] "GET / HTTP/1.1" 200 -
+2026-06-18 12:47:42,950 127.0.0.1 - - [18/Jun/2026 12:47:42] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-18 12:47:43,092 127.0.0.1 - - [18/Jun/2026 12:47:43] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-06-18 12:47:43,101 127.0.0.1 - - [18/Jun/2026 12:47:43] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2026-06-18 12:47:43,107 127.0.0.1 - - [18/Jun/2026 12:47:43] "GET /static/js/map.js HTTP/1.1" 200 -
+2026-06-18 12:47:43,112 127.0.0.1 - - [18/Jun/2026 12:47:43] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-18 12:47:43,231 127.0.0.1 - - [18/Jun/2026 12:47:43] "GET /static/js/serviceWorker.js HTTP/1.1" 200 -
+2026-06-18 12:47:43,363 Starting new HTTPS connection (1): places.googleapis.com:443
+2026-06-18 12:47:43,588 https://places.googleapis.com:443 "POST /v1/places:searchNearby HTTP/1.1" 200 None
+2026-06-18 12:47:43,590 127.0.0.1 - - [18/Jun/2026 12:47:43] "POST /api/search HTTP/1.1" 200 -
+2026-06-18 12:47:57,169 Starting new HTTPS connection (1): places.googleapis.com:443
+2026-06-18 12:47:57,441 https://places.googleapis.com:443 "POST /v1/places:searchNearby HTTP/1.1" 200 None
+2026-06-18 12:47:57,444 127.0.0.1 - - [18/Jun/2026 12:47:57] "POST /api/search HTTP/1.1" 200 -
+2026-06-18 12:48:10,932 Starting new HTTPS connection (1): places.googleapis.com:443
+2026-06-18 12:48:11,216 https://places.googleapis.com:443 "POST /v1/places:searchNearby HTTP/1.1" 200 None
+2026-06-18 12:48:11,219 127.0.0.1 - - [18/Jun/2026 12:48:11] "POST /api/search HTTP/1.1" 200 -
+2026-06-18 12:48:24,508 Starting new HTTPS connection (1): places.googleapis.com:443
+2026-06-18 12:48:24,767 https://places.googleapis.com:443 "POST /v1/places:searchNearby HTTP/1.1" 200 None
+2026-06-18 12:48:24,771 127.0.0.1 - - [18/Jun/2026 12:48:24] "POST /api/search HTTP/1.1" 200 -
+2026-06-18 12:48:35,782 Starting new HTTPS connection (1): places.googleapis.com:443
+2026-06-18 12:48:36,121 https://places.googleapis.com:443 "POST /v1/places:searchNearby HTTP/1.1" 200 None
+2026-06-18 12:48:36,123 127.0.0.1 - - [18/Jun/2026 12:48:36] "POST /api/search HTTP/1.1" 200 -
+2026-06-18 12:48:50,725 Starting new HTTPS connection (1): places.googleapis.com:443
+2026-06-18 12:48:50,988 https://places.googleapis.com:443 "POST /v1/places:searchNearby HTTP/1.1" 200 None
+2026-06-18 12:48:50,991 127.0.0.1 - - [18/Jun/2026 12:48:50] "POST /api/search HTTP/1.1" 200 -
+2026-06-18 12:48:52,757 Starting new HTTPS connection (1): places.googleapis.com:443
+2026-06-18 12:48:53,023 https://places.googleapis.com:443 "POST /v1/places:searchNearby HTTP/1.1" 200 None
+2026-06-18 12:48:53,025 127.0.0.1 - - [18/Jun/2026 12:48:53] "POST /api/search HTTP/1.1" 200 -
+2026-06-18 12:49:03,139 Starting new HTTPS connection (1): places.googleapis.com:443
+2026-06-18 12:49:03,447 https://places.googleapis.com:443 "POST /v1/places:searchNearby HTTP/1.1" 200 None
+2026-06-18 12:49:03,449 127.0.0.1 - - [18/Jun/2026 12:49:03] "POST /api/search HTTP/1.1" 200 -
+2026-06-18 12:49:07,753 Starting new HTTPS connection (1): places.googleapis.com:443
+2026-06-18 12:49:08,026 https://places.googleapis.com:443 "POST /v1/places:searchNearby HTTP/1.1" 200 None
+2026-06-18 12:49:08,028 127.0.0.1 - - [18/Jun/2026 12:49:08] "POST /api/search HTTP/1.1" 200 -
+2026-06-18 12:49:21,391 Starting new HTTPS connection (1): places.googleapis.com:443
+2026-06-18 12:49:21,643 https://places.googleapis.com:443 "POST /v1/places:searchNearby HTTP/1.1" 200 None
+2026-06-18 12:49:21,645 127.0.0.1 - - [18/Jun/2026 12:49:21] "POST /api/search HTTP/1.1" 200 -
+2026-06-18 12:49:23,466 Starting new HTTPS connection (1): places.googleapis.com:443
+2026-06-18 12:49:23,821 https://places.googleapis.com:443 "POST /v1/places:searchNearby HTTP/1.1" 200 None
+2026-06-18 12:49:23,823 127.0.0.1 - - [18/Jun/2026 12:49:23] "POST /api/search HTTP/1.1" 200 -
+2026-06-18 12:49:24,692 Starting new HTTPS connection (1): places.googleapis.com:443
+2026-06-18 12:49:24,960 https://places.googleapis.com:443 "POST /v1/places:searchNearby HTTP/1.1" 200 None
+2026-06-18 12:49:24,962 127.0.0.1 - - [18/Jun/2026 12:49:24] "POST /api/search HTTP/1.1" 200 -
+2026-06-18 12:49:29,386 Starting new HTTPS connection (1): places.googleapis.com:443
+2026-06-18 12:49:29,719 https://places.googleapis.com:443 "POST /v1/places:searchNearby HTTP/1.1" 200 None
+2026-06-18 12:49:29,721 127.0.0.1 - - [18/Jun/2026 12:49:29] "POST /api/search HTTP/1.1" 200 -
+2026-06-18 12:49:38,967 Starting new HTTPS connection (1): places.googleapis.com:443
+2026-06-18 12:49:39,189 https://places.googleapis.com:443 "POST /v1/places:searchNearby HTTP/1.1" 200 None
+2026-06-18 12:49:39,191 127.0.0.1 - - [18/Jun/2026 12:49:39] "POST /api/search HTTP/1.1" 200 -
+2026-06-18 12:49:47,442 Starting new HTTPS connection (1): places.googleapis.com:443
+2026-06-18 12:49:47,731 https://places.googleapis.com:443 "POST /v1/places:searchNearby HTTP/1.1" 200 None
+2026-06-18 12:49:47,733 127.0.0.1 - - [18/Jun/2026 12:49:47] "POST /api/search HTTP/1.1" 200 -
+2026-06-18 12:49:54,829 Starting new HTTPS connection (1): places.googleapis.com:443
+2026-06-18 12:49:55,103 https://places.googleapis.com:443 "POST /v1/places:searchNearby HTTP/1.1" 200 None
+2026-06-18 12:49:55,105 127.0.0.1 - - [18/Jun/2026 12:49:55] "POST /api/search HTTP/1.1" 200 -
+2026-06-18 12:50:02,091 Starting new HTTPS connection (1): places.googleapis.com:443
+2026-06-18 12:50:02,351 https://places.googleapis.com:443 "POST /v1/places:searchNearby HTTP/1.1" 200 None
+2026-06-18 12:50:02,353 127.0.0.1 - - [18/Jun/2026 12:50:02] "POST /api/search HTTP/1.1" 200 -
+2026-06-18 12:50:06,466 Starting new HTTPS connection (1): places.googleapis.com:443
+2026-06-18 12:50:06,752 https://places.googleapis.com:443 "POST /v1/places:searchNearby HTTP/1.1" 200 None
+2026-06-18 12:50:06,756 127.0.0.1 - - [18/Jun/2026 12:50:06] "POST /api/search HTTP/1.1" 200 -
+2026-06-18 12:50:14,482 Starting new HTTPS connection (1): places.googleapis.com:443
+2026-06-18 12:50:14,748 https://places.googleapis.com:443 "POST /v1/places:searchNearby HTTP/1.1" 200 None
+2026-06-18 12:50:14,750 127.0.0.1 - - [18/Jun/2026 12:50:14] "POST /api/search HTTP/1.1" 200 -
+2026-06-18 12:50:28,401 Starting new HTTPS connection (1): places.googleapis.com:443
+2026-06-18 12:50:28,693 https://places.googleapis.com:443 "POST /v1/places:searchNearby HTTP/1.1" 200 None
+2026-06-18 12:50:28,696 127.0.0.1 - - [18/Jun/2026 12:50:28] "POST /api/search HTTP/1.1" 200 -
+2026-06-18 12:50:35,589 Starting new HTTPS connection (1): places.googleapis.com:443
+2026-06-18 12:50:36,652 https://places.googleapis.com:443 "POST /v1/places:searchNearby HTTP/1.1" 200 None
+2026-06-18 12:50:36,656 127.0.0.1 - - [18/Jun/2026 12:50:36] "POST /api/search HTTP/1.1" 200 -
+2026-06-18 12:50:46,778 Starting new HTTPS connection (1): places.googleapis.com:443
+2026-06-18 12:50:47,020 https://places.googleapis.com:443 "POST /v1/places:searchNearby HTTP/1.1" 200 None
+2026-06-18 12:50:47,022 127.0.0.1 - - [18/Jun/2026 12:50:47] "POST /api/search HTTP/1.1" 200 -

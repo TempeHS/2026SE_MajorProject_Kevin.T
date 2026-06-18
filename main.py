@@ -206,7 +206,7 @@ def place_matches_all_filters(place, filters):
     filters is whatever the user picked e.g.
     {
         "cuisine": "japanese_restaurant",
-        "service_style": "takeaway_restaurant",
+        "service-style": "meal_takeaway",
         "dietary": "vegan_restaurant",
         "star_min": 4.0,
         and so on
@@ -224,12 +224,9 @@ def place_matches_all_filters(place, filters):
     if filters.get("service-style") and filters["service-style"] != "any":
         checks.append(filters["service-style"] in types)
 
-    # the rest of them later
-    # if filters.get("cuisine") and filters["cuisine"] != "restaurant":
-    #     checks.append(filters["cuisine"] in types)
-
-    # if filters.get("cuisine") and filters["cuisine"] != "restaurant":
-    #     checks.append(filters["cuisine"] in types)
+    # dietary filter (default "none" = skip)
+    if filters.get("dietary") and filters["dietary"] != "none":
+        checks.append(filters["dietary"] in types)
 
     # AND behaviour
     # - If user selected filters, all selected checks must be True.
@@ -255,6 +252,13 @@ def search_places():
         )  # if theres bad input types
 
     place_type = data.get("cuisine", "restaurant")
+
+    # additional filters
+    filters = {
+        "cuisine": data.get("cuisine", "restaurant"),
+        "service-style": data.get("serviceStyle", "any"),
+        "dietary": data.get("dietary", "none"),
+    }
 
     url = "https://places.googleapis.com/v1/places:searchNearby"  # Places API endpoint
     # json thing for google api
@@ -295,12 +299,15 @@ def search_places():
         )  # request error (error from me not from google)
 
     if not resp.ok:
-        return (
-            jsonify({"error": "Places API error", "details": resp.text}),
-            502,
-        )  # Google returned error
+        return jsonify({"error": "Places API error", "details": resp.text}), 502
 
-    return jsonify(resp.json()), 200  # send places data back to frontend
+    result = resp.json()
+    places = result.get("places", [])
+    result["places"] = [
+        place for place in places if place_matches_all_filters(place, filters)
+    ]
+
+    return jsonify(result), 200
 
 
 if __name__ == "__main__":

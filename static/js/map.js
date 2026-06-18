@@ -11,8 +11,8 @@ let map;
 let infoWindow;
 let nearbyMarkers = [];
 let searchRadiusCircle = null;
-let selectedType = "restaurant";
 let selectedCuisine = "restaurant";
+let selectedServiceStyle = "restaurant";
 let selectedDietary = "none";
 
 function getSliderRadiusMeters() {
@@ -171,6 +171,41 @@ async function nearbySearch(innerMap) {
   }
 }
 
+// makes the active item in the dropdown look active
+function setDropdownActive(items, activeItem) {
+  for (const item of items) {
+    item.classList.remove("active");
+    item.removeAttribute("aria-current");
+  }
+  activeItem.classList.add("active");
+  activeItem.setAttribute("aria-current", "true");
+}
+
+function wireFilterDropdown(
+  selector,
+  currentValueGetter,
+  currentValueSetter,
+  dataKey,
+) {
+  const items = Array.from(document.querySelectorAll(selector));
+  if (!items.length) return;
+
+  // set initial active state from current JS variable
+  const currentValue = currentValueGetter();
+  const initial = items.find((item) => item.dataset[dataKey] === currentValue);
+  if (initial) setDropdownActive(items, initial);
+
+  // update state + active style on click
+  for (const item of items) {
+    item.addEventListener("click", (e) => {
+      e.preventDefault();
+      const value = item.dataset[dataKey];
+      currentValueSetter(value);
+      setDropdownActive(items, item);
+    });
+  }
+}
+
 async function init() {
   const [{ event }] = await Promise.all([
     google.maps.importLibrary("core"),
@@ -285,6 +320,27 @@ async function init() {
       selectedDietary = item.dataset.dietary || "none";
     });
   });
+
+  wireFilterDropdown(
+    "[data-cuisine]",
+    () => selectedCuisine,
+    (v) => (selectedCuisine = v),
+    "cuisine",
+  );
+
+  wireFilterDropdown(
+    "[data-service-style]",
+    () => selectedServiceStyle,
+    (v) => (selectedServiceStyle = v),
+    "serviceStyle",
+  );
+
+  wireFilterDropdown(
+    "[data-dietary]",
+    () => selectedDietary,
+    (v) => (selectedDietary = v),
+    "dietary",
+  );
 
   console.log({ mapElement, innerMap });
 }
