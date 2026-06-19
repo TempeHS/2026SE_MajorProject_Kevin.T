@@ -14,12 +14,12 @@ The app will use the Google Maps/Places API and be built for both mobile and des
 
 #### Current sprint:
 
-`2` - Map API
+`3` - Extra functionality
 
 #### Last increment:
 
-Sprint 1: Skeleton
+Sprint 2: Map API
 
 #### Next planned increment:
 
-Sprint 3: Accounts and extra functionality
+N/A
