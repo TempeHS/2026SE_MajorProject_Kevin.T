@@ -51,18 +51,21 @@ def root():
 @app.route("/", methods=["GET"])
 @csp_header(
     {
-        # Server Side CSP is consistent with meta CSP in layout.html
         "base-uri": "'self'",
         "default-src": "'self'",
-        "style-src": "'self'",
-        "script-src": "'self'",
-        "img-src": "'self' data:",
+        "style-src": "'self' 'unsafe-inline' https://fonts.googleapis.com",
+        "style-src-attr": "'unsafe-inline'",
+        "style-src-elem": "'self' 'unsafe-inline' https://fonts.googleapis.com",
+        "script-src": "'self' 'unsafe-inline' 'unsafe-eval' https://maps.googleapis.com https://maps.gstatic.com",
+        "script-src-elem": "'self' 'unsafe-inline' https://maps.googleapis.com https://maps.gstatic.com",
+        "img-src": "'self' data: blob: https://maps.gstatic.com https://maps.googleapis.com https://*.gstatic.com",
         "media-src": "'self'",
-        "font-src": "'self'",
-        "object-src": "'self'",
-        "child-src": "'self'",
-        "connect-src": "'self'",
-        "worker-src": "'self'",
+        "font-src": "'self' https://fonts.gstatic.com data:",
+        "object-src": "'none'",
+        "child-src": "'self' blob:",
+        "connect-src": "'self' data: blob: https://maps.googleapis.com https://maps.gstatic.com https://www.gstatic.com https://*.gstatic.com https://places.googleapis.com",
+        "worker-src": "'self' blob:",
+        "manifest-src": "'self'",
         "report-uri": "/csp_report",
         "frame-ancestors": "'none'",
         "form-action": "'self'",
@@ -195,6 +198,148 @@ def logout():
 @app.route("/privacy.html", methods=["GET"])
 def privacy():
     return render_template("/privacy.html")
+
+
+# function for checking if the place matches all the filters
+def place_matches_all_filters(place, filters):
+    """
+    filters is whatever the user picked e.g.
+    {
+        "cuisine": "japanese_restaurant",
+        "service-style": "meal_takeaway",
+        "dietary": "vegan_restaurant",
+        "star_min": 4.0,
+        and so on
+    }
+    """
+
+    types = place.get("types") or []
+    checks = []
+
+    # filters
+    if filters.get("cuisine") and filters["cuisine"] != "restaurant":
+        checks.append(filters["cuisine"] in types)
+
+    if filters.get("service-style") and filters["service-style"] != "any":
+        checks.append(filters["service-style"] in types)
+
+    if filters.get("dietary") and filters["dietary"] != "none":
+        checks.append(filters["dietary"] in types)
+
+    # star rating filter (only when user set > 0)
+    min_rating = filters.get("rating")
+    if min_rating not in (None, "", 0, "0"):  # if it aint 0
+        try:
+            min_rating = float(min_rating)
+            place_rating = place.get("rating")
+            if place_rating is None or float(place_rating) < min_rating:
+                checks.append(False)
+        except (TypeError, ValueError):
+            checks.append(False)
+
+    # price range filter
+    price_min = filters.get("priceMin")
+    price_max = filters.get("priceMax")
+
+    # if the filter is actually chosen by the user
+    if price_min != None or price_max != None:
+        price_range = place.get("priceRange") or {}
+        start = price_range.get("startPrice", {}).get("units")
+        end = price_range.get("endPrice", {}).get("units")
+
+        if start != None and end != None:
+            start = float(start)
+            end = float(end)
+            if price_min != None and end < float(price_min):
+                checks.append(False)  # false cos the place is too cheap
+            if price_max != None and start > float(price_max):
+                checks.append(False)  # too expensive
+
+    # AND behaviour
+    # - If user selected filters, all selected checks must be True.
+    # - If no filters selected, checks is empty -> return True (do not exclude).
+    return all(checks)
+
+
+# i must say that this was mostly ai but i went through it and understood it
+@app.route("/api/search", methods=["POST"])
+@csrf.exempt
+def search_places():
+    data = request.get_json(silent=True) or {}  # read json body
+
+    # get location and search radius
+    try:
+        lat = float(data.get("lat"))
+        lng = float(data.get("lng"))
+        radius = int(data.get("radius", 2000))  # default radius is 2km
+    except:
+        return (
+            jsonify({"error": "Invalid lat/lng/radius"}),
+            400,
+        )  # if theres bad input types
+
+    place_type = data.get("cuisine", "restaurant")
+
+    # additional filters
+    filters = {
+        "cuisine": data.get("cuisine", "restaurant"),
+        "service-style": data.get("serviceStyle", "any"),
+        "dietary": data.get("dietary", "none"),
+        "priceMin": data.get("priceMin"),
+        "priceMax": data.get("priceMax"),
+        "rating": data.get("rating"),
+    }
+
+    url = "https://places.googleapis.com/v1/places:searchNearby"  # Places API endpoint
+    # json thing for google api
+    headers = {
+        "Content-Type": "application/json",
+        "X-Goog-Api-Key": "AIzaSyADzNnIA-zf9LSniYX8Z7uAo-VmfsiKz-c",  # hide this api key!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        "X-Goog-FieldMask": ",".join(
+            [
+                "places.id",
+                "places.displayName",
+                "places.location",
+                "places.formattedAddress",
+                "places.googleMapsUri",
+                "places.types",
+                "places.priceRange",
+                "places.rating",
+            ]
+        ),
+    }
+
+    payload = {
+        "includedTypes": [place_type],
+        "maxResultCount": 20,  # cap result count
+        "locationRestriction": {
+            "circle": {
+                "center": {"latitude": lat, "longitude": lng},  # center point
+                "radius": radius,  # meters
+            }
+        },
+    }
+
+    try:
+        resp = requests.post(
+            url, headers=headers, json=payload, timeout=12
+        )  # hello google
+    except requests.RequestException:
+        return (
+            jsonify({"error": "Google Places request failed"}),
+            502,
+        )  # request error (error from me not from google)
+
+    if not resp.ok:
+        return jsonify({"error": "Places API error", "details": resp.text}), 502
+
+    result = resp.json()
+    places = result.get("places", [])
+    result["places"] = [
+        place for place in places if place_matches_all_filters(place, filters)
+    ]
+
+    return jsonify(result), 200
 
 
 if __name__ == "__main__":

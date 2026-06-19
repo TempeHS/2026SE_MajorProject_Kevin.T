@@ -1,15 +1,15 @@
 {% extends 'layout.html' %} {% block content %}
+<!-- map stuff -->
+<script src="static/js/map.js"></script>
+
 <div class="container-fluid position-relative p-0 overflow-hidden">
-  <svg
-    aria-label="Placeholder: Responsive image"
-    class="bd-placeholder-img map-fill"
-    role="img"
-    xmlns="http://www.w3.org/2000/svg"
+  <gmp-map
+    center="-33.9119874,151.1579341"
+    zoom="17"
+    style="height: calc(100vh - 56px)"
+    map-id="DEMO_MAP_ID"
   >
-    <title>Placeholder</title>
-    <rect width="100%" height="100%" fill="#868e96"></rect>
-    <text x="50%" y="50%" fill="#dee2e6" dy=".3em">Map</text>
-  </svg>
+  </gmp-map>
 
   <!-- Top left button -->
   <div class="position-absolute top-0 start-0 p-3 d-flex flex-column gap-2">
@@ -63,10 +63,64 @@
           />
         </svg>
       </button>
-      <ul class="dropdown-menu" style="min-width: 18rem">
+      <ul class="dropdown-menu">
         <li><h6 class="dropdown-header">Cuisine</h6></li>
-        <li><a class="dropdown-item" href="#">italian</a></li>
-        <li><a class="dropdown-item" href="#">Another action</a></li>
+        <li><a class="dropdown-item" data-cuisine="restaurant">Any</a></li>
+        <li>
+          <a class="dropdown-item" data-cuisine="italian_restaurant">Italian</a>
+        </li>
+        <li>
+          <a class="dropdown-item" data-cuisine="chinese_restaurant">Chinese</a>
+        </li>
+        <li>
+          <a class="dropdown-item" data-cuisine="japanese_restaurant"
+            >Japanese</a
+          >
+        </li>
+        <li>
+          <a class="dropdown-item" data-cuisine="indian_restaurant">Indian</a>
+        </li>
+        <li>
+          <a class="dropdown-item" data-cuisine="mexican_restaurant">Mexican</a>
+        </li>
+        <li>
+          <a class="dropdown-item" data-cuisine="thai_restaurant">Thai</a>
+        </li>
+        <li>
+          <a class="dropdown-item" data-cuisine="american_restaurant"
+            >American</a
+          >
+        </li>
+        <li>
+          <a class="dropdown-item" data-cuisine="korean_restaurant">Korean</a>
+        </li>
+        <li>
+          <a class="dropdown-item" data-cuisine="vietnamese_restaurant"
+            >Vietnamese</a
+          >
+        </li>
+        <li>
+          <a class="dropdown-item" data-cuisine="mediterranean_restaurant"
+            >Mediterranean</a
+          >
+        </li>
+        <li>
+          <a class="dropdown-item" data-cuisine="greek_restaurant">Greek</a>
+        </li>
+        <li>
+          <a class="dropdown-item" data-cuisine="pizza_restaurant">Pizza</a>
+        </li>
+        <li>
+          <a class="dropdown-item" data-cuisine="sushi_restaurant">Sushi</a>
+        </li>
+        <li>
+          <a class="dropdown-item" data-cuisine="hamburger_restaurant"
+            >Hamburger</a
+          >
+        </li>
+        <li>
+          <a class="dropdown-item" data-cuisine="seafood_restaurant">Seafood</a>
+        </li>
       </ul>
     </div>
 
@@ -91,9 +145,28 @@
         </svg>
       </button>
       <ul class="dropdown-menu">
-        <li><h6 class="dropdown-header">Restaurant Style</h6></li>
-        <li><a class="dropdown-item" href="#">eat in</a></li>
-        <li><a class="dropdown-item" href="#">takeaway</a></li>
+        <li><h6 class="dropdown-header">Service Style</h6></li>
+        <li><a class="dropdown-item" data-service-style="any">Any</a></li>
+        <li>
+          <a class="dropdown-item" data-service-style="buffet_restaurant"
+            >Buffet</a
+          >
+        </li>
+        <li>
+          <a class="dropdown-item" data-service-style="fast_food_restaurant"
+            >Fast food</a
+          >
+        </li>
+        <li>
+          <a class="dropdown-item" data-service-style="fine_dining_restaurant"
+            >Fine dining</a
+          >
+        </li>
+        <li>
+          <a class="dropdown-item" data-service-style="meal_takeaway"
+            >Takeaway</a
+          >
+        </li>
       </ul>
     </div>
 
@@ -118,7 +191,15 @@
         </svg>
       </button>
       <div class="dropdown-menu p-3" style="--bs-dropdown-min-width: 22rem">
-        <h6 class="dropdown-header mb-2 p-0">Star rating</h6>
+        <div class="d-flex align-items-center gap-2">
+          <h6 class="dropdown-header p-0">Minimum star rating</h6>
+          <output
+            for="range-star"
+            id="star-range-value"
+            aria-hidden="true"
+            class="fw-bold"
+          ></output>
+        </div>
         <input
           type="range"
           class="form-range w-100 m-0"
@@ -127,6 +208,18 @@
           step="0.5"
           id="range-star"
         />
+
+        <script>
+          const starRangeInput = document.getElementById("range-star");
+          const starRangeOutput = document.getElementById("star-range-value");
+
+          if (starRangeInput && starRangeOutput) {
+            starRangeOutput.textContent = starRangeInput.value + " stars";
+            starRangeInput.addEventListener("input", function () {
+              starRangeOutput.textContent = this.value + " stars";
+            });
+          }
+        </script>
       </div>
     </div>
 
@@ -150,15 +243,17 @@
           />
         </svg>
       </button>
-      <div class="dropdown-menu p-3" style="--bs-dropdown-min-width: 22rem">
+      <div class="dropdown-menu p-3">
         <h6 class="dropdown-header mb-2 p-0">Price range:</h6>
 
         <div class="input-group input-group-sm flex-nowrap" style="width: 8rem">
           <span class="input-group-text">$</span>
           <input
-            type="text"
+            type="number"
+            min="0"
             class="form-control"
             placeholder="min"
+            id="price-min"
             aria-label="Minimum price"
           />
         </div>
@@ -168,9 +263,11 @@
         <div class="input-group input-group-sm flex-nowrap" style="width: 8rem">
           <span class="input-group-text">$</span>
           <input
-            type="text"
+            type="number"
+            min="0"
             class="form-control"
             placeholder="max"
+            id="price-max"
             aria-label="Maximum price"
           />
         </div>
@@ -189,30 +286,36 @@
           width="24"
           height="24"
           fill="currentColor"
-          class="bi bi-rulers"
+          class="bi bi-leaf-fill"
           viewBox="0 0 16 16"
         >
           <path
-            d="M1 0a1 1 0 0 0-1 1v14a1 1 0 0 0 1 1h5v-1H2v-1h4v-1H4v-1h2v-1H2v-1h4V9H4V8h2V7H2V6h4V2h1v4h1V4h1v2h1V2h1v4h1V4h1v2h1V2h1v4h1V1a1 1 0 0 0-1-1z"
+            d="M1.4 1.7c.217.289.65.84 1.725 1.274 1.093.44 2.885.774 5.834.528 2.02-.168 3.431.51 4.326 1.556C14.161 6.082 14.5 7.41 14.5 8.5q0 .344-.027.734C13.387 8.252 11.877 7.76 10.39 7.5c-2.016-.288-4.188-.445-5.59-2.045-.142-.162-.402-.102-.379.112.108.985 1.104 1.82 1.844 2.308 2.37 1.566 5.772-.118 7.6 3.071.505.8 1.374 2.7 1.75 4.292.07.298-.066.611-.354.715a.7.7 0 0 1-.161.042 1 1 0 0 1-1.08-.794c-.13-.97-.396-1.913-.868-2.77C12.173 13.386 10.565 14 8 14c-1.854 0-3.32-.544-4.45-1.435-1.124-.887-1.889-2.095-2.39-3.383-1-2.562-1-5.536-.65-7.28L.73.806z"
           />
         </svg>
       </button>
-      <div class="dropdown-menu p-3" style="--bs-dropdown-min-width: 22rem">
-        <h6 class="dropdown-header mb-2 p-0">Distance</h6>
-        <input
-          type="range"
-          class="form-range w-100 m-0"
-          min="0"
-          max="5"
-          step="0.5"
-          id="range-distance"
-        />
-      </div>
+      <ul class="dropdown-menu">
+        <li><h6 class="dropdown-header">Dietary restrictions</h6></li>
+        <li><a class="dropdown-item" data-dietary="none">None</a></li>
+        <li>
+          <a class="dropdown-item" data-dietary="vegan_restaurant">Vegan</a>
+        </li>
+        <li>
+          <a class="dropdown-item" data-dietary="vegetarian_restaurant"
+            >Vegetarian</a
+          >
+        </li>
+        <li>
+          <a class="dropdown-item" data-dietary="halal_restaurant">Halal</a>
+        </li>
+      </ul>
     </div>
   </div>
 
-  <!-- Bottom left button -->
-  <div class="position-absolute bottom-0 start-0 p-3">
+  <!-- Bottom left button (dice only) -->
+  <div
+    class="position-absolute bottom-0 start-0 p-3 d-flex flex-row gap-2 align-items-end"
+  >
     <button
       type="button"
       class="btn btn-primary"
@@ -232,5 +335,97 @@
       </svg>
     </button>
   </div>
+
+  <!-- Bottom center search button -->
+  <div
+    class="position-absolute bottom-0 start-50 translate-middle-x p-3 d-flex flex-column align-items-center"
+  >
+    <button
+      id="search-nearby-btn"
+      type="button"
+      class="btn btn-primary d-flex align-items-center gap-2"
+      style="padding: 0.375rem 0.75rem"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="16"
+        height="16"
+        fill="currentColor"
+        class="bi bi-search"
+        viewBox="0 0 16 16"
+      >
+        <path
+          d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"
+        />
+      </svg>
+      <span>Search</span>
+    </button>
+
+    <!-- distance: always visible on md+, dropup on mobile -->
+    <div class="btn-group dropup-center mt-2 w-100">
+      <button
+        type="button"
+        class="btn btn-primary btn-sm dropdown-toggle d-md-none w-100"
+        data-bs-toggle="dropdown"
+        aria-expanded="false"
+      >
+        Distance
+      </button>
+
+      <div
+        class="dropdown-menu p-3 distance-menu"
+        style="--bs-dropdown-min-width: 22rem"
+      >
+        <!-- Row 1: label + value -->
+        <div class="d-flex justify-content-between align-items-center mb-1">
+          <div class="d-flex align-items-center gap-2">
+            <h6 class="m-0">Distance</h6>
+            <output
+              for="range-distance"
+              id="distance-range-value"
+              aria-hidden="true"
+              class="fw-bold"
+            ></output>
+          </div>
+          <small class="text-muted">0 = auto (map view)</small>
+        </div>
+
+        <!-- Row 2: slider -->
+        <input
+          type="range"
+          class="form-range w-100 m-0"
+          min="0"
+          max="5"
+          step="0.1"
+          value="0"
+          id="range-distance"
+        />
+      </div>
+    </div>
+  </div>
+
+  <style>
+    @media (min-width: 768px) {
+      .distance-menu {
+        display: block;
+        position: static;
+        inset: auto;
+        transform: none;
+        margin-top: 0;
+      }
+    }
+  </style>
+
+  <script>
+    const distanceRangeInput = document.getElementById("range-distance");
+    const distanceRangeOutput = document.getElementById("distance-range-value");
+
+    if (distanceRangeInput && distanceRangeOutput) {
+      distanceRangeOutput.textContent = distanceRangeInput.value + " km";
+      distanceRangeInput.addEventListener("input", function () {
+        distanceRangeOutput.textContent = this.value + " km";
+      });
+    }
+  </script>
 </div>
 {% endblock %}
