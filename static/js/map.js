@@ -14,6 +14,8 @@ let searchRadiusCircle = null;
 let selectedCuisine = "restaurant";
 let selectedServiceStyle = "restaurant";
 let selectedDietary = "none";
+let selectedPriceMin = null;
+let selectedPriceMax = null;
 
 function getSliderRadiusMeters() {
   const distanceSlider = document.getElementById("range-distance");
@@ -117,6 +119,8 @@ async function nearbySearch(innerMap) {
         cuisine: selectedCuisine,
         serviceStyle: selectedServiceStyle,
         dietary: selectedDietary,
+        priceMin: selectedPriceMin,
+        priceMax: selectedPriceMax,
       }),
     });
 
@@ -295,52 +299,40 @@ async function init() {
     void nearbySearch(innerMap);
   });
 
-  // Hook up cuisine dropdown
-  document.querySelectorAll(".dropdown-item[data-cuisine]").forEach((item) => {
-    item.addEventListener("click", (e) => {
-      e.preventDefault();
-      selectedCuisine = item.dataset.cuisine || "restaurant";
-    });
-  });
-
-  // hook up service style dropdown
-  document
-    .querySelectorAll(".dropdown-item[data-service-style]")
-    .forEach((item) => {
-      item.addEventListener("click", (e) => {
-        e.preventDefault();
-        selectedServiceStyle = item.dataset.serviceStyle || "any";
-      });
-    });
-
-  // Hook up dietary dropdown
-  document.querySelectorAll(".dropdown-item[data-dietary]").forEach((item) => {
-    item.addEventListener("click", (e) => {
-      e.preventDefault();
-      selectedDietary = item.dataset.dietary || "none";
-    });
-  });
-
+  // hook up the dropdowns
   wireFilterDropdown(
     "[data-cuisine]",
     () => selectedCuisine,
     (v) => (selectedCuisine = v),
     "cuisine",
   );
-
   wireFilterDropdown(
     "[data-service-style]",
     () => selectedServiceStyle,
     (v) => (selectedServiceStyle = v),
     "serviceStyle",
   );
-
   wireFilterDropdown(
     "[data-dietary]",
     () => selectedDietary,
     (v) => (selectedDietary = v),
     "dietary",
   );
+
+  const priceMin = document.getElementById("price-min");
+  const priceMax = document.getElementById("price-max");
+
+  if (priceMin) {
+    priceMin.addEventListener("change", () => {
+      selectedPriceMin = priceMin.value ? Number(priceMin.value) : null;
+    });
+  }
+
+  if (priceMax) {
+    priceMax.addEventListener("change", () => {
+      selectedPriceMax = priceMax.value ? Number(priceMax.value) : null;
+    });
+  }
 
   console.log({ mapElement, innerMap });
 }

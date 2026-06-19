@@ -224,9 +224,26 @@ def place_matches_all_filters(place, filters):
     if filters.get("service-style") and filters["service-style"] != "any":
         checks.append(filters["service-style"] in types)
 
-    # dietary filter (default "none" = skip)
     if filters.get("dietary") and filters["dietary"] != "none":
         checks.append(filters["dietary"] in types)
+
+    # price range filter
+    price_min = filters.get("priceMin")
+    price_max = filters.get("priceMax")
+
+    # if the filter is actually chosen by the user
+    if price_min != None or price_max != None:
+        price_range = place.get("priceRange") or {}
+        start = price_range.get("startPrice", {}).get("units")
+        end = price_range.get("endPrice", {}).get("units")
+
+        if start != None and end != None:
+            start = float(start)
+            end = float(end)
+            if price_min != None and end < float(price_min):
+                checks.append(False)  # false cos the place is too cheap
+            if price_max != None and start > float(price_max):
+                checks.append(False)  # too expensive
 
     # AND behaviour
     # - If user selected filters, all selected checks must be True.
@@ -258,6 +275,8 @@ def search_places():
         "cuisine": data.get("cuisine", "restaurant"),
         "service-style": data.get("serviceStyle", "any"),
         "dietary": data.get("dietary", "none"),
+        "priceMin": data.get("priceMin"),
+        "priceMax": data.get("priceMax"),
     }
 
     url = "https://places.googleapis.com/v1/places:searchNearby"  # Places API endpoint
@@ -273,6 +292,7 @@ def search_places():
                 "places.formattedAddress",
                 "places.googleMapsUri",
                 "places.types",
+                "places.priceRange",
             ]
         ),
     }
