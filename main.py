@@ -213,8 +213,7 @@ def place_matches_all_filters(place, filters):
     }
     """
 
-    types = place.get("types")
-
+    types = place.get("types") or []
     checks = []
 
     # filters
@@ -226,6 +225,17 @@ def place_matches_all_filters(place, filters):
 
     if filters.get("dietary") and filters["dietary"] != "none":
         checks.append(filters["dietary"] in types)
+
+    # star rating filter (only when user set > 0)
+    min_rating = filters.get("rating")
+    if min_rating not in (None, "", 0, "0"):  # if it aint 0
+        try:
+            min_rating = float(min_rating)
+            place_rating = place.get("rating")
+            if place_rating is None or float(place_rating) < min_rating:
+                checks.append(False)
+        except (TypeError, ValueError):
+            checks.append(False)
 
     # price range filter
     price_min = filters.get("priceMin")
@@ -277,6 +287,7 @@ def search_places():
         "dietary": data.get("dietary", "none"),
         "priceMin": data.get("priceMin"),
         "priceMax": data.get("priceMax"),
+        "rating": data.get("rating"),
     }
 
     url = "https://places.googleapis.com/v1/places:searchNearby"  # Places API endpoint
@@ -293,6 +304,7 @@ def search_places():
                 "places.googleMapsUri",
                 "places.types",
                 "places.priceRange",
+                "places.rating",
             ]
         ),
     }

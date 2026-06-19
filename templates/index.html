@@ -191,7 +191,15 @@
         </svg>
       </button>
       <div class="dropdown-menu p-3" style="--bs-dropdown-min-width: 22rem">
-        <h6 class="dropdown-header mb-2 p-0">Minimum star rating</h6>
+        <div class="d-flex align-items-center gap-2">
+          <h6 class="dropdown-header p-0">Minimum star rating</h6>
+          <output
+            for="range-star"
+            id="star-range-value"
+            aria-hidden="true"
+            class="fw-bold"
+          ></output>
+        </div>
         <input
           type="range"
           class="form-range w-100 m-0"
@@ -200,6 +208,18 @@
           step="0.5"
           id="range-star"
         />
+
+        <script>
+          const starRangeInput = document.getElementById("range-star");
+          const starRangeOutput = document.getElementById("star-range-value");
+
+          if (starRangeInput && starRangeOutput) {
+            starRangeOutput.textContent = starRangeInput.value + " stars";
+            starRangeInput.addEventListener("input", function () {
+              starRangeOutput.textContent = this.value + " stars";
+            });
+          }
+        </script>
       </div>
     </div>
 
@@ -362,7 +382,7 @@
             <h6 class="m-0">Distance</h6>
             <output
               for="range-distance"
-              id="rangeValue"
+              id="distance-range-value"
               aria-hidden="true"
               class="fw-bold"
             ></output>
@@ -397,13 +417,13 @@
   </style>
 
   <script>
-    const rangeInput = document.getElementById("range-distance");
-    const rangeOutput = document.getElementById("rangeValue");
+    const distanceRangeInput = document.getElementById("range-distance");
+    const distanceRangeOutput = document.getElementById("distance-range-value");
 
-    if (rangeInput && rangeOutput) {
-      rangeOutput.textContent = rangeInput.value + " km";
-      rangeInput.addEventListener("input", function () {
-        rangeOutput.textContent = this.value + " km";
+    if (distanceRangeInput && distanceRangeOutput) {
+      distanceRangeOutput.textContent = distanceRangeInput.value + " km";
+      distanceRangeInput.addEventListener("input", function () {
+        distanceRangeOutput.textContent = this.value + " km";
       });
     }
   </script>

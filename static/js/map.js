@@ -16,6 +16,7 @@ let selectedServiceStyle = "restaurant";
 let selectedDietary = "none";
 let selectedPriceMin = null;
 let selectedPriceMax = null;
+let selectedRatingMin = 0;
 
 function getSliderRadiusMeters() {
   const distanceSlider = document.getElementById("range-distance");
@@ -121,6 +122,7 @@ async function nearbySearch(innerMap) {
         dietary: selectedDietary,
         priceMin: selectedPriceMin,
         priceMax: selectedPriceMax,
+        rating: selectedRatingMin,
       }),
     });
 
@@ -318,6 +320,14 @@ async function init() {
     (v) => (selectedDietary = v),
     "dietary",
   );
+
+  const ratingSlider = document.getElementById("range-star");
+  if (ratingSlider) {
+    selectedRatingMin = Number(ratingSlider.value) || 0;
+    ratingSlider.addEventListener("change", () => {
+      selectedRatingMin = Number(ratingSlider.value) || 0;
+    });
+  }
 
   const priceMin = document.getElementById("price-min");
   const priceMax = document.getElementById("price-max");
