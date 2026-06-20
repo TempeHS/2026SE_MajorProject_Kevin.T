@@ -17,6 +17,7 @@ let selectedDietary = "none";
 let selectedPriceMin = null;
 let selectedPriceMax = null;
 let selectedRatingMin = 0;
+let selectedOpenNow = false;
 
 function getSliderRadiusMeters() {
   const distanceSlider = document.getElementById("range-distance");
@@ -123,6 +124,7 @@ async function nearbySearch(innerMap) {
         priceMin: selectedPriceMin,
         priceMax: selectedPriceMax,
         rating: selectedRatingMin,
+        openNow: selectedOpenNow,
       }),
     });
 
@@ -341,6 +343,14 @@ async function init() {
   if (priceMax) {
     priceMax.addEventListener("change", () => {
       selectedPriceMax = priceMax.value ? Number(priceMax.value) : null;
+    });
+  }
+
+  const openNowCheck = document.getElementById("open-now-check");
+  if (openNowCheck) {
+    openNowCheck.addEventListener("change", () => {
+      selectedOpenNow = openNowCheck.checked;
+      void nearbySearch(innerMap);
     });
   }
 

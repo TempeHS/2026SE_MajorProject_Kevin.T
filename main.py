@@ -255,6 +255,12 @@ def place_matches_all_filters(place, filters):
             if price_max != None and start > float(price_max):
                 checks.append(False)  # too expensive
 
+    # open now filter
+    if filters.get("openNow"):
+        opening = place.get("currentOpeningHours") or {}
+        if not opening.get("openNow"):
+            checks.append(False)
+
     # AND behaviour
     # - If user selected filters, all selected checks must be True.
     # - If no filters selected, checks is empty -> return True (do not exclude).
@@ -288,6 +294,7 @@ def search_places():
         "priceMin": data.get("priceMin"),
         "priceMax": data.get("priceMax"),
         "rating": data.get("rating"),
+        "openNow": data.get("openNow", False),
     }
 
     url = "https://places.googleapis.com/v1/places:searchNearby"  # Places API endpoint
@@ -305,6 +312,7 @@ def search_places():
                 "places.types",
                 "places.priceRange",
                 "places.rating",
+                "places.currentOpeningHours.openNow",
             ]
         ),
     }
