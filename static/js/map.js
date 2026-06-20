@@ -2,7 +2,7 @@
 
 // prettier-ignore
 (g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})({
-  key: "AIzaSyADzNnIA-zf9LSniYX8Z7uAo-VmfsiKz-c",
+  key: window.GOOGLE_MAPS_API_KEY,
   v: "weekly",
 });
 // remove the api key!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -10,6 +10,7 @@
 let map;
 let infoWindow;
 let nearbyMarkers = [];
+let currentPlaces = []; // places from the most recent search (for random picker)
 let searchRadiusCircle = null;
 let selectedCuisine = "restaurant";
 let selectedServiceStyle = "restaurant";
@@ -18,6 +19,12 @@ let selectedPriceMin = null;
 let selectedPriceMax = null;
 let selectedRatingMin = 0;
 let selectedOpenNow = false;
+
+const geoOptions = {
+  enableHighAccuracy: false, // city-level fix is faster than GPS
+  timeout: 8000, // give up after 8s instead of hanging
+  maximumAge: 60000, // accept a cached fix up to 1 min old
+};
 
 function getSliderRadiusMeters() {
   const distanceSlider = document.getElementById("range-distance");
@@ -134,6 +141,7 @@ async function nearbySearch(innerMap) {
     const places = data.places || [];
 
     clearNearbyMarkers();
+    currentPlaces = [];
     if (!places.length) return;
 
     const fitBounds = new google.maps.LatLngBounds();
@@ -171,6 +179,7 @@ async function nearbySearch(innerMap) {
       });
 
       nearbyMarkers.push(marker);
+      currentPlaces.push({ place, marker, loc }); // remember for random picker
     }
 
     if (!fitBounds.isEmpty()) innerMap.fitBounds(fitBounds, 100);
@@ -265,17 +274,14 @@ async function init() {
             lat: position.coords.latitude,
             lng: position.coords.longitude,
           };
-
-          infoWindow.setPosition(pos);
-          infoWindow.setContent("Location found.");
-          infoWindow.open(innerMap);
           innerMap.setCenter(pos);
-
           await nearbySearch(innerMap);
         },
-        () => {
+        async () => {
           handleLocationError(true, infoWindow, innerMap.getCenter());
+          await nearbySearch(innerMap);
         },
+        geoOptions,
       );
     } else {
       handleLocationError(false, infoWindow, innerMap.getCenter());
@@ -298,9 +304,29 @@ async function init() {
     });
   }
 
-  // Initial nearby restaurant search after map is ready.
+  // Center on the user's location on startup, then search.
   event.addListenerOnce(innerMap, "idle", () => {
-    void nearbySearch(innerMap);
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(
+        async (position) => {
+          const pos = {
+            lat: position.coords.latitude,
+            lng: position.coords.longitude,
+          };
+          innerMap.setCenter(pos);
+          await nearbySearch(innerMap);
+        },
+        async () => {
+          // Permission denied or failed — fall back to default center.
+          handleLocationError(true, infoWindow, innerMap.getCenter());
+          await nearbySearch(innerMap);
+        },
+        geoOptions,
+      );
+    } else {
+      handleLocationError(false, infoWindow, innerMap.getCenter());
+      void nearbySearch(innerMap);
+    }
   });
 
   // hook up the dropdowns
@@ -354,7 +380,41 @@ async function init() {
     });
   }
 
+  // Hook up the random restaurant picker (dice button)
+  const randomBtn = document.getElementById("random-picker-btn");
+  if (randomBtn) {
+    randomBtn.addEventListener("click", () => {
+      pickRandomRestaurant(innerMap);
+    });
+  }
+
   console.log({ mapElement, innerMap });
 }
 
 void init();
+
+function pickRandomRestaurant(innerMap) {
+  // If we have no results, run a search first then try again.
+  if (!currentPlaces.length) {
+    nearbySearch(innerMap).then(() => {
+      if (currentPlaces.length) pickRandomRestaurant(innerMap);
+    });
+    return;
+  }
+
+  const index = Math.floor(Math.random() * currentPlaces.length);
+  const { place, marker, loc } = currentPlaces[index];
+
+  innerMap.panTo(loc);
+
+  const content = buildInfoContent({
+    displayName:
+      typeof place.displayName === "string"
+        ? place.displayName
+        : place.displayName?.text,
+    formattedAddress: place.formattedAddress,
+    googleMapsURI: place.googleMapsURI || place.googleMapsUri,
+  });
+  infoWindow.setContent(content);
+  infoWindow.open({ map: innerMap, anchor: marker });
+}

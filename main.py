@@ -8,6 +8,10 @@ import requests
 from flask_wtf import CSRFProtect
 from flask_csp.csp import csp_header
 import logging
+import os
+from dotenv import load_dotenv
+
+load_dotenv()  # read .env into environment variables
 
 import userManagement as dbHandler
 import logsManagement as logHandler
@@ -78,6 +82,7 @@ def index():
         "/index.html",
         is_logged_in=is_logged_in,
         user_email=session.get("email"),
+        maps_api_key=os.environ.get("GOOGLE_MAPS_API_KEY"),
     )
 
 
@@ -301,7 +306,7 @@ def search_places():
     # json thing for google api
     headers = {
         "Content-Type": "application/json",
-        "X-Goog-Api-Key": "AIzaSyADzNnIA-zf9LSniYX8Z7uAo-VmfsiKz-c",  # hide this api key!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        "X-Goog-Api-Key": os.environ.get("GOOGLE_MAPS_API_KEY"),
         "X-Goog-FieldMask": ",".join(
             [
                 "places.id",

@@ -1,5 +1,8 @@
 {% extends 'layout.html' %} {% block content %}
 <!-- map stuff -->
+<script>
+  window.GOOGLE_MAPS_API_KEY = "{{ maps_api_key }}";
+</script>
 <script src="static/js/map.js"></script>
 
 <div class="container-fluid position-relative p-0 overflow-hidden">
@@ -354,6 +357,7 @@
   >
     <button
       type="button"
+      id="random-picker-btn"
       class="btn btn-primary"
       style="width: 58px; height: 58px; padding: 0"
     >
