@@ -1,4 +1,4 @@
-# Restaurant finder app
+# Dishcovery
 
 This app will be a PWA that aims to show open restaurants near the user's location, additionally allowing them to sort or filter by many variables such as:
 
@@ -14,12 +14,12 @@ The app will use the Google Maps/Places API and be built for both mobile and des
 
 #### Current sprint:
 
-`3` - Extra functionality
+Complete
 
 #### Last increment:
 
-Sprint 2: Map API
+Sprint 2: Map API (core search + filtering)
 
 #### Next planned increment:
 
-N/A
+Sprint 3: Account functionality (saved/visited lists) — not completed

@@ -12,12 +12,6 @@ Create the skeleton of the website with the general layout of all the buttons an
 - Skeleton buttons and layout of main page
 - Remove old functionality from previous project
 
-### Unit test summary table
-
-| Test ID | Test Name | What It Tests | Input | Expected Output | Actual Output | Pass / Fail |
-| ------- | --------- | ------------- | ----- | --------------- | ------------- | ----------- |
-|         |           |               |       |                 |               |             |
-
 ### Sprint review
 
 - Skeleton home page created with buttons
@@ -42,9 +36,12 @@ Integrate Google Maps into the website and create the core features
 
 ### Unit test summary table
 
-| Test ID | Test Name | What It Tests | Input | Expected Output | Actual Output | Pass / Fail |
-| ------- | --------- | ------------- | ----- | --------------- | ------------- | ----------- |
-|         |           |               |       |                 |               |             |
+| Test ID | Test Name                         | What It Tests                              | Input                                            | Expected Output | Actual Output | Pass / Fail |
+| ------- | --------------------------------- | ------------------------------------------ | ------------------------------------------------ | --------------- | ------------- | ----------- |
+| T1      | test_no_filters_passes            | A place passes when no filters are applied | place rating 4.0, empty filters                  | True            | True          | Pass        |
+| T2      | test_cuisine_filter_excludes_non_match | Cuisine filter excludes non-matching types | place types ["cafe"], filter "japanese_restaurant" | False         | False         | Pass        |
+| T3      | test_rating_below_minimum_excluded | Rating filter excludes low ratings         | place rating 3.0, filter 4.0                     | False           | False         | Pass        |
+| T4      | test_price_too_expensive_excluded | Price filter excludes too-expensive places | place price $80–120, filter priceMax 50          | False           | False         | Pass        |
 
 ### Sprint review
 

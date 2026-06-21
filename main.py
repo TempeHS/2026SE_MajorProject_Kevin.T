@@ -156,7 +156,7 @@ def auth():
     totp = pyotp.TOTP(user_secret)
 
     # generate qr code
-    otp_uri = totp.provisioning_uri(name=email, issuer_name="Developer Log App")
+    otp_uri = totp.provisioning_uri(name=email, issuer_name="Dishcovery")
     qr_code = pyqrcode.create(otp_uri)
     stream = BytesIO()
     qr_code.png(stream, scale=5)
@@ -212,7 +212,7 @@ def place_matches_all_filters(place, filters):
         "cuisine": "japanese_restaurant",
         "service-style": "meal_takeaway",
         "dietary": "vegan_restaurant",
-        "star_min": 4.0,
+        "rating": 4.0,
         and so on
     }
     """

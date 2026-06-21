@@ -5,7 +5,6 @@
   key: window.GOOGLE_MAPS_API_KEY,
   v: "weekly",
 });
-// remove the api key!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 let map;
 let infoWindow;
