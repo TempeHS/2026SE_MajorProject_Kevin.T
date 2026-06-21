@@ -14,7 +14,6 @@ from dotenv import load_dotenv
 load_dotenv()  # read .env into environment variables
 
 import userManagement as dbHandler
-import logsManagement as logHandler
 
 # 2fa stuff
 import pyotp
